@@ -72,3 +72,7 @@
 body {
   background-color: black;
 }
+
+.intro-info {
+  height: calc(100vh - 220px)
+}
