@@ -13,7 +13,7 @@ const ServiceCard = (props: Props) => {
       style={{
         background: `url('/service-${props.num}.jpg') no-repeat center / cover`,
       }}
-      className="w-full sm:w-1/4 h-72 bg-violet-500 saturate-0 "
+      className="w-full sm:w-1/3 h-72 bg-violet-500 saturate-0 "
     >
       <div className="absolute top-0 left-0 h-full w-full bg-violet-500 z-0 opacity-70"></div>
       <Link
@@ -30,7 +30,7 @@ const labels = ["Classes", "Who We Are", "Contact Us"];
 
 const Services = () => {
   return (
-    <Container className="flex flex-row justify-between my-20">
+    <Container className="flex flex-col space-y-10 sm:space-y-0 sm:space-x-6 sm:flex-row justify-between my-20">
       {labels.map((label, i) => (
         <ServiceCard key={i} num={i + 1} label={label} />
       ))}

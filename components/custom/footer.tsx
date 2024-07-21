@@ -30,13 +30,15 @@ const Copyright = () => {
 
 const Footer = (props: Props) => {
   return (
-    <div className="border-t-2 border-t-violet-500 py-5">
-      <Container className="flex flex-row justify-between items-start">
-        <div className="space-y-5">
-          <p className="text-white">The Eileen School of Speech & Drama</p>
-          <img src="/logo.png" className="w-24" />
+    <div className="border-t-2 border-t-violet-500 pt-10 md:py-5">
+      <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
+        <div className="space-y-10 sm:space-y-5">
+          <p className="text-white text-center md:text-left text-4xl sm:text-base">
+            The Eileen School of Speech & Drama
+          </p>
+          <img src="/logo.png" className="w-36 md:w-24 mx-auto sm:mx-0" />
         </div>
-        <div className="text-white flex flex-col">
+        <div className="text-white text-center sm:text-right text-4xl sm:text-base flex flex-col space-y-2 mx-auto sm:mx-0 pb-10">
           <Link href={"/gallery"} className="hover:underline">
             Gallery
           </Link>
