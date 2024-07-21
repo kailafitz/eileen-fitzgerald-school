@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import FacebookIcon from "./facebook";
+import InstagramIcon from "./instagram";
 
 type Props = {};
 
@@ -21,7 +23,7 @@ const CopyrightIcon = () => (
 
 const Copyright = () => {
   return (
-    <p className="flex flex-row items-center justify-center text-white text-xs opacity-60">
+    <p className="flex flex-row items-center justify-center text-white text-xs opacity-60 pt-5">
       <CopyrightIcon />
       copyright {new Date().getFullYear()}
     </p>
@@ -30,15 +32,15 @@ const Copyright = () => {
 
 const Footer = (props: Props) => {
   return (
-    <div className="border-t-2 border-t-violet-500 pt-10 md:py-5">
+    <div className="border-t-2 border-t-violet-500 pt-10 pb-3 md:py-5">
       <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
-        <div className="space-y-10 sm:space-y-5">
-          <p className="text-white text-center md:text-left text-4xl sm:text-base">
+        <div className="w-full sm:w-fit space-y-10 sm:space-y-5">
+          <p className="text-white text-center md:text-left text-1xl sm:text-base">
             The Eileen School of Speech & Drama
           </p>
           <img src="/logo.png" className="w-36 md:w-24 mx-auto sm:mx-0" />
         </div>
-        <div className="text-white text-center sm:text-right text-4xl sm:text-base flex flex-col space-y-2 mx-auto sm:mx-0 pb-10">
+        <div className="text-white text-center sm:text-right text-1xl sm:text-base flex flex-col space-y-3 sm:space-y-2 mx-auto sm:mx-0 pb-10">
           <Link href={"/gallery"} className="hover:underline">
             Gallery
           </Link>
@@ -48,6 +50,21 @@ const Footer = (props: Props) => {
           <Link href={"/locations"} className="hover:underline">
             Locations
           </Link>
+          {/* <hr className="w-full bg-white" /> */}
+          <div className="flex flex-row justify-center md:justify-end space-x-5">
+            <Link
+              href="https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama"
+              target="_blank"
+            >
+              <FacebookIcon size={25} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/eileenfitzgerald_drama/"
+              target="_blank"
+            >
+              <InstagramIcon size={25} />
+            </Link>
+          </div>
         </div>
       </Container>
       <Copyright />
