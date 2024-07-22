@@ -18,7 +18,7 @@ const ServiceCard = (props: Props) => {
       <div className="absolute top-0 left-0 h-full w-full bg-violet-500 z-0 opacity-70"></div>
       <Link
         href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
-        className="text-center text-white w-full h-full relative z-20 flex flex-col justify-center hover:backdrop-blur-sm"
+        className="text-center text-gray-200 w-full h-full relative z-20 flex flex-col justify-center hover:backdrop-blur-sm"
       >
         {props.label}
       </Link>

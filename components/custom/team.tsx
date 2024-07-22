@@ -34,7 +34,7 @@ const Members = () => {
               src={`/${member.name.split(" ")[0]}.jpg`}
               className="object-contain w-full max-w-64  sm:w-3/5 lg:w-1/4 h-auto"
             />
-            <div className="text-white">
+            <div className="text-gray-200">
               {member.bio.map((paragraph, i) => {
                 return (
                   <p key={i} className="mb-3">
@@ -54,7 +54,7 @@ const Team = (props: Props) => {
   return (
     <>
       <Container className="py-10">
-        <h1 className="text-white text-center text-2xl md:text-4xl">
+        <h1 className="text-gray-200 text-center text-2xl md:text-4xl">
           Meet our Staff
         </h1>
       </Container>

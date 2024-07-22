@@ -27,9 +27,9 @@ const MobileMenu = (props: Props) => {
     <Sheet>
       <SheetTrigger className="block md:hidden">
         <div className="w-10 space-y-2">
-          <span className="h-1 w-full bg-white block"></span>
-          <span className="h-1 w-full bg-white block"></span>
-          <span className="h-1 w-full bg-white block"></span>
+          <span className="h-1 w-full bg-gray-200 block"></span>
+          <span className="h-1 w-full bg-gray-200 block"></span>
+          <span className="h-1 w-full bg-gray-200 block"></span>
         </div>
       </SheetTrigger>
       <SheetContent>
@@ -38,7 +38,11 @@ const MobileMenu = (props: Props) => {
         </SheetHeader>
         <div className="flex flex-col justify-start space-y-4 p-5">
           {links.map((link, i) => (
-            <Link href={link.link} className="text-2xl hover:underline">
+            <Link
+              key={`${link.label}_${i}_mobile`}
+              href={link.link}
+              className="text-2xl hover:underline"
+            >
               {link.label}
             </Link>
           ))}

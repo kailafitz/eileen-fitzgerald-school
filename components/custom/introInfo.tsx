@@ -3,7 +3,7 @@ import Container from "./container";
 
 const IntroInfo = () => {
   return (
-    <div className="bg-violet-500 w-full py-10 intro-info flex flex-col text-white">
+    <div className="bg-violet-500 w-full py-10 custom-vh-xs custom-vh-md flex flex-col text-gray-200">
       <Container className="text-center flex-1 flex flex-col justify-evenly">
         <div>
           <p>Welcome to the home of the</p>

@@ -27,8 +27,11 @@ const NavigationBar = () => {
         <div className="w-3/5 hidden md:block">
           <NavigationMenuList>
             {links.map((link, i) => (
-              <NavigationMenuItem key={i}>
-                <Link href={link.link} className="text-white hover:underline">
+              <NavigationMenuItem key={link.label}>
+                <Link
+                  href={link.link}
+                  className="text-gray-200 hover:underline"
+                >
                   {link.label}
                 </Link>
               </NavigationMenuItem>

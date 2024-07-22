@@ -69,15 +69,33 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
 }
 
-.intro-info {
+.custom-vh-xs {
   /* height: 100vh; */
   height: calc(100vh - 104px);
+}
 
+.custom-vh-md {
   @media only screen and (min-width: 768px) {
     height: calc(100vh - 220px);
   }
+}
+
+.fixed-col {
+  width: 300px;
+}
+
+.fixed-col-content {
+  padding-top: calc(220px + 2rem);
+}
+
+.scrollable-col {
+  padding-left: 300px;
 }

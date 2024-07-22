@@ -7,7 +7,7 @@ const Announcements = () => {
   return (
     <div className="bg-violet-500 w-full py-5">
       <Container>
-        <p className="text-white">
+        <p className="text-gray-200">
           Welcome to the home of the Eileen Fitzgerald School of Speech & Drama
           The school was established in Co. Clare in 1992 to foster a love of
           drama, communications and clear speech in our students. Browse our
