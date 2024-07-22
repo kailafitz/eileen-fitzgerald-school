@@ -8,14 +8,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import feather from "feather-icons";
 import FacebookIcon from "./facebook";
 import InstagramIcon from "./instagram";
 
 type Props = {};
 
 const links = [
-  { label: "Home", link: "home" },
+  { label: "Home", link: "/" },
   { label: "About", link: "about" },
   { label: "Classes", link: "classes" },
   { label: "Gallery", link: "gallery" },

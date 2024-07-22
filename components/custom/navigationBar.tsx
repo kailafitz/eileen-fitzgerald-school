@@ -10,7 +10,7 @@ import Container from "./container";
 import MobileMenu from "./mobileMenu";
 
 const links = [
-  { label: "Home", link: "home" },
+  { label: "Home", link: "/" },
   { label: "About", link: "about" },
   { label: "Classes", link: "classes" },
   { label: "Gallery", link: "gallery" },
