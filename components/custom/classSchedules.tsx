@@ -90,8 +90,8 @@ const ClassSchedules = (props: Props) => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Our Speech and Drama Classes
       </h1>
-      <p className="text-center text-base mb-5">
-        Our Class Schedules are Based on our Locations and Age Groups
+      <p className="text-center text-base mb-5 md:w-1/2 mx-auto">
+        Our class schedules are based on our locations and age groups
       </p>
       <p className="mb-10">
         With almost 30 years of experience, Eileen Fitzgerald teaches a wide

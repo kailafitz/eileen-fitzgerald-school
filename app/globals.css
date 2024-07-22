@@ -78,8 +78,11 @@ body {
 }
 
 .custom-vh-xs {
-  /* height: 100vh; */
-  height: calc(100vh - 104px);
+  min-height: calc(100vh - 104px);
+
+  @media only screen and (min-width: 768px) {
+    min-height: unset;
+  }
 }
 
 .custom-vh-md {
@@ -97,5 +100,9 @@ body {
 }
 
 .scrollable-col {
-  padding-left: 300px;
+  padding-left: inherit;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 300px;
+  }
 }

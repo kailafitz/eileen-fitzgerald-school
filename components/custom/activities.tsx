@@ -50,8 +50,8 @@ const Activities = () => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Class Activities
       </h1>
-      <p className="text-center text-base mb-10">
-        See the Different Programs in Place for our Students
+      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+        See the different programs in place for our students
       </p>
       <div className="mb-10 flex flex-col space-y-10">
         {activities.map((group, i) => {

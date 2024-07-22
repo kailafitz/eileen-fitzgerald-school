@@ -13,7 +13,7 @@ type Props = {};
 const Classes = (props: Props) => {
   return (
     <>
-      <div className="fixed h-screen z-10 fixed-col p-5 bg-white fixed-col-content">
+      <div className="fixed h-screen z-10 fixed-col p-5 bg-white fixed-col-content hidden md:block">
         <p className="text-2xl mb-5">Contents</p>
         <Link
           href="/classes/#what-is-speech-and-drama"

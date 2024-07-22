@@ -66,8 +66,8 @@ const Benefits = (props: Props) => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
         Benefits of Speech and Drama
       </h1>
-      <p className="text-center text-base mb-10">
-        What are the Benefits of Speech and Drama for my Child?
+      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+        What are the benefits of speech and drama for my child?
       </p>
       <Benefit />
     </Container>

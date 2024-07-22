@@ -42,9 +42,9 @@ const YearlyEvents = () => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Yearly Events
       </h1>
-      <p className="text-center text-base mb-10">
-        There are Multiple Events throughout the Year that our Students can get
-        Involved in through our School
+      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+        There are multiple events throughout the year that our students can get
+        involved in through our school
       </p>
       <div className="mb-10 flex flex-col space-y-10">
         <Table>
