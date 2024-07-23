@@ -6,11 +6,17 @@ import Link from "next/link";
 import Activities from "@/components/custom/activities";
 import YearlyEvents from "@/components/custom/yearlyEvents";
 import PublicSpeaking from "@/components/custom/publicSpeaking";
+import { Metadata } from "next";
 
-type Props = {};
+export const metadata: Metadata = {
+  title: "Classes | Eileen Fitzgerald",
+  description:
+    "Classes ran by The Eileen Fitzgerald School of Speech and Drama. Read through details on classes held around Ennis, Co.Clare, for various age groups. Details are provided on class activities for each age group, from 4 year olds to adults. The Eileen Fitzgerald School of Speech and Drama gets involved in many events around Ireland whilst holding events of their own to keep students simulated and engaged whilst practising the arts of Speech and Drama. Public speaking classes are also offered by Eileen.",
+};
+
 // [&_div:nth-child(2)]:justify-end
 
-const Classes = (props: Props) => {
+const Classes = () => {
   return (
     <>
       <div className="fixed h-screen z-10 fixed-col p-5 bg-white fixed-col-content hidden md:block">

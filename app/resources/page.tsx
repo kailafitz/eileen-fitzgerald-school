@@ -1,6 +1,13 @@
-import Container from "@/components/custom/container";
-import Link from "next/link";
 import React from "react";
+import Container from "@/components/custom/container";
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Resources | Eileen Fitzgerald",
+  description:
+    "Drama, poetry and exam links that are useful to the students of The Eileen Fitzgerald School of Speech and Drama",
+};
 
 const dramaLinks = [
   { label: "Daily Actor", link: "https://www.dailyactor.com/" },
@@ -64,16 +71,17 @@ const links = [
 
 const Resources = () => {
   return (
-    <Container className="my-10">
-      <h1 className="text-gray-200 text-center text-2xl md:text-4xl mb-10">
-        Resources - Useful Links
-      </h1>
+    <Container className="my-10 text-gray-200 ">
+      <h1 className="text-center text-2xl md:text-4xl mb-2">Resources</h1>
+      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+        Useful links for our students
+      </p>
       <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
         {links.map((linkGroup, i) => {
           return (
             <div
               key={`${linkGroup.title}_${i}`}
-              className="bg-violet-500 text-gray-200 p-5 w-full md:w-1/3 mx-auto"
+              className="bg-violet-500 p-5 w-full md:w-1/3 mx-auto"
             >
               <h2 className="text-2xl mb-5 text-center">{linkGroup.title}</h2>
               <div className="flex flex-col">
