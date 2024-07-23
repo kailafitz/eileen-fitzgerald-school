@@ -15,7 +15,7 @@ const links = [
   { label: "Classes", link: "classes" },
   { label: "Gallery", link: "gallery" },
   { label: "Resources", link: "resources" },
-  { label: "Content", link: "content" },
+  { label: "Contact", link: "contact" },
 ];
 
 const NavigationBar = () => {

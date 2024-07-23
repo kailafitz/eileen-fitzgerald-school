@@ -6,8 +6,6 @@ import {
 } from "@/components/ui/accordion";
 import Container from "./container";
 
-type Props = {};
-
 const testimonials = [
   {
     name: "Siobhan McGrath",
@@ -51,7 +49,7 @@ const testimonials = [
   },
 ];
 
-const Testimonials = (props: Props) => {
+const Testimonials = () => {
   return (
     <Container className="pb-10">
       <Accordion type="single" collapsible>

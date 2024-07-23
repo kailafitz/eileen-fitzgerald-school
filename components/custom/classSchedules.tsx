@@ -2,15 +2,12 @@ import React from "react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
 import Container from "./container";
-
-type Props = {};
 
 const schedules = [
   {
@@ -84,7 +81,7 @@ const ScheduleTables = () => {
   );
 };
 
-const ClassSchedules = (props: Props) => {
+const ClassSchedules = () => {
   return (
     <Container id="class-schedules" className="text-gray-200">
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">

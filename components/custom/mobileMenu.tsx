@@ -2,7 +2,6 @@ import React from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -11,18 +10,16 @@ import Link from "next/link";
 import FacebookIcon from "./facebook";
 import InstagramIcon from "./instagram";
 
-type Props = {};
-
 const links = [
   { label: "Home", link: "/" },
   { label: "About", link: "about" },
   { label: "Classes", link: "classes" },
   { label: "Gallery", link: "gallery" },
   { label: "Resources", link: "resources" },
-  { label: "Content", link: "content" },
+  { label: "Contact", link: "contact" },
 ];
 
-const MobileMenu = (props: Props) => {
+const MobileMenu = () => {
   return (
     <Sheet>
       <SheetTrigger className="block md:hidden">

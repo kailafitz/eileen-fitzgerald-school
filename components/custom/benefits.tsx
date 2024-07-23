@@ -1,8 +1,6 @@
 import React from "react";
 import Container from "./container";
 
-type Props = {};
-
 const benefits = [
   {
     label: "Increases Self-Confidence",
@@ -60,7 +58,7 @@ const Benefit = () => {
   );
 };
 
-const Benefits = (props: Props) => {
+const Benefits = () => {
   return (
     <Container className="text-gray-200 py-10">
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">

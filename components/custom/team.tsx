@@ -1,8 +1,6 @@
 import React from "react";
 import Container from "./container";
 
-type Props = {};
-
 const members = [
   {
     name: "Eileen Fitzgerald",
@@ -53,7 +51,7 @@ const Members = () => {
   );
 };
 
-const Team = (props: Props) => {
+const Team = () => {
   return (
     <>
       <Container className="py-10">

@@ -1,8 +1,6 @@
 import React from "react";
 import Container from "./container";
 
-type Props = {};
-
 const Announcements = () => {
   return (
     <div className="bg-violet-500 w-full py-5">

@@ -1,9 +1,7 @@
 import React from "react";
 import Container from "./container";
 
-type Props = {};
-
-const WhatIsSpeechAndDrama = (props: Props) => {
+const WhatIsSpeechAndDrama = () => {
   return (
     <div
       className="custom-vh-xs custom-vh-md flex flex-col justify-center bg-violet-500"
