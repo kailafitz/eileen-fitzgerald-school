@@ -1,6 +1,4 @@
 import React from "react";
-import Container from "./container";
-
 const members = [
   {
     name: "Eileen Fitzgerald",
@@ -24,7 +22,7 @@ const members = [
 
 const Members = () => {
   return (
-    <Container className="space-y-10 pb-10">
+    <div className="space-y-10 pb-10">
       {members.map((member, i) => {
         return (
           <div
@@ -47,18 +45,16 @@ const Members = () => {
           </div>
         );
       })}
-    </Container>
+    </div>
   );
 };
 
 const Team = () => {
   return (
     <>
-      <Container className="py-10">
-        <h1 className="text-gray-200 text-center text-2xl md:text-4xl">
-          Meet our Staff
-        </h1>
-      </Container>
+      <h1 className="text-gray-200 text-center my-10 text-2xl md:text-4xl">
+        Meet our Staff
+      </h1>
       <Members />
     </>
   );

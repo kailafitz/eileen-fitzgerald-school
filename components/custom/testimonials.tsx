@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Container from "./container";
 
 const testimonials = [
   {
@@ -51,7 +50,13 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Container className="pb-10">
+    <div className="pb-10 text-gray-200">
+      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
+        Testimonials
+      </h1>
+      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+        See what our past pupils have to say
+      </p>
       <Accordion type="single" collapsible>
         {testimonials.map((testimonial, i) => {
           return (
@@ -62,7 +67,7 @@ const Testimonials = () => {
           );
         })}
       </Accordion>
-    </Container>
+    </div>
   );
 };
 

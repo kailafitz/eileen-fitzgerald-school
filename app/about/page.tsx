@@ -2,6 +2,7 @@ import React from "react";
 import Team from "@/components/custom/team";
 import Testimonials from "@/components/custom/testimonials";
 import { Metadata } from "next";
+import Container from "@/components/custom/container";
 
 export const metadata: Metadata = {
   title: "About | Eileen Fitzgerald",
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <>
+    <Container>
       <Team />
       <Testimonials />
-    </>
+    </Container>
   );
 };
 
