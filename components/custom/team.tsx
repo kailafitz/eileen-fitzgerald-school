@@ -27,9 +27,12 @@ const members = [
 const Members = () => {
   return (
     <Container className="space-y-10 pb-10">
-      {members.map((member) => {
+      {members.map((member, i) => {
         return (
-          <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center space-y-10 lg:space-y-0 lg:space-x-20">
+          <div
+            key={`${member.name}_${i}`}
+            className="flex flex-col lg:flex-row justify-center lg:justify-between items-center space-y-10 lg:space-y-0 lg:space-x-20"
+          >
             <img
               src={`/${member.name.split(" ")[0]}.jpg`}
               className="object-contain w-full max-w-64  sm:w-3/5 lg:w-1/4 h-auto"

@@ -57,12 +57,10 @@ const Testimonials = (props: Props) => {
       <Accordion type="single" collapsible>
         {testimonials.map((testimonial, i) => {
           return (
-            <>
-              <AccordionItem value={`item-${i}`}>
-                <AccordionTrigger>{testimonial.name}</AccordionTrigger>
-                <AccordionContent>{testimonial.testimonial}</AccordionContent>
-              </AccordionItem>
-            </>
+            <AccordionItem key={`${testimonial.name}_${i}`} value={`item-${i}`}>
+              <AccordionTrigger>{testimonial.name}</AccordionTrigger>
+              <AccordionContent>{testimonial.testimonial}</AccordionContent>
+            </AccordionItem>
           );
         })}
       </Accordion>
