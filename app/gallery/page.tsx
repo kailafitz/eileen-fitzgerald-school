@@ -62,7 +62,7 @@ const cols = [col1, col2, col3, col4];
 const Gallery = () => {
   return (
     <Container className="text-gray-200">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
+      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Our Gallery
       </h1>
       <p className="text-center text-base mb-10 sm:w-4/5 lg:w-1/2 mx-auto">
