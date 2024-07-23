@@ -58,7 +58,7 @@ const Locations = () => {
       <div className="flex flex-col justify-center space-y-10 md:flex-row md:justify-between md:space-y-0 md:space-x-10">
         {locations.map((location) => {
           return (
-            <div className="flex flex-col w-full md:w-1/3">
+            <div className="flex flex-col w-full md:w-1/3 justify-between">
               <h4 className="mb-5">{location.title}</h4>
               {location.iframe}
             </div>
