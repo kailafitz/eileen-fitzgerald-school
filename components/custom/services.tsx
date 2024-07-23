@@ -13,20 +13,20 @@ const ServiceCard = (props: Props) => {
       style={{
         background: `url('/service-${props.num}.jpg') no-repeat center / cover`,
       }}
-      className="w-full sm:w-1/3 h-72 bg-violet-500 saturate-0 "
+      className="w-full sm:w-1/3 h-72 group relative"
     >
-      <div className="absolute top-0 left-0 h-full w-full bg-violet-500 z-0 opacity-70"></div>
       <Link
         href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
-        className="text-center text-gray-200 w-full h-full relative z-20 flex flex-col justify-center hover:backdrop-blur-sm"
+        className="group text-center text-gray-200 w-full h-full relative z-20 flex flex-col justify-center hover:backdrop-blur-sm"
       >
         {props.label}
       </Link>
+      <div className="bg-violet-500 opacity-65 absolute bottom-0 left-0 h-0 w-full transition-all group-hover:h-full z-10 saturate-100"></div>
     </div>
   );
 };
 
-const labels = ["Classes", "Who We Are", "Contact Us"];
+const labels = ["Classes", "About", "Contact"];
 
 const Services = () => {
   return (
