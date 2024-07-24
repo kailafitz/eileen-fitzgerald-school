@@ -5,7 +5,7 @@ type Props = {
   className?: string;
 };
 
-const EmailIcon = (props: Props) => {
+const InterpersonalSkillIcon = (props: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,12 +17,14 @@ const EmailIcon = (props: Props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`feather feather-mail ${props.className}`}
+      className={`lucide lucide-users ${props.className}`}
     >
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-      <polyline points="22,6 12,13 2,6"></polyline>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
   );
 };
 
-export default EmailIcon;
+export default InterpersonalSkillIcon;

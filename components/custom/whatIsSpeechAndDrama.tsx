@@ -4,7 +4,7 @@ import Container from "./container";
 const WhatIsSpeechAndDrama = () => {
   return (
     <div
-      className="custom-vh-xs custom-vh-md flex flex-col justify-center bg-violet-500"
+      className="custom-vh-xs flex flex-col justify-center bg-primary"
       id="what-is-speech-and-drama"
     >
       <Container className="text-gray-200 py-10">

@@ -21,7 +21,7 @@ const ServiceCard = (props: Props) => {
       >
         {props.label}
       </Link>
-      <div className="bg-violet-500 opacity-65 absolute bottom-0 left-0 h-0 w-full transition-all group-hover:h-full z-10 saturate-100"></div>
+      <div className="bg-primary opacity-65 absolute bottom-0 left-0 h-0 w-full transition-all group-hover:h-full z-10 saturate-100"></div>
     </div>
   );
 };

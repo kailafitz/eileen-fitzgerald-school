@@ -3,7 +3,7 @@ import Container from "./container";
 
 const Announcements = () => {
   return (
-    <div className="bg-violet-500 w-full py-5">
+    <div className="bg-primary w-full py-5">
       <Container>
         <p className="text-gray-200">
           Welcome to the home of the Eileen Fitzgerald School of Speech & Drama

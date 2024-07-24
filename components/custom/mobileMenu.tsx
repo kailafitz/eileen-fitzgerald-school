@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -35,13 +36,15 @@ const MobileMenu = () => {
         </SheetHeader>
         <div className="flex flex-col justify-start space-y-4 p-5">
           {links.map((link, i) => (
-            <Link
-              key={`${link.label}_${i}_mobile`}
-              href={link.link}
-              className="text-2xl hover:underline"
-            >
-              {link.label}
-            </Link>
+            <SheetClose asChild>
+              <Link
+                key={`${link.label}_${i}_mobile`}
+                href={link.link}
+                className="text-2xl hover:underline"
+              >
+                {link.label}
+              </Link>
+            </SheetClose>
           ))}
           <hr className="h-1 w-full bg-black my-5" />
           <Link

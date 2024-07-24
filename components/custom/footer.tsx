@@ -30,7 +30,7 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <div className="border-t-2 border-t-violet-500 pt-10 pb-3 md:py-5 bg-black z-30">
+    <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5 bg-black z-30">
       <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
         <div className="w-full sm:w-fit space-y-10 sm:space-y-5">
           <p className="text-gray-200 text-center md:text-left text-1xl sm:text-base">
@@ -40,17 +40,17 @@ const Footer = () => {
         </div>
         <div className="text-gray-200 text-center sm:text-right text-1xl sm:text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0 pb-10">
           <Link href={"/gallery"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Gallery
             </span>
           </Link>
           <Link href={"/testimonials"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Testimonials
             </span>
           </Link>
           <Link href={"/locations"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Locations
             </span>
           </Link>
@@ -60,7 +60,7 @@ const Footer = () => {
               target="_blank"
               className="w-fit relative"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
                 <FacebookIcon size={25} />
               </span>
             </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               target="_blank"
               className="w-fit relative"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
                 <InstagramIcon size={25} />
               </span>
             </Link>

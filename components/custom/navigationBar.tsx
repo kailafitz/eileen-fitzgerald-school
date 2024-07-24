@@ -30,7 +30,7 @@ const NavigationBar = () => {
               <NavigationMenuItem key={link.label} className="relative">
                 <Link
                   href={link.link}
-                  className="text-gray-200 after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100"
+                  className="text-gray-200 after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100"
                 >
                   {link.label}
                 </Link>

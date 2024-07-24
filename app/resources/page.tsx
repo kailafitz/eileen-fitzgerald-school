@@ -81,7 +81,7 @@ const Resources = () => {
           return (
             <div
               key={`${linkGroup.title}_${i}`}
-              className="bg-violet-500 p-5 w-full md:w-1/3 mx-auto"
+              className="bg-primary p-5 w-full md:w-1/3 mx-auto"
             >
               <h2 className="text-2xl mb-5 text-center">{linkGroup.title}</h2>
               <div className="flex flex-col">

@@ -25,12 +25,12 @@ const Classes = () => {
           href="/classes/#what-is-speech-and-drama"
           className="relative w-fit mb-2 block"
         >
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             What is Speech and Drama?
           </span>
         </Link>
         <Link href="/classes/#benefits" className="relative w-fit mb-2 block">
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             Benefits of Speech and Drama
           </span>
         </Link>
@@ -38,12 +38,12 @@ const Classes = () => {
           href="/classes/#class-schedules"
           className="relative w-fit mb-2 block"
         >
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             Class Schedules
           </span>
         </Link>
         <Link href="/classes/#activities" className="relative w-fit mb-2 block">
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             Class Activities
           </span>
         </Link>
@@ -51,7 +51,7 @@ const Classes = () => {
           href="/classes/#yearly-events"
           className="relative w-fit mb-2 block"
         >
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             Yearly Events
           </span>
         </Link>
@@ -59,7 +59,7 @@ const Classes = () => {
           href="/classes/#public-speaking"
           className="relative w-fit mb-2 block"
         >
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             Public Speaking
           </span>
         </Link>
