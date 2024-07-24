@@ -34,10 +34,11 @@ const details = [
 
 const ContactDetails = () => {
   return (
-    <div className="text-gray-200 w-full sm:w-7/12 lg:w-1/2 mx-auto space-y-10">
-      {details.map((contactMethod) => {
+    <div className="text-gray-200 w-full sm:w-7/12 lg:w-1/3 mx-auto space-y-10">
+      {details.map((contactMethod, i) => {
         return (
           <Link
+            key={`${contactMethod.label}_${i}`}
             href={contactMethod.link}
             target="_blank"
             className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"

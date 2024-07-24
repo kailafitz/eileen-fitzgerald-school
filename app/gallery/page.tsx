@@ -77,7 +77,10 @@ const Gallery = () => {
             <div key={`photo_col_${i}`} className="grid grid-row-2 gap-y-4">
               {col.map((img, i) => {
                 return (
-                  <div className="group relative flex flex-col justify-between">
+                  <div
+                    key={`${img.imageName}_${i}`}
+                    className="group relative flex flex-col justify-between"
+                  >
                     <img
                       key={`${img.imageName}_${i}`}
                       src={`/gallery/${img.imageName}.jpg`}

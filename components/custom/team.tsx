@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 const members = [
   {
     name: "Eileen Fitzgerald",
@@ -21,30 +22,53 @@ const members = [
 ];
 
 const Members = () => {
+  const [currentMember, setCurrentMember] = useState("Eileen Fitzgerald");
+
+  const member = members.find((member) => currentMember === member.name);
+
+  const resetAnimation = () => {
+    const benefitContainer = document.getElementById("bioContainer");
+    benefitContainer?.classList.add("fade-in-animation");
+
+    setTimeout(() => {
+      benefitContainer?.classList.remove("fade-in-animation");
+    }, 600);
+  };
+
   return (
     <div className="space-y-10 pb-10">
-      {members.map((member, i) => {
-        return (
-          <div
-            key={`${member.name}_${i}`}
-            className="flex flex-col lg:flex-row justify-center lg:justify-between items-center space-y-10 lg:space-y-0 lg:space-x-20"
-          >
-            <img
-              src={`/${member.name.split(" ")[0]}.jpg`}
-              className="object-contain w-full max-w-64  sm:w-3/5 lg:w-1/4 h-auto"
-            />
-            <div className="text-gray-200">
-              {member.bio.map((paragraph, i) => {
-                return (
-                  <p key={i} className="mb-3">
-                    {paragraph}
-                  </p>
-                );
-              })}
+      <div className="flex flex-row justify-center space-x-10">
+        {members.map((member, i) => {
+          return (
+            <div className="flex flex-col justify-center space-y-5 w-1/4">
+              <img
+                src={`/${member.name.split(" ")[0]}2.png`}
+                className="bg-primary object-contain w-full md:w-3/4 h-auto mx-auto rounded-full border-primary border-2"
+              />
+              <h2
+                onClick={() => {
+                  setCurrentMember(member.name);
+                  resetAnimation();
+                }}
+                className={`text-gray-200 mx-auto hover:cursor-pointer relative ${
+                  member.name === currentMember
+                    ? "after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-white after:scale-x-100"
+                    : ""
+                }`}
+              >
+                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-white after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                  {member.name}
+                </span>
+              </h2>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <div id="bioContainer">
+        {member?.bio.map((paragraph) => {
+          return <p className="text-gray-200 mb-5">{paragraph}</p>;
+        })}
+      </div>
     </div>
   );
 };
