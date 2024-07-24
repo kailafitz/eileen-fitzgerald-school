@@ -2,6 +2,7 @@ import React from "react";
 
 type Props = {
   size: number;
+  className?: string;
 };
 
 const FacebookIcon = (props: Props) => {
@@ -16,7 +17,7 @@ const FacebookIcon = (props: Props) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="feather feather-facebook"
+      className={`feather feather-facebook ${props.className}`}
     >
       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
     </svg>

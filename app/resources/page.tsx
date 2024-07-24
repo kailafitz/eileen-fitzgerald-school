@@ -91,9 +91,11 @@ const Resources = () => {
                       key={`${link.label}_${i}`}
                       href={link.link}
                       target="_blank"
-                      className="mb-3 hover:underline"
+                      className="mb-3 relative w-fit block"
                     >
-                      {link.label}
+                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-gray-200 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                        {link.label}
+                      </span>
                     </Link>
                   );
                 })}

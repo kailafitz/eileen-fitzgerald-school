@@ -61,7 +61,9 @@ const Testimonials = () => {
         {testimonials.map((testimonial, i) => {
           return (
             <AccordionItem key={`${testimonial.name}_${i}`} value={`item-${i}`}>
-              <AccordionTrigger>{testimonial.name}</AccordionTrigger>
+              <AccordionTrigger>
+                <span>{testimonial.name}</span>
+              </AccordionTrigger>
               <AccordionContent>{testimonial.testimonial}</AccordionContent>
             </AccordionItem>
           );

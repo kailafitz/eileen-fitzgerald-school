@@ -50,8 +50,8 @@ const YearlyEvents = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Month(s)</TableHead>
-              <TableHead>Event</TableHead>
+              <TableHead className="w-36">Month(s)</TableHead>
+              <TableHead className="w-36">Event</TableHead>
               <TableHead>Description</TableHead>
             </TableRow>
           </TableHeader>

@@ -23,32 +23,46 @@ const Classes = () => {
         <p className="text-2xl mb-5">Contents</p>
         <Link
           href="/classes/#what-is-speech-and-drama"
-          className="hover:underline"
+          className="relative w-fit mb-2 block"
         >
-          What is Speech and Drama?
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            What is Speech and Drama?
+          </span>
         </Link>
-        <Link href="/classes/#benefits" className="hover:underline block">
-          Benefits of Speech and Drama
+        <Link href="/classes/#benefits" className="relative w-fit mb-2 block">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Benefits of Speech and Drama
+          </span>
         </Link>
         <Link
           href="/classes/#class-schedules"
-          className="hover:underline block"
+          className="relative w-fit mb-2 block"
         >
-          Class Schedules
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Class Schedules
+          </span>
         </Link>
-        <Link href="/classes/#activities" className="hover:underline block">
-          Class Activities
+        <Link href="/classes/#activities" className="relative w-fit mb-2 block">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Class Activities
+          </span>
         </Link>
-        <Link href="/classes/#yearly-events" className="hover:underline block">
-          Yearly Events
+        <Link
+          href="/classes/#yearly-events"
+          className="relative w-fit mb-2 block"
+        >
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Yearly Events
+          </span>
         </Link>
         <Link
           href="/classes/#public-speaking"
-          className="hover:underline block"
+          className="relative w-fit mb-2 block"
         >
-          Public Speaking
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Public Speaking
+          </span>
         </Link>
-        {/* </Container> */}
       </div>
       <div className="scrollable-col">
         <WhatIsSpeechAndDrama />

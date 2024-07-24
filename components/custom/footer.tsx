@@ -40,17 +40,17 @@ const Footer = () => {
         </div>
         <div className="text-gray-200 text-center sm:text-right text-1xl sm:text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0 pb-10">
           <Link href={"/gallery"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:bottom-0 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Gallery
             </span>
           </Link>
           <Link href={"/testimonials"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:bottom-0 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Testimonials
             </span>
           </Link>
           <Link href={"/locations"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:bottom-0 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Locations
             </span>
           </Link>
@@ -58,14 +58,20 @@ const Footer = () => {
             <Link
               href="https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama"
               target="_blank"
+              className="w-fit relative"
             >
-              <FacebookIcon size={25} />
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                <FacebookIcon size={25} />
+              </span>
             </Link>
             <Link
               href="https://www.instagram.com/eileenfitzgerald_drama/"
               target="_blank"
+              className="w-fit relative"
             >
-              <InstagramIcon size={25} />
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                <InstagramIcon size={25} />
+              </span>
             </Link>
           </div>
         </div>

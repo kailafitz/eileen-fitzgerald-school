@@ -43,7 +43,7 @@ const ContactDetails = () => {
           >
             {contactMethod.icon}
             <span className="relative">
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:bottom-0 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-violet-500 after:scale-x-0 after:transition-all hover:after:scale-x-100">
                 {contactMethod.label}
               </span>
             </span>
