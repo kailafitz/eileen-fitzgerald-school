@@ -103,9 +103,10 @@ const Benefits = () => {
         <Benefit label={currentBenefit} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-3">
-          {benefits.map((benefit) => {
+          {benefits.map((benefit, i) => {
             return (
               <button
+                key={`${benefit.label}_${i}`}
                 className={`p-5 transition-all border-2 hover:bg-violet-800 hover:border-violet-800 ${
                   currentBenefit === benefit.label
                     ? "bg-black border-primary"
