@@ -69,7 +69,7 @@ const Classes = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col w-4/5">
+      <div className="flex flex-col w-full md:w-4/5">
         <WhatIsSpeechAndDrama />
         <Benefits />
         <ClassSchedules />

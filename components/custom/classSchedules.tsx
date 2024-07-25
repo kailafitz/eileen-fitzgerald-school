@@ -42,7 +42,7 @@ const ScheduleTables = () => {
   return (
     <>
       {/* className="mb-10 flex flex-col md:flex-row md:justify-start space-y-10 md:space-y-0 md:space-x-10" */}
-      <div className="mb-10 flex flex-col space-y-10">
+      <div className="mb-10 flex flex-col justify-between items-start space-y-10">
         {schedules.map((school, i) => {
           return (
             <div
@@ -51,7 +51,41 @@ const ScheduleTables = () => {
               // className="flex flex-col w-full md:w-1/3"
             >
               <h4 className="text-gray-200 text-left mb-3">{school.school}</h4>
-              <Table>
+              {/* Wrapper */}
+              <div className="flex flex-col space-x-2 space-y-2 lg:flex-row lg:space-y-0">
+                {/* Headings */}
+                <div
+                  className={`flex flex-row lg:flex-col lg:space-y-2 lg:w-1/${
+                    school.classes.length + 1
+                  }`}
+                >
+                  <div className="bg-black border-primary border-2 p-2 w-1/2 lg:w-full">
+                    Age Group
+                  </div>
+                  <div className="bg-black border-primary border-2 p-2 w-1/2 lg:w-full">
+                    Day & Time
+                  </div>
+                </div>
+                {/* Schedule */}
+                {school.classes.map((details, i) => {
+                  return (
+                    <div
+                      key={`${school.school}_${details.time}_${details.day}_${i}`}
+                      className={`flex flex-row lg:flex-col lg:space-y-2 lg:w-1/${
+                        school.classes.length + 1
+                      }`}
+                    >
+                      <div className="bg-primary border-primary border-2 p-2 w-1/2 lg:w-full">
+                        {details.ageGroup}
+                      </div>
+                      <div className="flex flex-col bg-primary p-2 w-1/2 border-primary border-2 sm:flex-row sm:space-x-2 lg:w-full">
+                        <span>{details.day}</span> <span>{details.time}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              {/* <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead>Age Group</TableHead>
@@ -72,7 +106,7 @@ const ScheduleTables = () => {
                     );
                   })}
                 </TableBody>
-              </Table>
+              </Table> */}
             </div>
           );
         })}
