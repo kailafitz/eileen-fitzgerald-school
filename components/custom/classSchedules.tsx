@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import Container from "./container";
 
 const schedules = [
@@ -41,28 +33,19 @@ const schedules = [
 const ScheduleTables = () => {
   return (
     <>
-      {/* className="mb-10 flex flex-col md:flex-row md:justify-start space-y-10 md:space-y-0 md:space-x-10" */}
       <div className="mb-10 flex flex-col justify-between items-start space-y-10">
         {schedules.map((school, i) => {
           return (
-            <div
-              key={`${school.school}_${i}`}
-              className="flex flex-col w-full"
-              // className="flex flex-col w-full md:w-1/3"
-            >
+            <div key={`${school.school}_${i}`} className="flex flex-col w-full">
               <h4 className="text-gray-200 text-left mb-3">{school.school}</h4>
               {/* Wrapper */}
-              <div className="flex flex-col space-x-2 space-y-2 lg:flex-row lg:space-y-0">
+              <div className="space-y-2 lg:space-y-0 lg:grid lg:gap-x-2 lg:grid-cols-6">
                 {/* Headings */}
-                <div
-                  className={`flex flex-row lg:flex-col lg:space-y-2 lg:w-1/${
-                    school.classes.length + 1
-                  }`}
-                >
-                  <div className="bg-black border-primary border-2 p-2 w-1/2 lg:w-full">
+                <div className="flex flex-row space-x-2 lg:space-x-0 lg:grid lg:grid-rows-2 lg:gap-y-2">
+                  <div className="border-primary border-2 p-2 w-full">
                     Age Group
                   </div>
-                  <div className="bg-black border-primary border-2 p-2 w-1/2 lg:w-full">
+                  <div className="border-primary border-2 p-2 w-full">
                     Day & Time
                   </div>
                 </div>
@@ -71,42 +54,18 @@ const ScheduleTables = () => {
                   return (
                     <div
                       key={`${school.school}_${details.time}_${details.day}_${i}`}
-                      className={`flex flex-row lg:flex-col lg:space-y-2 lg:w-1/${
-                        school.classes.length + 1
-                      }`}
+                      className="flex flex-row space-x-2 lg:space-x-0 lg:grid lg:grid-rows-2 lg:gap-y-2"
                     >
-                      <div className="bg-primary border-primary border-2 p-2 w-1/2 lg:w-full">
+                      <div className="bg-primary border-primary border-2 p-2 w-full">
                         {details.ageGroup}
                       </div>
-                      <div className="flex flex-col bg-primary p-2 w-1/2 border-primary border-2 sm:flex-row sm:space-x-2 lg:w-full">
+                      <div className="bg-primary border-primary border-2 p-2 w-full">
                         <span>{details.day}</span> <span>{details.time}</span>
                       </div>
                     </div>
                   );
                 })}
               </div>
-              {/* <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Age Group</TableHead>
-                    <TableHead>Day & Time</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {school.classes.map((details, i) => {
-                    return (
-                      <TableRow
-                        key={`${school.school}_${details.time}_${details.day}_${i}`}
-                      >
-                        <TableCell>{details.ageGroup}</TableCell>
-                        <TableCell className="flex flex-col sm:flex-row space-x-0 sm:space-x-2">
-                          <span>{details.day}</span> <span>{details.time}</span>
-                        </TableCell>
-                      </TableRow>
-                    );
-                  })}
-                </TableBody>
-              </Table> */}
             </div>
           );
         })}
