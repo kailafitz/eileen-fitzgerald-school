@@ -32,18 +32,13 @@ const PublicSpeaking = () => {
               €160
             </div>
             <ul className="border-primary border-2 p-5">
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+              <li className="list-disc ml-4 marker:text-primary">
                 Small groups of four
               </li>
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+              <li className="list-disc ml-4 marker:text-primary">
                 45 minutes class
               </li>
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>4
-                weeks
-              </li>
+              <li className="list-disc ml-4 marker:text-primary">4 weeks</li>
             </ul>
           </div>
           <div>
@@ -51,18 +46,11 @@ const PublicSpeaking = () => {
               €320
             </div>
             <ul className="border-primary border-2 p-5">
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
-                One-to-one
-              </li>
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+              <li className="list-disc ml-4 marker:text-primary">One-to-one</li>
+              <li className="list-disc ml-4 marker:text-primary">
                 30 minutes class
               </li>
-              <li className="list-none flex flex-row items-center">
-                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>4
-                weeks
-              </li>
+              <li className="list-disc ml-4 marker:text-primary">4 weeks</li>
             </ul>
           </div>
         </div>
@@ -74,9 +62,8 @@ const PublicSpeaking = () => {
           return (
             <li
               key={`${activity}_${i}`}
-              className="list-none flex flex-row items-center ml-8"
+              className="list-disc ml-8 marker:text-primary"
             >
-              <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
               {activity}
             </li>
           );

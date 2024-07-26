@@ -125,17 +125,15 @@ const Activities = () => {
                 {group.activities.map((activity, i) => {
                   return (
                     <React.Fragment key={`${activity.main}_${i}`}>
-                      <li className="list-none flex flex-row items-center">
-                        <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                      <li className="list-disc marker:text-primary">
                         {activity.main}
                       </li>
                       {activity.breakdown?.map((listItem, i) => {
                         return (
                           <li
                             key={`${listItem}_${i}`}
-                            className="list-none flex flex-row items-center ml-8"
+                            className="list-disc ml-8 marker:text-primary"
                           >
-                            <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
                             {listItem}
                           </li>
                         );
