@@ -1,6 +1,6 @@
 import React from "react";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import Container from "./container";
+import Link from "next/link";
 
 const publicSpeaking = [
   "Engaging an audience",
@@ -24,31 +24,76 @@ const PublicSpeaking = () => {
         to improve your communication skills and deliver a more effective
         message to your audience?
       </p>
-      <p>
-        This is a four week course available for small groups or one to one
-        sessions:
-      </p>
+      <div className="w-full md:w-fit mx-auto">
+        <p className="mb-2">We have 2 options available for this course:</p>
+        <div className="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row">
+          <div>
+            <div className="bg-primary text-center p-1 flex flex-col justify-center">
+              €160
+            </div>
+            <ul className="border-primary border-2 p-5">
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                Small groups of four
+              </li>
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                45 minutes class
+              </li>
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>4
+                weeks
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="bg-primary text-center p-1 flex flex-col justify-center">
+              €320
+            </div>
+            <ul className="border-primary border-2 p-5">
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                One-to-one
+              </li>
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                30 minutes class
+              </li>
+              <li className="list-none flex flex-row items-center">
+                <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>4
+                weeks
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-sm mb-5">**Room or Zoom available**</p>
+      </div>
+      <p className="mb-2">Course Content</p>
       <ul className="mb-5">
-        <li className="ml-5">
-          Small groups of four in a 45 minutes class over four weeks - €160
-        </li>
-        <li className="ml-5">
-          One-to-one 30 minutes class over four weeks - €320
-        </li>
+        {publicSpeaking.map((activity, i) => {
+          return (
+            <li
+              key={`${activity}_${i}`}
+              className="list-none flex flex-row items-center ml-8"
+            >
+              <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+              {activity}
+            </li>
+          );
+        })}
       </ul>
-      <p className="mb-5">**Room or Zoom available**</p>
-      <h4 className="text-left mb-3">Course Content</h4>
-      <Table>
-        <TableBody>
-          {publicSpeaking.map((activity, i) => {
-            return (
-              <TableRow key={`${activity}_${i}`}>
-                <TableCell>{activity}</TableCell>
-              </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
+      <p>
+        To make an arrangement or to find out more, please contact Eileen at{" "}
+        <Link
+          href="mailto:eileen.fitzgerald.school@gmail.com"
+          className="relative"
+        >
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            eileen.fitzgerald.school@gmail.com
+          </span>
+        </Link>
+        .
+      </p>
     </Container>
   );
 };

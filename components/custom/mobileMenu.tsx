@@ -42,7 +42,7 @@ const MobileMenu = () => {
               </Link>
             </SheetClose>
           ))}
-          <hr className="h-1 w-full bg-black my-5" />
+          <hr className="h-1 w-full bg-zinc-900 my-5" />
           <Link
             href="/about/#testimonials"
             className="text-2xl hover:underline"
@@ -55,7 +55,7 @@ const MobileMenu = () => {
           <Link href="/contact/locations" className="text-2xl hover:underline">
             Locations
           </Link>
-          <hr className="h-1 w-full bg-black my-5" />
+          <hr className="h-1 w-full bg-zinc-900 my-5" />
           <div className="flex flex-row space-x-5">
             <FacebookIcon size={40} />
             <InstagramIcon size={40} />

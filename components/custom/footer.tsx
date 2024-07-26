@@ -30,7 +30,7 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5 bg-black z-30">
+    <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5 bg-zinc-900 z-30">
       <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
         <div className="w-full sm:w-fit space-y-10 sm:space-y-5">
           <p className="text-gray-200 text-center md:text-left text-1xl sm:text-base">

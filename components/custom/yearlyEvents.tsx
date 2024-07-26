@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import Container from "./container";
 
 const yearlyEvents = [
@@ -14,7 +6,7 @@ const yearlyEvents = [
     months: "October",
     event: "Cratloe Speechfest",
     description:
-      "A one-day festival for primary school children where they can partake in events that will enhance their language and creative skills. 'A speech festival for primary school to encourage clear, expressive speaking, develop creativity and enhance communication skills'",
+      "A one-day festival for primary school children where they can partake in events that will enhance their language and creative skills. 'A speech festival for primary school to encourage clear, expressive speaking, develop creativity and enhance communication skills'.",
   },
   {
     months: "January & February",
@@ -42,31 +34,26 @@ const YearlyEvents = () => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Yearly Events
       </h1>
-      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+      <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
         There are multiple events throughout the year that our students can get
         involved in through our school
       </p>
       <div className="mb-10 flex flex-col space-y-10">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-36">Month(s)</TableHead>
-              <TableHead className="w-36">Event</TableHead>
-              <TableHead>Description</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {yearlyEvents.map((event, i) => {
-              return (
-                <TableRow key={`${event.event}_${i}`}>
-                  <TableCell>{event.months}</TableCell>
-                  <TableCell>{event.event}</TableCell>
-                  <TableCell>{event.description}</TableCell>
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
+        {yearlyEvents.map((event, i) => {
+          return (
+            <div key={`${event.event}_${i}`} className="flex flex-col">
+              <div className="flex flex-col space-y-2 mb-3 sm:flex-row sm:space-x-2 sm:space-y-0">
+                <div className="bg-primary border-primary border-2 p-2">
+                  {event.event}
+                </div>
+                <div className="border-primary border-2 p-2">
+                  {event.months}
+                </div>
+              </div>
+              <div>{event.description}</div>
+            </div>
+          );
+        })}
       </div>
     </Container>
   );

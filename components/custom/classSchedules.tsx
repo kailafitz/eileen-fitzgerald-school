@@ -80,7 +80,7 @@ const ClassSchedules = () => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Our Speech and Drama Classes
       </h1>
-      <p className="text-center text-base mb-5 md:w-1/2 mx-auto">
+      <p className="text-center text-base mb-5 lg:w-1/2 mx-auto">
         Our class schedules are based on our locations and age groups
       </p>
       <p className="mb-10">

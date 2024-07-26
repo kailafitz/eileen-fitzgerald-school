@@ -74,7 +74,7 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: theme("colors.zinc.900");
 }
 
 .custom-vh-xs {

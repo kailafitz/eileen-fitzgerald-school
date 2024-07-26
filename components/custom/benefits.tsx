@@ -96,7 +96,7 @@ const Benefits = () => {
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
         Benefits of Speech and Drama
       </h1>
-      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
+      <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
         What are the benefits of speech and drama for my child?
       </p>
       <div className="flex flex-col justify-between">
@@ -109,7 +109,7 @@ const Benefits = () => {
                 key={`${benefit.label}_${i}`}
                 className={`p-5 transition-all border-2 hover:bg-violet-800 hover:border-violet-800 ${
                   currentBenefit === benefit.label
-                    ? "bg-black border-primary"
+                    ? "bg-zinc-900 border-primary"
                     : "bg-primary border-primary"
                 }`}
                 onClick={() => {
