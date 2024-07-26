@@ -1,45 +1,99 @@
 import React from "react";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import Container from "./container";
 
 const activities = [
   {
     ageGroup: "Junior & Senior Infant",
     activities: [
-      "Fostering a love and enjoyment in the spoken word",
-      "Developing the ability to express themselves clearly while improving memorisation and recall",
-      "Building self-confidence through theatre games",
-      "Developing skills in voice and diction",
-      "Storytelling through acting and puppetry",
-      "Learning to work as part of a group",
-      "Show & Tell, an introduction to speaking before a group",
+      {
+        main: "Fostering a love and enjoyment in the spoken word",
+      },
+      {
+        main: "Developing the ability to express themselves clearly while improving memorisation and recall",
+      },
+      {
+        main: "Building self-confidence through theatre games",
+      },
+      {
+        main: "Developing skills in voice and diction",
+      },
+      {
+        main: "Storytelling through acting and puppetry",
+      },
+      {
+        main: "Learning to work as part of a group",
+      },
+      {
+        main: "Show & Tell, an introduction to speaking before a group",
+      },
     ],
   },
   {
     ageGroup: "Junior",
     activities: [
-      "Poetry and the spoken word",
-      "Voice work & speech exercises concentrating on clarity, diction, audibility and expression",
-      "Drama and devising a character",
-      "Monologue and duologue work",
-      "Mime and movement",
-      "Public speaking and learning how to present to an audience",
-      "Characterisation and improvisation",
-      "Sight-reading",
+      {
+        main: "Poetry and the spoken word",
+      },
+      {
+        main: "Voice work & speech exercises concentrating on clarity, diction, audibility and expression",
+      },
+      {
+        main: "Drama and devising a character",
+      },
+      {
+        main: "Monologue and duologue work",
+      },
+      {
+        main: "Mime and movement",
+      },
+      {
+        main: "Public speaking and learning how to present to an audience",
+      },
+      {
+        main: "Characterisation and improvisation",
+      },
+      {
+        main: "Sight-reading",
+      },
     ],
   },
   {
     ageGroup: "Senior",
     activities: [
-      "Acting; to perform with fluency, focus and naturalness, using the acting space appropriately, use of gesture, developing a character",
-      "Further development of vocal work and modulation",
-      "Performance/audition technique",
-      "Mime and movement",
-      "Sight-reading and prose reading",
-      "Shakespeare, an introduction to his plays and sonnets",
-      "Poetry appreciation and verse speaking",
-      "Improvisation and scene building",
-      "Public speaking and presentations",
+      {
+        main: "Acting:",
+        breakdown: [
+          "to perform with fluency",
+          "focus and naturalness",
+          "using the acting space appropriately",
+          "use of gesture",
+          "developing a character",
+        ],
+      },
+      {
+        main: "Further development of vocal work and modulation",
+      },
+      {
+        main: "Performance/audition technique",
+      },
+      {
+        main: "Mime and movement",
+      },
+      {
+        main: "Sight-reading and prose reading",
+      },
+      {
+        main: "Shakespeare, an introduction to his plays and sonnets",
+      },
+      {
+        main: "Poetry appreciation and verse speaking",
+      },
+      {
+        main: "Improvisation and scene building",
+      },
+      {
+        main: "Public speaking and presentations",
+      },
     ],
   },
 ];
@@ -57,18 +111,39 @@ const Activities = () => {
         {activities.map((group, i) => {
           return (
             <div key={`${group.ageGroup}_${i}`} className="w-full">
-              <h4 className="text-left mb-3">{group.ageGroup} Activities</h4>
-              <Table>
-                <TableBody>
-                  {group.activities.map((activity, i) => {
-                    return (
-                      <TableRow key={`${activity}_${i}`}>
-                        <TableCell>{activity}</TableCell>
-                      </TableRow>
-                    );
-                  })}
-                </TableBody>
-              </Table>
+              <h4 className="text-xl text-left mb-3">
+                {group.ageGroup} Activities
+              </h4>
+              {group.ageGroup === "Senior" && (
+                <p className="mb-3">
+                  Theses classes are designed to develop you physically, vocally
+                  and imaginatively whilst encouraging an independent and
+                  in-depth approach to the work.
+                </p>
+              )}
+              <ul>
+                {group.activities.map((activity, i) => {
+                  return (
+                    <React.Fragment key={`${activity.main}_${i}`}>
+                      <li className="list-none flex flex-row items-center">
+                        <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                        {activity.main}
+                      </li>
+                      {activity.breakdown?.map((listItem, i) => {
+                        return (
+                          <li
+                            key={`${listItem}_${i}`}
+                            className="list-none flex flex-row items-center ml-8"
+                          >
+                            <div className="h-2 w-2 bg-primary mr-4 rounded-full"></div>
+                            {listItem}
+                          </li>
+                        );
+                      })}
+                    </React.Fragment>
+                  );
+                })}
+              </ul>
             </div>
           );
         })}
