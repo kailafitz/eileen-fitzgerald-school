@@ -2,11 +2,12 @@ import React from "react";
 import Benefits from "@/components/custom/benefits";
 import ClassSchedules from "@/components/custom/classSchedules";
 import WhatIsSpeechAndDrama from "@/components/custom/whatIsSpeechAndDrama";
-import Link from "next/link";
 import Activities from "@/components/custom/activities";
 import YearlyEvents from "@/components/custom/yearlyEvents";
 import PublicSpeaking from "@/components/custom/publicSpeaking";
 import { Metadata } from "next";
+import MobileMenuClasses from "@/components/custom/mobileMenuClasses";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
@@ -18,55 +19,61 @@ export const metadata: Metadata = {
 
 const Classes = () => {
   return (
-    <div className="flex flex-row">
-      <div className="w-1/5 p-5 bg-white hidden md:block">
-        <div className="sticky top-5">
-          <p className="text-2xl mb-5">Contents</p>
-          <Link
-            href="/classes/#what-is-speech-and-drama"
-            className="relative w-fit mb-2 block"
-          >
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              What is Speech and Drama?
-            </span>
-          </Link>
-          <Link href="/classes/#benefits" className="relative w-fit mb-2 block">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Benefits of Speech and Drama
-            </span>
-          </Link>
-          <Link
-            href="/classes/#class-schedules"
-            className="relative w-fit mb-2 block"
-          >
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Class Schedules
-            </span>
-          </Link>
-          <Link
-            href="/classes/#activities"
-            className="relative w-fit mb-2 block"
-          >
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Class Activities
-            </span>
-          </Link>
-          <Link
-            href="/classes/#yearly-events"
-            className="relative w-fit mb-2 block"
-          >
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Yearly Events
-            </span>
-          </Link>
-          <Link
-            href="/classes/#public-speaking"
-            className="relative w-fit mb-2 block"
-          >
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Public Speaking
-            </span>
-          </Link>
+    <div className="flex flex-col md:flex-row">
+      <div className="sticky top-0 bg-white p-5 block md:block md:w-1/5">
+        <MobileMenuClasses />
+        <div className="md:sticky md:top-5">
+          <div className="hidden md:block">
+            <p className="text-xl md:text-2xl mb-5">Contents</p>
+            <Link
+              href="/classes/#what-is-speech-and-drama"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                What is Speech and Drama?
+              </span>
+            </Link>
+            <Link
+              href="/classes/#benefits"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                Benefits of Speech and Drama
+              </span>
+            </Link>
+            <Link
+              href="/classes/#class-schedules"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                Class Schedules
+              </span>
+            </Link>
+            <Link
+              href="/classes/#activities"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                Class Activities
+              </span>
+            </Link>
+            <Link
+              href="/classes/#yearly-events"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                Yearly Events
+              </span>
+            </Link>
+            <Link
+              href="/classes/#public-speaking"
+              className="relative w-fit mb-2 block"
+            >
+              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                Public Speaking
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="flex flex-col w-full md:w-4/5">
