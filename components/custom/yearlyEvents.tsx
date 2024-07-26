@@ -30,7 +30,7 @@ const yearlyEvents = [
 
 const YearlyEvents = () => {
   return (
-    <Container className="text-gray-200" id="yearly-events">
+    <Container className="text-gray-200 pt-10" id="yearly-events">
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Yearly Events
       </h1>
@@ -38,7 +38,7 @@ const YearlyEvents = () => {
         There are multiple events throughout the year that our students can get
         involved in through our school
       </p>
-      <div className="mb-10 flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10">
         {yearlyEvents.map((event, i) => {
           return (
             <div key={`${event.event}_${i}`} className="flex flex-col">

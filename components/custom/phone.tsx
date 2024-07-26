@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  size: number;
+  size?: number;
   className?: string;
 };
 

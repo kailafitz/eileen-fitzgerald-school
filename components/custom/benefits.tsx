@@ -7,42 +7,43 @@ import EmpathyIcon from "./empathy";
 import InterpersonalSkillIcon from "./interpersonalSkills";
 import BodyLanguageIcon from "./bodyLanguage";
 import Container from "./container";
+import { useRouter } from "next/navigation";
 
-let size = 100;
+let classes = "w-16 md:w-24";
 
 const benefits = [
   {
-    icon: <ConfidanceIcon size={size} />,
+    icon: <ConfidanceIcon className={classes} />,
     label: "Increases Self-Confidence",
     description:
       "We create a safe environment for students to express themselves without feeling judged, building their confidence and developing new skills.",
   },
   {
-    icon: <CreativityIcon size={size} />,
+    icon: <CreativityIcon className={classes} />,
     label: "Inspires and Unlocks Creativity and Imagination",
     description:
       "By encouraging the student to think outside the box, we analyse how to look at situations from all points of view.",
   },
   {
-    icon: <InterpersonalSkillIcon size={size} />,
+    icon: <InterpersonalSkillIcon className={classes} />,
     label: "Develops Interpersonal Skills",
     description:
       "Both verbal & non-verbal communication, teamwork, conflict resolution and active listening is focused on.",
   },
   {
-    icon: <BodyLanguageIcon size={size} />,
+    icon: <BodyLanguageIcon className={classes} />,
     label: "Use of Positive Body Language",
     description:
       "We create a safe environment for students to express themselves without feeling judged, building their confidence and developing new skills.",
   },
   {
-    icon: <SpeechIcon size={size} />,
+    icon: <SpeechIcon className={classes} />,
     label: "Clear, Expressive, Articulate Speech",
     description:
       "We use a variety of speech exercises and theatre games to work on the voice.",
   },
   {
-    icon: <EmpathyIcon size={size} />,
+    icon: <EmpathyIcon className={classes} />,
     label: "Practise Empathy and Respect",
     description:
       "We encourage the process of discussion, brainstorming, making choices and negotiating to stimulate the student to develop a greater empathy with people they meet in their daily lives.",
@@ -62,11 +63,11 @@ const Benefit = (props: Props) => {
       className="flex flex-col space-y-8 mb-10 md:mb-5 transition-all"
       id="benefitContainer"
     >
-      <div className="mx-auto bg-primary p-10 rounded-full">
+      <div className="mx-auto bg-primary p-6 md:p-10 rounded-full">
         {benefit?.icon}
       </div>
       <div>
-        <h6 className="min-h-11 md:min-h-0 text-2xl text-center mx-auto mb-5">
+        <h6 className="min-h-11 mb-3 md:min-h-0 text-xl md:text-2xl text-center mx-auto md:mb-5">
           {benefit?.label}
         </h6>
         <p className="sm:min-h-36 md:min-h-24 w-full sm:w-3/4 xl:w-7/12 mx-auto text-center">
@@ -81,6 +82,7 @@ const Benefits = () => {
   const [currentBenefit, setCurrentBenefit] = useState(
     "Increases Self-Confidence"
   );
+  const router = useRouter();
 
   const resetAnimation = () => {
     const benefitContainer = document.getElementById("benefitContainer");
@@ -92,8 +94,8 @@ const Benefits = () => {
   };
 
   return (
-    <Container className="text-gray-200 py-10">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
+    <Container className="text-gray-200 pt-10" id="benefits">
+      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Benefits of Speech and Drama
       </h1>
       <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
@@ -115,6 +117,7 @@ const Benefits = () => {
                 onClick={() => {
                   setCurrentBenefit(benefit.label);
                   resetAnimation();
+                  router.push("/classes/#benefits");
                 }}
               >
                 {benefit.label}

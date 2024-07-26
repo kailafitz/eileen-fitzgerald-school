@@ -13,7 +13,7 @@ const publicSpeaking = [
 
 const PublicSpeaking = () => {
   return (
-    <Container className="mb-10 text-gray-200" id="public-speaking">
+    <Container className="py-10 text-gray-200" id="public-speaking">
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Public Speaking
       </h1>

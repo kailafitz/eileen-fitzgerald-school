@@ -33,7 +33,7 @@ const schedules = [
 const ScheduleTables = () => {
   return (
     <>
-      <div className="mb-10 flex flex-col justify-between items-start space-y-10">
+      <div className="flex flex-col justify-between items-start pt-10 space-y-10">
         {schedules.map((school, i) => {
           return (
             <div key={`${school.school}_${i}`} className="flex flex-col w-full">
@@ -42,10 +42,10 @@ const ScheduleTables = () => {
               <div className="space-y-2 lg:space-y-0 lg:grid lg:gap-x-2 lg:grid-cols-6">
                 {/* Headings */}
                 <div className="flex flex-row space-x-2 lg:space-x-0 lg:grid lg:grid-rows-2 lg:gap-y-2">
-                  <div className="border-primary border-2 p-2 w-full">
+                  <div className="border-primary border-2 p-2 w-full flex flex-col justify-center">
                     Age Group
                   </div>
-                  <div className="border-primary border-2 p-2 w-full">
+                  <div className="border-primary border-2 p-2 w-full flex flex-col justify-center">
                     Day & Time
                   </div>
                 </div>
@@ -56,10 +56,10 @@ const ScheduleTables = () => {
                       key={`${school.school}_${details.time}_${details.day}_${i}`}
                       className="flex flex-row space-x-2 lg:space-x-0 lg:grid lg:grid-rows-2 lg:gap-y-2"
                     >
-                      <div className="bg-primary border-primary border-2 p-2 w-full">
+                      <div className="bg-primary border-primary border-2 p-2 w-full flex flex-col justify-center">
                         {details.ageGroup}
                       </div>
-                      <div className="bg-primary border-primary border-2 p-2 w-full">
+                      <div className="bg-primary border-primary border-2 p-2 w-full flex flex-col justify-center">
                         <span>{details.day}</span> <span>{details.time}</span>
                       </div>
                     </div>

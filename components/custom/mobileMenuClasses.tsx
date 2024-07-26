@@ -30,6 +30,7 @@ const MobileMenuClasses = () => {
         <SelectItem value="what-is-speech-and-drama">
           What is Speech and Drama?
         </SelectItem>
+        <SelectItem value="benefits">Benefits of Speech and Drama</SelectItem>
         <SelectItem value="class-schedules">Class Schedules</SelectItem>
         <SelectItem value="activities">Activities</SelectItem>
         <SelectItem value="yearly-events">Yearly Events</SelectItem>
