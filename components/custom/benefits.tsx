@@ -86,10 +86,10 @@ const Benefits = () => {
 
   const resetAnimation = () => {
     const benefitContainer = document.getElementById("benefitContainer");
-    benefitContainer?.classList.add("fade-in-animation");
+    benefitContainer?.classList.add("animate-fade-in");
 
     setTimeout(() => {
-      benefitContainer?.classList.remove("fade-in-animation");
+      benefitContainer?.classList.remove("animate-fade-in");
     }, 600);
   };
 

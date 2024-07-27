@@ -11,20 +11,20 @@ type Props = {
 const ServiceCard = (props: Props) => {
   return (
     <div
-      style={{
-        background: `url('/service-${props.num}.jpg') no-repeat center / cover`,
-      }}
-      className={`w-full sm:w-1/3 h-72 group relative hide-down transition-delay-${
+      className={`group w-full sm:w-1/3 h-24 relative hide-down transition-delay-${
         props.num - 1
       }`}
     >
-      <Link
-        href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
-        className="group text-center text-gray-200 w-full h-full relative z-20 flex flex-col justify-center hover:backdrop-blur-sm"
-      >
-        {props.label}
-      </Link>
-      <div className="bg-primary opacity-65 absolute bottom-0 left-0 h-0 w-full transition-all group-hover:h-full z-10 saturate-100"></div>
+      <div className="bg-primary w-full h-full relative flex flex-col justify-center hover:backdrop-blur-sm">
+        <Link
+          href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
+          className="group text-center text-gray-200 z-20"
+        >
+          {props.label}
+        </Link>
+
+        {/* <div className="bg-primary opacity-65 absolute bottom-0 left-0 h-0 w-full duration-700 group-hover:h-full z-10 saturate-100"></div> */}
+      </div>
     </div>
   );
 };
@@ -36,7 +36,7 @@ const Services = () => {
     <>
       <Script src="/animations.js" type="text/javascript" />
       <Container className="flex flex-col space-y-10 py-10 services-container justify-center">
-        <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between">
+        <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between items-center">
           {labels.map((label, i) => (
             <ServiceCard key={i} num={i + 1} label={label} />
           ))}

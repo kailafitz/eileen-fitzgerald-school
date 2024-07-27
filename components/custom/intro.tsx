@@ -11,7 +11,7 @@ const Intro = () => {
         className="min-h-screen py-10 flex flex-col justify-center text-gray-200"
         id="intro"
       >
-        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-10 md:justify-between hide-down">
+        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-10 md:justify-between hide-down transition-delay-0">
           <div className="flex flex-col justify-center w-full md:w-2/3">
             <h1 className="text-xl md:text-3xl mb-3">
               The school was established in Co. Clare in 1992 to foster a love
@@ -39,7 +39,7 @@ const Intro = () => {
             />
             <img
               src="actor-2.png"
-              className="absolute bottom-0 w-3/4 h-auto opacity-100 -z-10 right-36 saturate-50 object-contain hide-down"
+              className="absolute bottom-0 w-3/4 h-auto opacity-100 -z-10 right-36 saturate-50 object-contain hide-down transition-delay-0"
             />
           </div>
         </div>

@@ -98,65 +98,34 @@ body {
   }
 }
 
-.fade-in-animation {
-  animation: fade-in .5s ease-in;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.bouncing-arrow {
-  animation: 1s ease infinite alternate bouncing;
-}
-
-@keyframes bouncing {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(10px);
-  }
-}
-
 .dark-gradient {
   background: linear-gradient(176deg, rgba(24, 24, 27, 0) 0%, rgba(24, 24, 27, 1) 99%), linear-gradient(92deg, rgba(24, 24, 27, 0) 0%, rgba(24, 24, 27, 1) 99%);
-  ;
 }
 
 .hide-down {
   opacity: 0;
   filter: blur(10px);
   transform: translateY(-6rem);
-  transition: all 2s;
 }
 
-.show-down {
+.fade-down {
   opacity: 1;
   filter: blur(0px);
   transform: translateY(0);
-  transition: all 2s;
 }
 
 .transition-delay-0 {
-  transition: all 2s;
+  transition: opacity 2s, blur 2s, transform 2s;
 }
 
 .transition-delay-1 {
-  transition: all 2s .2s;
+  transition: opacity 2s .4s, blur 2s .4s, transform 2s .4s;
 }
 
 .transition-delay-2 {
-  transition: all 2s .4s;
+  transition: opacity 2s .6s, blur 2s .6s, transform 2s .6s;
 }
 
 .transition-delay-3 {
-  transition: all 2s .6s;
+  transition: opacity 2s .8s, blur 2s .8s, transform 2s .8s;
 }

@@ -28,10 +28,10 @@ const Members = () => {
 
   const resetAnimation = () => {
     const benefitContainer = document.getElementById("bioContainer");
-    benefitContainer?.classList.add("fade-in-animation");
+    benefitContainer?.classList.add("animate-fade-in");
 
     setTimeout(() => {
-      benefitContainer?.classList.remove("fade-in-animation");
+      benefitContainer?.classList.remove("animate-fade-in");
     }, 600);
   };
 

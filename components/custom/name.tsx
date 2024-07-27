@@ -17,7 +17,7 @@ const Name = () => {
       </Container>
       <Link href="#intro" className="w-fit mx-auto">
         <ChevronDown
-          className="text-white block mx-auto bouncing-arrow"
+          className="text-white block mx-auto animate-bouncing"
           size="40"
         />
       </Link>
