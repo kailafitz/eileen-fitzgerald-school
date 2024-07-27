@@ -1,10 +1,12 @@
-import IntroInfo from "@/components/custom/introInfo";
+import Intro from "@/components/custom/intro";
+import Name from "@/components/custom/name";
 import Services from "@/components/custom/services";
 
 export default function Home() {
   return (
     <>
-      <IntroInfo />
+      <Name />
+      <Intro />
       <Services />
     </>
   );

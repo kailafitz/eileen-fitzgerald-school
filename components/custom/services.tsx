@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import Script from "next/script";
 
 type Props = {
   label: string;
@@ -13,7 +14,9 @@ const ServiceCard = (props: Props) => {
       style={{
         background: `url('/service-${props.num}.jpg') no-repeat center / cover`,
       }}
-      className="w-full sm:w-1/3 h-72 group relative"
+      className={`w-full sm:w-1/3 h-72 group relative hide-down transition-delay-${
+        props.num - 1
+      }`}
     >
       <Link
         href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
@@ -30,11 +33,16 @@ const labels = ["Classes", "About", "Contact"];
 
 const Services = () => {
   return (
-    <Container className="flex flex-col space-y-10 sm:space-y-0 sm:space-x-6 sm:flex-row justify-between my-20">
-      {labels.map((label, i) => (
-        <ServiceCard key={i} num={i + 1} label={label} />
-      ))}
-    </Container>
+    <>
+      <Script src="/animations.js" type="text/javascript" />
+      <Container className="flex flex-col space-y-10 py-10 services-container justify-center">
+        <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between">
+          {labels.map((label, i) => (
+            <ServiceCard key={i} num={i + 1} label={label} />
+          ))}
+        </div>
+      </Container>
+    </>
   );
 };
 
