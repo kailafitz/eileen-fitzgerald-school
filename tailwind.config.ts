@@ -71,11 +71,22 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in": {
-          from: {
+        "fade": {
+          "0%": {
             opacity: "0"
           },
-          to: {
+          "100%": {
+            opacity: "1"
+          }
+        },
+        "appear": {
+          "0%": {
+            opacity: "0"
+          },
+          "99%": {
+            opacity: "0"
+          },
+          "100%": {
             opacity: "1"
           }
         },
@@ -83,12 +94,33 @@ const config = {
           from: { transform: "translateY(0px)" },
           to: { transform: "translateY(10px)" }
         },
+        "slide-out-container": {
+          "0%": { height: "100vh" },
+          "90%": { height: "100vh" },
+          "100%": { height: "0" }
+        },
+        "circle": {
+          "0%": { opacity: "1", top: "10%", left: "20%", width: "200px", height: "200px" },
+          "10%": { opacity: "1", top: "60%", left: "80%", width: "450px", height: "450px" },
+          "20%": { opacity: "1", top: "80%", left: "15%", width: "290px", height: "290px" },
+          "30%": { opacity: "1", top: "25%", left: "90%", width: "250px", height: "250px" },
+          "40%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "60%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "70%": { opacity: "1", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" },
+          "95%": { opacity: "1", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" },
+          "100%": { opacity: "0", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in .5s ease-in",
+        "fade-in": "fade .5s ease-in",
+        "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
+        "slide-out-container": "slide-out-container 6s linear forwards",
+        "logo": "appear 3.5s linear, fade 1s ease reverse forwards 5s",
+        "circle": "circle 5s ease-in-out forwards",
+        "name": "appear 3.5s linear, fade 1s ease reverse forwards 5s"
       },
     },
   },

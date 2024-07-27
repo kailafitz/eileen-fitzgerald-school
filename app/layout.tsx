@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/custom/navigationBar";
 import Footer from "@/components/custom/footer";
+import OpeningAnimation from "@/components/custom/openingAnimation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen flex scroll-smooth">
       <body
-        className={`${inter.className} flex-1 flex flex-col justify-between`}
+        className={`${inter.className} flex-1 flex flex-col justify-between relative`}
       >
+        <OpeningAnimation />
         <NavigationBar />
         {children}
         <Footer />
