@@ -10,32 +10,35 @@ type Props = {
 
 const ServiceCard = (props: Props) => {
   return (
-    <div
-      className={`group w-full sm:w-1/3 h-24 relative hide-down transition-delay-${
+    <Link
+      href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
+      className={`group flex flex-col justify-center w-full sm:w-1/3 h-24 bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 hide-down text-center text-gray-200 z-20 transition-delay-${
         props.num - 1
       }`}
     >
-      <div className="bg-primary w-full h-full relative flex flex-col justify-center hover:backdrop-blur-sm">
-        <Link
-          href={`/${props.label.toLowerCase().replace(/ /g, "-")}`}
-          className="group text-center text-gray-200 z-20"
-        >
-          {props.label}
-        </Link>
-
-        {/* <div className="bg-primary opacity-65 absolute bottom-0 left-0 h-0 w-full duration-700 group-hover:h-full z-10 saturate-100"></div> */}
-      </div>
-    </div>
+      {props.label}
+    </Link>
   );
 };
 
 const labels = ["Classes", "About", "Contact"];
 
 const Services = () => {
+  // services-container
   return (
     <>
       <Script src="/animations.js" type="text/javascript" />
-      <Container className="flex flex-col space-y-10 py-10 services-container justify-center">
+      <Container className="flex flex-col space-y-10 py-10 min-h-screen justify-around">
+        {/* <div className="w-1/2 h-3/4 relative">
+          <img
+            src="service-2.jpg"
+            className="w-3/5 h-3/5 object-cover opacity-40"
+          />
+          <img
+            src="service-1.jpg"
+            className="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover"
+          />
+        </div> */}
         <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between items-center">
           {labels.map((label, i) => (
             <ServiceCard key={i} num={i + 1} label={label} />
