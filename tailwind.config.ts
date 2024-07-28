@@ -79,16 +79,9 @@ const config = {
             opacity: "1"
           }
         },
-        "appear": {
-          "0%": {
-            opacity: "0"
-          },
-          "99%": {
-            opacity: "0"
-          },
-          "100%": {
-            opacity: "1"
-          }
+        "height": {
+          to: { height: "0" },
+          from: { height: "100%" }
         },
         "bouncing": {
           from: { transform: "translateY(0px)" },
@@ -96,20 +89,20 @@ const config = {
         },
         "slide-out-container": {
           "0%": { height: "100vh" },
-          "90%": { height: "100vh" },
-          "100%": { height: "0" }
+          "100%": { height: "0vh" }
         },
-        "circle": {
-          "0%": { opacity: "1", top: "10%", left: "20%", width: "200px", height: "200px" },
-          "10%": { opacity: "1", top: "60%", left: "80%", width: "450px", height: "450px" },
-          "20%": { opacity: "1", top: "80%", left: "15%", width: "290px", height: "290px" },
-          "30%": { opacity: "1", top: "25%", left: "90%", width: "250px", height: "250px" },
-          "40%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
-          "60%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
-          "70%": { opacity: "1", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" },
-          "95%": { opacity: "1", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" },
-          "100%": { opacity: "0", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" }
-        }
+        "spotlight": {
+          "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },
+          "20%": { opacity: "1", top: "60%", left: "80%", width: "450px", height: "450px" },
+          "35%": { opacity: "1", top: "80%", left: "15%", width: "290px", height: "290px" },
+          "75%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "100%": { opacity: "0", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+        },
+        "disable-scroll": {
+          from: { overflow: "hidden" },
+          to: { overflow: "scroll" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -117,10 +110,10 @@ const config = {
         "fade-in": "fade .5s ease-in",
         "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 5s linear forwards",
-        "logo": "appear 1.95s linear, fade 1s ease reverse forwards 4s",
-        "circle": "circle 5s ease-in-out forwards",
-        "name": "appear 2s linear, fade 1s ease reverse forwards 4s"
+        "slide-out-container": "slide-out-container 1.3s linear 6s both",
+        "logo": "fade 1s linear 1.99s both, fade 1.3s linear reverse forwards 4s",
+        "spotlight": "spotlight 3s ease-in-out forwards",
+        "disable-scroll": "disable-scroll .5s linear 7s both",
       },
     },
   },
