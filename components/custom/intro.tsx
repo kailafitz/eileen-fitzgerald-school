@@ -19,10 +19,11 @@ const Intro = () => {
             </h1>
             <p className="mb-10 hide-down transition-delay-1">
               Here at The Eileen Fitzgerald School, various classes are on offer
-              for pupils of all ages! Whether you're interested in expressing
-              yourself through the arts or if you're looking to vastly improve
-              your confidence and communication skills for an important meeting
-              at work, speech and drama is an empowering discipline.
+              for pupils of all ages! Whether you&#39;re interested in
+              expressing yourself through the arts or if you&#39;re looking to
+              vastly improve your confidence and communication skills for an
+              important meeting at work, speech and drama is an empowering
+              discipline.
             </p>
             <Link
               href={`/classes`}
