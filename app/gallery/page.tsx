@@ -66,7 +66,7 @@ const Gallery = () => {
         Our Gallery
       </h1>
       <p className="text-center text-base mb-10 sm:w-4/5 lg:w-1/2 mx-auto">
-        We take pride in our students' achievements and the fun and memories
+        We take pride in our students&#39; achievements and the fun and memories
         they make at our school during classtime. Here is a taste of all the
         smiles we've seen over the years. More photos and updates over on our
         Instagram and Facebook communities!
