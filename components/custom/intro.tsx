@@ -35,10 +35,12 @@ const Intro = () => {
             <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10"></div>
             <img
               src="actress-2.png"
+              alt="actress"
               className="w-full h-auto object-contain border-zinc-900 border-2"
             />
             <img
               src="actor-2.png"
+              alt="actor"
               className="absolute bottom-0 w-3/4 h-auto opacity-100 -z-10 right-36 saturate-50 object-contain hide-down transition-delay-0"
             />
           </div>

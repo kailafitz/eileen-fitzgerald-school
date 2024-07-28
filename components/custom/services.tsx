@@ -32,10 +32,12 @@ const Services = () => {
         {/* <div className="w-1/2 h-3/4 relative">
           <img
             src="service-2.jpg"
+            alt="About Us image"
             className="w-3/5 h-3/5 object-cover opacity-40"
           />
           <img
             src="service-1.jpg"
+            alt="Classes image"
             className="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover"
           />
         </div> */}

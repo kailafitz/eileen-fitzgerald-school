@@ -40,9 +40,13 @@ const Members = () => {
       <div className="flex flex-row justify-center space-x-10">
         {members.map((member, i) => {
           return (
-            <div className="flex flex-col justify-center space-y-5 w-1/4">
+            <div
+              key={`${member.name}_${i}`}
+              className="flex flex-col justify-center space-y-5 w-1/4"
+            >
               <img
                 src={`/${member.name.split(" ")[0]}2.png`}
+                alt={member.name}
                 className="bg-primary object-contain w-full md:w-3/4 h-auto mx-auto rounded-full border-primary border-2"
               />
               <h2
@@ -65,8 +69,12 @@ const Members = () => {
         })}
       </div>
       <div id="bioContainer">
-        {member?.bio.map((paragraph) => {
-          return <p className="text-gray-200 mb-5">{paragraph}</p>;
+        {member?.bio.map((paragraph, i) => {
+          return (
+            <p key={i} className="text-gray-200 mb-5">
+              {paragraph}
+            </p>
+          );
         })}
       </div>
     </div>

@@ -22,7 +22,7 @@ const NavigationBar = () => {
   return (
     <NavigationMenu>
       <Container className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7">
-        <img src="/logo.png" className="w-16 md:w-32" />
+        <img src="/logo.png" className="w-16 md:w-32" alt="logo" />
         <MobileMenu />
         <div className="w-3/5 hidden md:block">
           <NavigationMenuList>

@@ -36,7 +36,11 @@ const Footer = () => {
           <p className="text-gray-200 text-center md:text-left text-1xl sm:text-base">
             The Eileen School of Speech & Drama
           </p>
-          <img src="/logo.png" className="w-36 md:w-24 mx-auto sm:mx-0" />
+          <img
+            src="/logo.png"
+            className="w-36 md:w-24 mx-auto sm:mx-0"
+            alt="logo"
+          />
         </div>
         <div className="text-gray-200 text-center sm:text-right text-1xl sm:text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0 pb-10">
           <Link href={"/gallery"} className="w-fit relative">
