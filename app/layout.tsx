@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen flex scroll-smooth">
       <body
-        className={`${inter.className} flex-1 flex flex-col justify-between relative animate-disable-scroll`}
+        className={`${inter.className} flex-1 flex flex-col justify-between relative`}
       >
-        <OpeningAnimation />
+        {/* <OpeningAnimation /> */}
         <NavigationBar />
         {children}
         <Footer />

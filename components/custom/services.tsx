@@ -41,6 +41,18 @@ const Services = () => {
             className="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover"
           />
         </div> */}
+        <p className="text-base md:text-xl">
+          Browse our website to get a glimpse into what we do and we hope you
+          join us in celebrating the art that is Speech & Drama. We post all our
+          latest news and updates on our social media pages. For queries
+          relating to enrolments and fees, please contact us directly{" "}
+          <Link href="/contact" className="relative">
+            <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-0.5 before:left-0 before:bg-white before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              here
+            </span>
+          </Link>
+          .
+        </p>
         <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between items-center">
           {labels.map((label, i) => (
             <ServiceCard key={i} num={i + 1} label={label} />

@@ -11,38 +11,64 @@ const Intro = () => {
         className="min-h-screen py-10 flex flex-col justify-center text-gray-200"
         id="intro"
       >
-        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-10 md:justify-between hide-down transition-delay-0">
+        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-20 md:justify-between ">
           <div className="flex flex-col justify-center w-full md:w-2/3">
-            <h1 className="text-xl md:text-3xl mb-3">
-              The school was established in Co. Clare in 1992 to foster a love
-              of drama, communications and clear speech in our students. Browse
-              our website to get a glimpse into what we do and we hope you join
-              us in celebrating the art that is Speech & Drama.
+            <h1 className="text-xl md:text-3xl mb-3 hide-down transition-delay-0">
+              Established in Co. Clare in 1992, our school continues to foster a
+              love of drama, communications and clear speech in our students.
             </h1>
-            <p className="text-base md:text-xl">
-              We post all our latest news and updates on our social media pages.
-              For queries relating to enrolments and fees, please contact us
-              directly{" "}
-              <Link href="/contact" className="relative">
-                <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-0.5 before:left-0 before:bg-white before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                  here
-                </span>
-              </Link>
-              .
+            <p className="mb-10 hide-down transition-delay-1">
+              Here at The Eileen Fitzgerald School, various classes are on offer
+              for pupils of all ages! Whether you're interested in expressing
+              yourself through the arts or if you're looking to vastly improve
+              your confidence and communication skills for an important meeting
+              at work, speech and drama is an empowering discipline.
             </p>
+            <Link
+              href={`/classes`}
+              className="flex flex-col justify-center p-3 w-full sm:w-fit bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 text-center text-gray-200 hide-down transition-delay-3"
+            >
+              View Classes
+            </Link>
           </div>
-          <div className="relative w-full md:w-1/3">
-            <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10"></div>
+          <div className="relative w-full md:w-1/3 ">
+            <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10 "></div>
             <img
               src="actress-2.png"
               alt="actress"
               className="w-full h-auto object-contain border-zinc-900 border-2"
             />
+          </div>
+        </div>
+      </Container>
+      <Container className="min-h-screen py-10 flex flex-col justify-center text-gray-200">
+        <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-20 md:justify-between">
+          <div className="relative w-full md:w-1/3 ">
+            <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10 "></div>
             <img
-              src="actor-2.png"
+              src="actor-3.png"
               alt="actor"
-              className="absolute bottom-0 w-3/4 h-auto opacity-100 -z-10 right-36 saturate-50 object-contain hide-down transition-delay-0"
+              className="w-full h-auto object-contain border-zinc-900 border-2"
             />
+          </div>
+          <div className="flex flex-col justify-center w-full md:w-2/3">
+            <h1 className="text-xl md:text-3xl mb-3 hide-down transition-delay-0">
+              For queries relating to enrolments and fees, please contact us
+              directly
+            </h1>
+            <p className="mb-10 hide-down transition-delay-1">
+              Browse our website to get a glimpse into what we do and we hope
+              you join us in celebrating the art that is Speech & Drama. We post
+              all our latest news and updates on our social media pages. To find
+              our contact information, please visit our Contact page. We look
+              forward to hearing from you!
+            </p>
+            <Link
+              href={`/classes`}
+              className="flex flex-col justify-center p-3 w-full sm:w-fit bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 text-center text-gray-200 hide-down transition-delay-3"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </Container>

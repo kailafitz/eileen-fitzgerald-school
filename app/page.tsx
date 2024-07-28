@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Name />
       <Intro />
-      <Services />
+      {/* <Services /> */}
     </>
   );
 }
