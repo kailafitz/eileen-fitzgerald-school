@@ -7,9 +7,7 @@ const OpeningAnimation = () => {
       <div className="bg-white absolute rounded-full z-40 animate-circle"></div>
       <img src="/logo.png" className="w-52 h-52 mx-auto animate-logo z-50" />
       <h1 className="text-zinc-900 animate-name text-center text-xl w-full absolute z-40 top-[65%]">
-        The Eileen Fitzgerald School
-        <br />
-        of Speech and Drama
+        The Eileen Fitzgerald <br /> School of Speech and Drama
       </h1>
     </div>
   );

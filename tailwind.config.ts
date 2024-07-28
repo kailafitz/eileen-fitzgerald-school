@@ -106,9 +106,9 @@ const config = {
           "30%": { opacity: "1", top: "25%", left: "90%", width: "250px", height: "250px" },
           "40%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "60%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
-          "70%": { opacity: "1", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" },
-          "95%": { opacity: "1", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" },
-          "100%": { opacity: "0", top: "calc(50% - 250px)", left: "calc(50% - 250px)", width: "500px", height: "500px" }
+          "70%": { opacity: "1", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" },
+          "95%": { opacity: "1", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" },
+          "100%": { opacity: "0", top: "calc(50% - 225px)", left: "calc(50% - 225px)", width: "450px", height: "450px" }
         }
       },
       animation: {
@@ -117,10 +117,10 @@ const config = {
         "fade-in": "fade .5s ease-in",
         "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 6s linear forwards",
-        "logo": "appear 3.5s linear, fade 1s ease reverse forwards 5s",
+        "slide-out-container": "slide-out-container 5s linear forwards",
+        "logo": "appear 1.95s linear, fade 1s ease reverse forwards 4s",
         "circle": "circle 5s ease-in-out forwards",
-        "name": "appear 3.5s linear, fade 1s ease reverse forwards 5s"
+        "name": "appear 2s linear, fade 1s ease reverse forwards 4s"
       },
     },
   },
