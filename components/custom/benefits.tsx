@@ -61,7 +61,7 @@ const Benefit = (props: Props) => {
   return (
     <div
       className="flex flex-col space-y-8 mb-10 md:mb-5 transition-all"
-      id="benefitContainer"
+      id="benefit-container"
     >
       <div className="mx-auto bg-primary p-6 md:p-10 rounded-full">
         {benefit?.icon}
@@ -85,7 +85,7 @@ const Benefits = () => {
   const router = useRouter();
 
   const resetAnimation = () => {
-    const benefitContainer = document.getElementById("benefitContainer");
+    const benefitContainer = document.getElementById("benefit-Container");
     benefitContainer?.classList.add("animate-fade-in");
 
     setTimeout(() => {

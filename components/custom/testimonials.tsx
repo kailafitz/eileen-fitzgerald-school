@@ -1,9 +1,13 @@
+"use client";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -22,6 +26,11 @@ const testimonials = [
       "I attended this school for over 10 years and had the most amazing time. Speech and drama has always been a very special part of me since attending. Eileen is the most fantastic teacher and a true friend to all of her students.",
   },
   {
+    name: "Ava Power",
+    testimonial:
+      "I became a student of the Eileen Fitzgerald School of Speech and Drama over fifteen years ago and I am all the better for it. Eileen is a wonderful teacher and mentor. She is completely devoted to her students and has been a great support to me in projects I’ve taken on after attending her school. The teaching I received from Eileen has made a great and lasting impact on my communication and performance skills. Eileen creates a learning environment that is friendly, fun and wherein all students feel encouraged to reach their full potential. I can’t recommend Eileen and her school of Speech and Drama highly enough.",
+  },
+  {
     name: "Katie McDermott",
     testimonial:
       "I just finished my 13th year with Eileen and would highly recommend. It has helped me so much with my confidence in such a friendly environment. I have made great friends though class and competitions. Eileen always has great time for all her students.",
@@ -29,17 +38,12 @@ const testimonials = [
   {
     name: "Mikhaila Fitzpatrick",
     testimonial:
-      "The Eileen Fitzgerald School of Speech and Drama gave me some of the most memorable years of my life. From Junior Infants all the way up to Leaving Cert, I was with Eileen competing in Feile Luimnigh and completing my grades with the Irish Board. Classes with Eileen and Ciara were always a positive and banterful experience, with an emphasis on a wide range of important skills that I've come to realise are so very prominant in our everyday lives. I am most appreciative of all the work that Eileen and Ciara have put into me over the years. Many a time I was nervous to go up on stage, and now what I would do to relive some of the glory. I would highly recommend these classes as there is so much to gain. Eileen Fitzgerald is a wonderful teacher and a great communicator with students of all ages. She is an empathetic leader who cares about her students and their experiences in her class. It is no wonder that Eileen remains friends with many of her past pupils.",
+      "The Eileen Fitzgerald School of Speech and Drama gave me some of the most memorable years of my life. From Junior Infants all the way up to Leaving Cert, I was with Eileen competing in Feile Luimnigh and completing my grades with the Irish Board. Classes with Eileen and Ciara were always a positive and fun experience, with an emphasis on a wide range of important skills that I've come to realise are so very prominant in our everyday lives. Eileen is an empathetic leader who cares about her students and their experiences in her classroom. It is no wonder that Eileen remains friends with many of her past pupils.",
   },
   {
     name: "Sorchie Roche",
     testimonial:
       "I attended classes with Eileen for 10 years and I am so glad I did. It gave me confidence to be able to get up and speak in front of people and it was always great fun too :) Eileen is a fantastic teacher, who was very patient with me and very encouraging :) I really enjoyed my time in the class and recommend it to everyone",
-  },
-  {
-    name: "Ava Power",
-    testimonial:
-      "I became a student of the Eileen Fitzgerald School of Speech and Drama over fifteen years ago and I am all the better for it. Eileen is a wonderful teacher and mentor. She is completely devoted to her students and has been a great support to me in projects I’ve taken on after attending her school. The teaching I received from Eileen has made a great and lasting impact on my communication and performance skills. Eileen creates a learning environment that is friendly, fun and wherein all students feel encouraged to reach their full potential. I can’t recommend Eileen and her school of Speech and Drama highly enough.",
   },
   {
     name: "Karoline O'Sullivan",
@@ -48,27 +52,53 @@ const testimonials = [
   },
 ];
 
+// mx-auto w-72 md:w-full
+
 const Testimonials = () => {
   return (
     <div className="pb-10 text-gray-200">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2" id="benefits">
+      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Testimonials
       </h1>
       <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
         See what our past pupils have to say
       </p>
-      <Accordion type="single" collapsible>
-        {testimonials.map((testimonial, i) => {
-          return (
-            <AccordionItem key={`${testimonial.name}_${i}`} value={`item-${i}`}>
-              <AccordionTrigger>
-                <span>{testimonial.name}</span>
-              </AccordionTrigger>
-              <AccordionContent>{testimonial.testimonial}</AccordionContent>
-            </AccordionItem>
-          );
-        })}
-      </Accordion>
+      <Carousel
+        orientation="horizontal"
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
+      >
+        <CarouselContent className="-ml-4 w-screen lg:w-full">
+          {testimonials.map((testimonial, i) => {
+            return (
+              <CarouselItem
+                key={`${testimonial.name}_${i}`}
+                className="basis-10/12 sm:basis-1/2 lg:basis-1/3 sm:pl-4 relative"
+              >
+                <Quote
+                  className="absolute top-0 right-0 text-primary opacity-20 -z-10"
+                  size={120}
+                />
+                <div className="border-primary border-2 h-full p-5 flex flex-col justify-between">
+                  <p className="text-sm mb-3">{testimonial.testimonial}</p>
+                  <h6 className="flex flex-row items-center justify-end">
+                    <span className="w-7 bg-slate-200 h-0.5 mr-2"></span>
+                    {testimonial.name}
+                  </h6>
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </div>
   );
 };

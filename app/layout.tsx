@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex-1 flex flex-col justify-between relative`}
       >
-        <OpeningAnimation />
+        {/* <OpeningAnimation /> */}
         <NavigationBar />
         {children}
         <Footer />
