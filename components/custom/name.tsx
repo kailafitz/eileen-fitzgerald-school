@@ -8,16 +8,16 @@ const Name = () => {
     <div className="bg-primary w-full py-10 custom-vh-xs custom-vh-md flex flex-col text-gray-200">
       <Container className="text-center flex-1 flex flex-col justify-evenly">
         <div>
-          <p className="text-lg mb-5">Welcome to the home of the</p>
+          <p className="text-lg mb-5">Welcome to the home of</p>
           <h1 className="text-3xl sm:text-6xl md:text-7xl xl:text-8xl">
-            Eileen Fitzgerald <br />
+            The Eileen Fitzgerald <br />
             School of Speech & Drama
           </h1>
         </div>
       </Container>
       <Link href="#intro" className="w-fit mx-auto">
         <ChevronDown
-          className="text-white block mx-auto animate-bouncing"
+          className="text-white block mx-auto animate-bounce"
           size="40"
         />
       </Link>

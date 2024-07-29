@@ -115,17 +115,21 @@ body {
 }
 
 .transition-delay-0 {
-  transition: opacity .8s, blur .8s, transform .8s;
+  transition: opacity .5s, blur .5s, transform .5s;
 }
 
 .transition-delay-1 {
-  transition: opacity .8s .3s, blur .8s .3s, transform .8s .3s;
+  transition: opacity .5s .3s, blur .5s .3s, transform .5s .3s;
 }
 
 .transition-delay-2 {
-  transition: opacity .8s .4s, blur .8s .4s, transform .8s .4s;
+  transition: opacity .5s .4s, blur .5s .4s, transform .5s .4s;
 }
 
 .transition-delay-3 {
-  transition: opacity .8s .5s, blur .8s .5s, transform .8s .5s;
+  transition: opacity .5s .5s, blur .5s .5s, transform .5s .5s;
+}
+
+.flip {
+  transform: scaleX(-1);
 }
