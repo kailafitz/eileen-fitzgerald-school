@@ -61,7 +61,7 @@ const Intro = () => {
             <p className="mb-10 hide-down transition-delay-1">
               Learn more about Eileen Fitzgerald and her achievements as a
               teacher, mentor and advocate for the art of Speech and Drama over
-              the years of her long and successful career. As a successful
+              the years of her long and successful career. As an accredited
               teacher and mentor, so many students have been shaped by the power
               of Speech and Drama at the school of Eileen Fitzgerald. Read more
               about Eileen and what her students have to say by visiting our
