@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import ConfidanceIcon from "./confidance";
-import CreativityIcon from "./creativity";
-import SpeechIcon from "./speech";
-import EmpathyIcon from "./empathy";
-import InterpersonalSkillIcon from "./interpersonalSkills";
-import BodyLanguageIcon from "./bodyLanguage";
+import ConfidanceIcon from "./svgs/confidance";
+import CreativityIcon from "./svgs/creativity";
+import SpeechIcon from "./svgs/speech";
+import EmpathyIcon from "./svgs/empathy";
+import InterpersonalSkillIcon from "./svgs/interpersonalSkills";
+import BodyLanguageIcon from "./svgs/bodyLanguage";
 import Container from "./container";
 import { useRouter } from "next/navigation";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "./container";
-import FacebookIcon from "./facebook";
-import EmailIcon from "./email";
-import PhoneIcon from "./phone";
-import InstagramIcon from "./instagram";
+import FacebookIcon from "./svgs/facebook";
+import EmailIcon from "./svgs/email";
+import PhoneIcon from "./svgs/phone";
+import InstagramIcon from "./svgs/instagram";
 import Link from "next/link";
 
 const size = 28;
