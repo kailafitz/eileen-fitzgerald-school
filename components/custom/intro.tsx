@@ -35,8 +35,8 @@ const Intro = () => {
           <div className="relative w-full md:w-1/3 ">
             <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10 "></div>
             <img
-              src="actress-2.png"
-              alt="actor"
+              src="actress-3.png"
+              alt="actress"
               className="w-full h-auto object-contain border-zinc-900 border-2"
             />
           </div>
@@ -45,11 +45,11 @@ const Intro = () => {
 
       <Container className="min-h-screen py-10 flex flex-col justify-center text-gray-200">
         <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-20 md:justify-between">
-          <div className="relative w-full md:w-1/3 ">
+          <div className="relative w-full md:w-1/3">
             <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10 "></div>
             <img
               src="actor-3.png"
-              alt="actress"
+              alt="actor"
               className="w-full h-auto object-contain border-zinc-900 border-2 flip"
             />
           </div>
