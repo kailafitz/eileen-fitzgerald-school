@@ -39,58 +39,60 @@ const Members = () => {
   // };
 
   return (
-    <div className="space-y-10 pb-10">
-      {members.map((member, i) => {
-        return (
-          <React.Fragment key={`${member.name}_${i}`}>
-            <div className="flex flex-col justify-center md:min-h-screen">
-              <div className="space-y-10">
-                {/* Image and name div */}
-                <div className="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
-                  {/* Image div */}
-                  <div>
-                    <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto hide-down transition-delay-0">
-                      <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
-                      <img
-                        src={`/${member.name.split(" ")[0]}2.png`}
-                        alt={member.name}
-                        className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"
-                      />
+    <>
+      <Script src="/animations.js" type="text/javascript" />
+      <div className="space-y-10 pb-10">
+        {members.map((member, i) => {
+          return (
+            <React.Fragment key={`${member.name}_${i}`}>
+              <div className="flex flex-col justify-center md:min-h-screen">
+                <div className="space-y-10">
+                  {/* Image and name div */}
+                  <div className="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
+                    {/* Image div */}
+                    <div>
+                      <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto hide-down transition-delay-0">
+                        <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
+                        <img
+                          src={`/${member.name.split(" ")[0]}2.png`}
+                          alt={member.name}
+                          className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"
+                        />
+                      </div>
+                    </div>
+                    {/* Name div */}
+                    <div className="bg-primary border-primary border-2 w-full h-28 md:h-auto flex flex-col justify-between hide-down transition-delay-0">
+                      <h2 className="text-zinc-900 text-xl md:text-6xl text-left hide-down transition-delay-1">
+                        {member.name}
+                      </h2>{" "}
+                      <h2 className="text-zinc-900 text-xl md:text-6xl text-right hide-down transition-delay-2">
+                        {member.position}
+                      </h2>
                     </div>
                   </div>
-                  {/* Name div */}
-                  <div className="bg-primary border-primary border-2 w-full h-28 md:h-auto flex flex-col justify-between hide-down transition-delay-0">
-                    <h2 className="text-zinc-900 text-xl md:text-6xl text-left hide-down transition-delay-1">
-                      {member.name}
-                    </h2>{" "}
-                    <h2 className="text-zinc-900 text-xl md:text-6xl text-right hide-down transition-delay-2">
-                      {member.position}
-                    </h2>
+                  {/* Bio paragraphs div */}
+                  <div id="bio-container">
+                    {member?.bio.map((paragraph, i) => {
+                      return (
+                        <p key={i} className="text-gray-200 mb-5">
+                          {paragraph}
+                        </p>
+                      );
+                    })}
                   </div>
                 </div>
-                {/* Bio paragraphs div */}
-                <div id="bio-container">
-                  {member?.bio.map((paragraph, i) => {
-                    return (
-                      <p key={i} className="text-gray-200 mb-5">
-                        {paragraph}
-                      </p>
-                    );
-                  })}
-                </div>
               </div>
-            </div>
-          </React.Fragment>
-        );
-      })}
-    </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
 const Team = () => {
   return (
     <>
-      <Script src="/animations.js" type="text/javascript" />
       <h1 className="text-gray-200 text-center my-10 text-2xl md:text-4xl">
         Meet our Teachers
       </h1>

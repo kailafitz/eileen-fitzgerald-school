@@ -76,7 +76,7 @@ const ScheduleTables = () => {
 
 const ClassSchedules = () => {
   return (
-    <Container id="class-schedules" className="text-gray-200">
+    <Container id="class-schedules" className="text-gray-200 pt-10">
       <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
         Our Speech and Drama Classes
       </h1>
