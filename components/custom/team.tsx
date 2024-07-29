@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const members = [
   {
     name: "Eileen Fitzgerald",
+    position: "Director & Teaching",
     bio: [
       "Eileen Fitzgerald A.I.B.S.D., L.T.C.L. runs a very successful Speech & Drama School which was established in 1992. Eileen has been involved in and studied speech & drama from a young age. She teaches all aspects of communication skills and drama from 4-year olds to 85-year olds!",
       "Eileen studied with Trinity College London attaining a Licentiate Teachers Diploma. She has an Associate Diploma with the Irish Board of Speech & Drama.",
@@ -13,6 +14,7 @@ const members = [
   },
   {
     name: "Ciara Felle",
+    position: "Student Teacher",
     bio: [
       "Ciara Felle began her speech & drama training at a very young age.",
       "In her final year in primary school she moved to the Eileen Fitzgerald School to complete her studies. After finishing her secondary & university years, Ciara spent a number of years living and teaching in Edinburgh. Her passion is travel and at last count Ciara has travelled to 60 countries.",
@@ -22,61 +24,64 @@ const members = [
 ];
 
 const Members = () => {
-  const [currentMember, setCurrentMember] = useState("Eileen Fitzgerald");
+  // const [currentMember, setCurrentMember] = useState("Eileen Fitzgerald");
 
-  const member = members.find((member) => currentMember === member.name);
+  // const member = members.find((member) => currentMember === member.name);
 
-  const resetAnimation = () => {
-    const benefitContainer = document.getElementById("bioContainer");
-    benefitContainer?.classList.add("animate-fade-in");
+  // const resetAnimation = () => {
+  //   const benefitContainer = document.getElementById("bioContainer");
+  //   benefitContainer?.classList.add("animate-fade-in");
 
-    setTimeout(() => {
-      benefitContainer?.classList.remove("animate-fade-in");
-    }, 600);
-  };
+  //   setTimeout(() => {
+  //     benefitContainer?.classList.remove("animate-fade-in");
+  //   }, 600);
+  // };
 
   return (
     <div className="space-y-10 pb-10">
-      <div className="flex flex-row justify-center space-x-10">
-        {members.map((member, i) => {
-          return (
-            <div
-              key={`${member.name}_${i}`}
-              className="flex flex-col justify-center space-y-5 w-1/4"
-            >
-              <img
-                src={`/${member.name.split(" ")[0]}2.png`}
-                alt={member.name}
-                className="bg-primary object-contain w-full md:w-3/4 h-auto mx-auto rounded-full border-primary border-2"
-              />
-              <h2
-                onClick={() => {
-                  setCurrentMember(member.name);
-                  resetAnimation();
-                }}
-                className={`text-gray-200 mx-auto hover:cursor-pointer relative ${
-                  member.name === currentMember
-                    ? "after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-white after:scale-x-100"
-                    : ""
-                }`}
-              >
-                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-white after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                  {member.name}
-                </span>
-              </h2>
+      {members.map((member, i) => {
+        return (
+          <React.Fragment key={`${member.name}_${i}`}>
+            <div className="flex flex-col justify-center md:min-h-screen">
+              <div className="space-y-10">
+                {/* Image and name div */}
+                <div className="flex flex-row justify-center space-x-10">
+                  {/* Image div */}
+                  <div>
+                    <div className="border-zinc-900 border-2 w-full md:w-1/2 relative mx-auto">
+                      <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
+                      <img
+                        src={`/${member.name.split(" ")[0]}2.png`}
+                        alt={member.name}
+                        className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"
+                      />
+                    </div>
+                  </div>
+                  {/* Name div */}
+                  <div className="bg-primary border-primary border-2 w-full flex flex-col justify-between">
+                    <h2 className="text-zinc-900 text-6xl text-left">
+                      {member.name}
+                    </h2>{" "}
+                    <h2 className="text-zinc-900 text-6xl text-right">
+                      {member.position}
+                    </h2>
+                  </div>
+                </div>
+                {/* Bio paragraphs div */}
+                <div id="bioContainer">
+                  {member?.bio.map((paragraph, i) => {
+                    return (
+                      <p key={i} className="text-gray-200 mb-5">
+                        {paragraph}
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-          );
-        })}
-      </div>
-      <div id="bioContainer">
-        {member?.bio.map((paragraph, i) => {
-          return (
-            <p key={i} className="text-gray-200 mb-5">
-              {paragraph}
-            </p>
-          );
-        })}
-      </div>
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 };
@@ -85,7 +90,7 @@ const Team = () => {
   return (
     <>
       <h1 className="text-gray-200 text-center my-10 text-2xl md:text-4xl">
-        Meet our Staff
+        Meet our Teachers
       </h1>
       <Members />
     </>

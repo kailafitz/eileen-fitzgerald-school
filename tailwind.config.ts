@@ -111,7 +111,7 @@ const config = {
         "fade-in": "fade .5s ease-in",
         "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 1.3s linear 6s both",
+        "slide-out-container": "slide-out-container 1.3s linear 5.7s both",
         "logo": "fade 1s linear 1.99s both, fade 1.3s linear reverse forwards 4s",
         "spotlight": "spotlight 3s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 7s both",
