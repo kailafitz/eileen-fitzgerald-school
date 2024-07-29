@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
-import FacebookIcon from "./facebook";
-import InstagramIcon from "./instagram";
+import FacebookIcon from "./svgs/facebook";
+import InstagramIcon from "./svgs/instagram";
 
 const CopyrightIcon = () => (
   <svg

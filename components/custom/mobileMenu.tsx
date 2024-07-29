@@ -8,8 +8,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import FacebookIcon from "./facebook";
-import InstagramIcon from "./instagram";
+import FacebookIcon from "./svgs/facebook";
+import InstagramIcon from "./svgs/instagram";
 
 const links = [
   { label: "Home", link: "/" },
