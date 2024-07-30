@@ -4,6 +4,7 @@ import "./globals.css";
 import NavigationBar from "@/components/custom/navigationBar";
 import Footer from "@/components/custom/footer";
 import OpeningAnimation from "@/components/custom/openingAnimation";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex-1 flex flex-col justify-between relative`}
       >
+        <Script src="/animations.js" type="text/javascript" />
         {/* <OpeningAnimation /> */}
         <NavigationBar />
         {children}

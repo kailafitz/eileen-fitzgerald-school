@@ -1,12 +1,10 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
-import Script from "next/script";
 
 const Intro = () => {
   return (
     <>
-      <Script src="/animations.js" type="text/javascript" />
       <Container
         className="min-h-screen py-10 flex flex-col justify-center text-gray-200"
         id="intro"

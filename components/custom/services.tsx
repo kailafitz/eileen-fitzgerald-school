@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
-import Script from "next/script";
 
 type Props = {
   label: string;
@@ -26,10 +25,8 @@ const labels = ["Classes", "About", "Contact"];
 const Services = () => {
   // services-container
   return (
-    <>
-      <Script src="/animations.js" type="text/javascript" />
-      <Container className="flex flex-col space-y-10 py-10 min-h-screen justify-around">
-        {/* <div className="w-1/2 h-3/4 relative">
+    <Container className="flex flex-col space-y-10 py-10 min-h-screen justify-around">
+      {/* <div className="w-1/2 h-3/4 relative">
           <img
             src="service-2.jpg"
             alt="About Us image"
@@ -41,13 +38,12 @@ const Services = () => {
             className="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover"
           />
         </div> */}
-        <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between items-center">
-          {labels.map((label, i) => (
-            <ServiceCard key={i} num={i + 1} label={label} />
-          ))}
-        </div>
-      </Container>
-    </>
+      <div className="flex flex-col space-y-10 md:justify-center sm:space-y-0 sm:space-x-6 sm:flex-row justify-between items-center">
+        {labels.map((label, i) => (
+          <ServiceCard key={i} num={i + 1} label={label} />
+        ))}
+      </div>
+    </Container>
   );
 };
 
