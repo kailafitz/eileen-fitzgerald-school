@@ -52,8 +52,6 @@ const testimonials = [
   },
 ];
 
-// mx-auto w-72 md:w-full
-
 const Testimonials = () => {
   return (
     <div className="pb-10 text-gray-200">
@@ -61,7 +59,7 @@ const Testimonials = () => {
         Testimonials
       </h1>
       <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
-        See what our past pupils have to say
+        See what our pupils have to say
       </p>
       <Carousel
         orientation="horizontal"

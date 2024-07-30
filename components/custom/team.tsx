@@ -1,5 +1,14 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  ANIMATION_DELAY_1,
+  ANIMATION_DELAY_2,
+  ANIMATION_DELAY_3,
+  ANIMATION_DURATION,
+} from "@/lib/globals";
+import MotionDiv from "./motionDiv";
+
 const members = [
   {
     name: "Eileen Fitzgerald",
@@ -24,19 +33,6 @@ const members = [
 ];
 
 const Members = () => {
-  // const [currentMember, setCurrentMember] = useState("Eileen Fitzgerald");
-
-  // const member = members.find((member) => currentMember === member.name);
-
-  // const resetAnimation = () => {
-  //   const benefitContainer = document.getElementById("bio-container");
-  //   benefitContainer?.classList.add("animate-fade-in");
-
-  //   setTimeout(() => {
-  //     benefitContainer?.classList.remove("animate-fade-in");
-  //   }, 600);
-  // };
-
   return (
     <div className="space-y-10 pb-10">
       {members.map((member, i) => {
@@ -47,8 +43,8 @@ const Members = () => {
                 {/* Image and name div */}
                 <div className="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
                   {/* Image div */}
-                  <div>
-                    <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto hide-down transition-delay-0">
+                  <MotionDiv className="w-2/5">
+                    <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto">
                       <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
                       <img
                         src={`/${member.name.split(" ")[0]}2.png`}
@@ -56,24 +52,54 @@ const Members = () => {
                         className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"
                       />
                     </div>
-                  </div>
+                  </MotionDiv>
                   {/* Name div */}
-                  <div className="bg-primary border-primary border-2 w-full h-28 md:h-auto flex flex-col justify-between hide-down transition-delay-0">
-                    <h2 className="text-zinc-900 text-xl md:text-6xl text-left hide-down transition-delay-1">
-                      {member.name}
-                    </h2>{" "}
-                    <h2 className="text-zinc-900 text-xl md:text-6xl text-right hide-down transition-delay-2">
-                      {member.position}
-                    </h2>
+                  <div className="flex flex-col justify-center w-3/5">
+                    <MotionDiv className="bg-primary w-full h-28 md:h-4/5 flex flex-col justify-between">
+                      <motion.h2
+                        initial={{ opacity: 0, translateY: "-6rem" }}
+                        whileInView={{ opacity: 1, translateY: "0" }}
+                        exit={{ opacity: 0, translateY: "6rem" }}
+                        transition={{
+                          duration: ANIMATION_DURATION,
+                          delay: ANIMATION_DELAY_1,
+                        }}
+                        className="text-zinc-900 text-xl md:text-6xl text-left"
+                      >
+                        {member.name}
+                      </motion.h2>{" "}
+                      <motion.h2
+                        initial={{ opacity: 0, translateY: "-6rem" }}
+                        whileInView={{ opacity: 1, translateY: "0" }}
+                        exit={{ opacity: 0, translateY: "6rem" }}
+                        transition={{
+                          duration: ANIMATION_DURATION,
+                          delay: ANIMATION_DELAY_2,
+                        }}
+                        className="text-zinc-900 text-xl md:text-6xl text-right"
+                      >
+                        {member.position}
+                      </motion.h2>
+                    </MotionDiv>
                   </div>
                 </div>
                 {/* Bio paragraphs div */}
                 <div id="bio-container">
                   {member?.bio.map((paragraph, i) => {
                     return (
-                      <p key={i} className="text-gray-200 mb-5">
+                      <motion.p
+                        key={i}
+                        initial={{ opacity: 0, translateY: "-6rem" }}
+                        whileInView={{ opacity: 1, translateY: "0" }}
+                        exit={{ opacity: 0, translateY: "6rem" }}
+                        transition={{
+                          duration: ANIMATION_DURATION,
+                          delay: ANIMATION_DELAY_3,
+                        }}
+                        className="text-gray-200 mb-5"
+                      >
                         {paragraph}
-                      </p>
+                      </motion.p>
                     );
                   })}
                 </div>

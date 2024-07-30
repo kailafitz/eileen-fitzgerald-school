@@ -110,34 +110,6 @@ body {
   background: radial-gradient(circle, rgba(24, 24, 27, 0) 58%, rgba(24, 24, 27, 1) 85%), white;
 }
 
-.hide-down {
-  opacity: 0;
-  filter: blur(10px);
-  transform: translateY(-6rem);
-}
-
-.fade-down {
-  opacity: 1;
-  filter: blur(0px);
-  transform: translateY(0);
-}
-
-.transition-delay-0 {
-  transition: opacity .5s, blur .5s, transform .5s;
-}
-
-.transition-delay-1 {
-  transition: opacity .5s .3s, blur .5s .3s, transform .5s .3s;
-}
-
-.transition-delay-2 {
-  transition: opacity .5s .4s, blur .5s .4s, transform .5s .4s;
-}
-
-.transition-delay-3 {
-  transition: opacity .5s .5s, blur .5s .5s, transform .5s .5s;
-}
-
 .flip {
   transform: scaleX(-1);
 }
