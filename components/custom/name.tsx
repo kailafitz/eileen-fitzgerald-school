@@ -18,7 +18,7 @@ const Name = () => {
         </div>
       </Container>
       <Link href="#intro" className="w-fit mx-auto">
-        <div className="bg-white rounded-full p-0.5 animate-bounce">
+        <div className="bg-gray-200 rounded-full p-0.5 animate-bounce">
           <ChevronDown className="text-zinc-900 block mx-auto" size="40" />
         </div>
       </Link>

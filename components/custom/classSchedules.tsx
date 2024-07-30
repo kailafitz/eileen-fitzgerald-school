@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import Link from "next/link";
 
 const schedules = [
   {
@@ -87,7 +88,15 @@ const ClassSchedules = () => {
         With almost 30 years of experience, Eileen Fitzgerald teaches a wide
         range of acting and speech classes. Classes are offered for beginners,
         children, teenagers and adults focusing on developing public speaking
-        skills, and performance technique training.
+        skills, and performance technique training. To enroll for any of our
+        classes, please get in touch for availability and prices by contacting
+        us. Visit our{" "}
+        <Link href="/classes" className="relative">
+          <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-1 before:left-0 before:bg-gray-200 before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            Contact
+          </span>
+        </Link>{" "}
+        page for our details.
       </p>
       <ScheduleTables />
     </Container>

@@ -2,6 +2,8 @@ import React from "react";
 import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import Link from "next/link";
+import MotionDiv from "@/components/custom/motionDiv";
+import { ANIMATION_DELAY_1 } from "@/lib/globals";
 
 export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
@@ -79,7 +81,7 @@ const Resources = () => {
       <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
         {links.map((linkGroup, i) => {
           return (
-            <div
+            <MotionDiv
               key={`${linkGroup.title}_${i}`}
               className="bg-primary p-5 w-full md:w-1/3 mx-auto"
             >
@@ -100,7 +102,7 @@ const Resources = () => {
                   );
                 })}
               </div>
-            </div>
+            </MotionDiv>
           );
         })}
       </div>

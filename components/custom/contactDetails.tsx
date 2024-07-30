@@ -1,15 +1,17 @@
 import React from "react";
-import Container from "./container";
 import FacebookIcon from "./svgs/facebook";
 import EmailIcon from "./svgs/email";
 import PhoneIcon from "./svgs/phone";
 import InstagramIcon from "./svgs/instagram";
 import Link from "next/link";
+import MotionDiv from "./motionDiv";
+import { ANIMATION_DELAY_1 } from "@/lib/globals";
+import MessengerIcon from "./svgs/messenger";
 
 const size = 28;
 const classes = "text-primary";
 
-const details = [
+const contactDetails = [
   {
     icon: <PhoneIcon size={size} className={classes} />,
     label: "+353 86 818 7549",
@@ -21,40 +23,96 @@ const details = [
     link: "mailto:eileen.fitzgerald.school@gmail.com",
   },
   {
-    icon: <FacebookIcon size={size} className={classes} />,
+    icon: <MessengerIcon size={size} className={classes} />,
     label: "Eileen Fitzgerald School of Speech & Drama",
-    link: "https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama",
+    link: "m.me/611752942268562",
   },
+];
+
+const socialMediaDetails = [
   {
     icon: <InstagramIcon size={size} className={classes} />,
     label: "eileenfitzgerald_drama",
     link: "https://www.instagram.com/eileenfitzgerald_drama/",
   },
+  {
+    icon: <FacebookIcon size={size} className={classes} />,
+    label: "Eileen Fitzgerald School of Speech & Drama",
+    link: "https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama",
+  },
 ];
 
 const ContactDetails = () => {
   return (
-    <div className="text-gray-200 w-fit mx-auto space-y-10">
-      {details.map((contactMethod, i) => {
-        return (
-          <Link
-            key={`${contactMethod.label}_${i}`}
-            href={contactMethod.link}
-            target="_blank"
-            className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
-          >
-            <div className="bg-gray-200 p-2 rounded-full">
-              {contactMethod.icon}
-            </div>
-            <span className="relative">
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                {contactMethod.label}
-              </span>
-            </span>
-          </Link>
-        );
-      })}
-    </div>
+    <>
+      <img
+        src="/logo.png"
+        alt="logo"
+        className="absolute top-56 w-screen md:w-3/5 md:-top-6 md:-right-48 opacity-10 rotate-12 -z-10"
+      />
+      <div className="flex flex-col space-y-10">
+        <div className="w-full md:w-1/2 text-left">
+          <h1 className="text-2xl md:text-4xl my-10">Contact Us</h1>
+          <p className="text-base mb-10">
+            If you're interested in enrolling in any of our classes or wish to
+            find out more information, please get in touch with us.
+          </p>
+          <div className="w-fit space-y-5">
+            {contactDetails.map((contactMethod, i) => {
+              return (
+                <MotionDiv delay={ANIMATION_DELAY_1}>
+                  <Link
+                    key={`${contactMethod.label}_${i}`}
+                    href={contactMethod.link}
+                    target="_blank"
+                    className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
+                  >
+                    <div className="bg-gray-200 p-2 rounded-full">
+                      {contactMethod.icon}
+                    </div>
+                    <span className="relative">
+                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                        {contactMethod.label}
+                      </span>
+                    </span>
+                  </Link>
+                </MotionDiv>
+              );
+            })}
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 text-left">
+          <h1 className="text-2xl md:text-4xl mb-10">Follow Us</h1>
+          <p className="text-base mb-10">
+            Get to know our school even further by following us on our social
+            media platforms where we post the latest news and updates!
+          </p>
+          <div className="w-fit space-y-5">
+            {socialMediaDetails.map((socialMedia, i) => {
+              return (
+                <MotionDiv delay={ANIMATION_DELAY_1}>
+                  <Link
+                    key={`${socialMedia.label}_${i}`}
+                    href={socialMedia.link}
+                    target="_blank"
+                    className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
+                  >
+                    <div className="bg-gray-200 p-2 rounded-full">
+                      {socialMedia.icon}
+                    </div>
+                    <span className="relative">
+                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                        {socialMedia.label}
+                      </span>
+                    </span>
+                  </Link>
+                </MotionDiv>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

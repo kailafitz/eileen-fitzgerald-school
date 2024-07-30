@@ -83,7 +83,7 @@ const PublicSpeaking = () => {
           href="mailto:eileen.fitzgerald.school@gmail.com"
           className="relative"
         >
-          <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-1 before:left-0 before:bg-white before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-1 before:left-0 before:bg-gray-200 before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
             eileen.fitzgerald.school@gmail.com
           </span>
         </Link>

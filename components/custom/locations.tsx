@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "./container";
 import { MapPin } from "lucide-react";
+import MotionDiv from "./motionDiv";
 
 let iframeClassName = "w-full h-60 border-none border-0";
 
@@ -39,12 +39,14 @@ const locations = [
 
 const Locations = () => {
   return (
-    <Container className="mb-10 text-zinc-900">
-      <h1 className="text-center text-2xl md:text-4xl my-10">Our Locations</h1>
+    <>
+      <h1 className="text-center text-2xl md:text-4xl my-10 md:mb-10">
+        Our Locations
+      </h1>
       <div className="flex flex-col justify-center space-y-10 md:flex-row md:justify-between md:space-y-0 md:space-x-10">
         {locations.map((location, i) => {
           return (
-            <div
+            <MotionDiv
               key={`${location.title}_${i}`}
               className="flex flex-col w-full md:w-1/3 justify-between"
             >
@@ -53,11 +55,11 @@ const Locations = () => {
                 <h4 className="mb-5"> {location.title}</h4>
               </div>
               {location.iframe}
-            </div>
+            </MotionDiv>
           );
         })}
       </div>
-    </Container>
+    </>
   );
 };
 
