@@ -121,6 +121,7 @@ const Activities = () => {
                   in-depth approach to the work.
                 </p>
               )}
+              <hr className="h-0.5 bg-primary border-none w-full my-5" />
               <ul>
                 {group.activities.map((activity, i) => {
                   return (

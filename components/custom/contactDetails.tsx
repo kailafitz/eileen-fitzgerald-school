@@ -5,7 +5,6 @@ import PhoneIcon from "./svgs/phone";
 import InstagramIcon from "./svgs/instagram";
 import Link from "next/link";
 import MotionDiv from "./motionDiv";
-import { ANIMATION_DELAY_1 } from "@/lib/globals";
 import MessengerIcon from "./svgs/messenger";
 
 const size = 28;
@@ -60,7 +59,7 @@ const ContactDetails = () => {
           <div className="w-fit space-y-5">
             {contactDetails.map((contactMethod, i) => {
               return (
-                <MotionDiv delay={ANIMATION_DELAY_1}>
+                <MotionDiv delay={1}>
                   <Link
                     key={`${contactMethod.label}_${i}`}
                     href={contactMethod.link}
@@ -90,7 +89,7 @@ const ContactDetails = () => {
           <div className="w-fit space-y-5">
             {socialMediaDetails.map((socialMedia, i) => {
               return (
-                <MotionDiv delay={ANIMATION_DELAY_1}>
+                <MotionDiv delay={1}>
                   <Link
                     key={`${socialMedia.label}_${i}`}
                     href={socialMedia.link}

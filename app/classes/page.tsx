@@ -8,6 +8,7 @@ import PublicSpeaking from "@/components/custom/publicSpeaking";
 import { Metadata } from "next";
 import MobileMenuClasses from "@/components/custom/mobileMenuClasses";
 import Link from "next/link";
+import MotionDiv from "@/components/custom/motionDiv";
 
 export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
@@ -23,7 +24,7 @@ const Classes = () => {
       <div className="sticky top-0 bg-gray-200 p-5 block md:block md:w-1/5">
         <MobileMenuClasses />
         <div className="md:sticky md:top-5">
-          <div className="hidden md:block">
+          <MotionDiv className="hidden md:block">
             <p className="text-xl md:text-2xl mb-5">Contents</p>
             <Link
               href="/classes/#what-is-speech-and-drama"
@@ -73,7 +74,7 @@ const Classes = () => {
                 Public Speaking
               </span>
             </Link>
-          </div>
+          </MotionDiv>
         </div>
       </div>
       <div className="flex flex-col w-full md:w-4/5">

@@ -87,7 +87,7 @@ const Intro = () => {
                 >
                   {info.body}
                 </motion.p>
-                <MotionDiv delay={ANIMATION_DELAY_3}>
+                <MotionDiv delay={3}>
                   <Link
                     href={`/${info.link}`}
                     className="flex flex-col justify-center capitalize p-3 w-full sm:w-fit bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 text-center text-gray-200"
