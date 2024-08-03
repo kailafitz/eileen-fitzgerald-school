@@ -96,7 +96,7 @@ const ClassSchedules = () => {
             Contact
           </span>
         </Link>{" "}
-        page for our details.
+        page for our contact information.
       </p>
       <ScheduleTables />
     </Container>

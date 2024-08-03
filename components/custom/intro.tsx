@@ -71,7 +71,7 @@ const Intro = () => {
                     duration: ANIMATION_DURATION,
                     delay: ANIMATION_DELAY_1,
                   }}
-                  className="text-xl md:text-3xl mb-3"
+                  className="font-heading text-xl md:text-4xl mb-3"
                 >
                   {info.title}
                 </motion.h1>

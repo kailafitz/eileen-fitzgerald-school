@@ -24,7 +24,7 @@ const NavigationBar = () => {
       <Container className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7">
         <img src="/logo.png" className="w-16 md:w-32" alt="logo" />
         <MobileMenu />
-        <div className="w-3/5 hidden md:block">
+        <div className="md:w-4/5 lg:w-3/5 hidden md:block">
           <NavigationMenuList>
             {links.map((link, i) => (
               <NavigationMenuItem key={link.label} className="relative">

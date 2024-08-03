@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
+import { alegreya, open } from "./app/fonts";
 
 const config = {
   darkMode: ["class"],
@@ -17,6 +18,10 @@ const config = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      body: ["var(--font-open-sans)"],
+      heading: ["var(--font-alegreya-sans)"]
     },
     extend: {
       colors: {

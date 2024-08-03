@@ -3,6 +3,8 @@ import Container from "./container";
 import Link from "next/link";
 import FacebookIcon from "./svgs/facebook";
 import InstagramIcon from "./svgs/instagram";
+import PhoneIcon from "./svgs/phone";
+import EmailIcon from "./svgs/email";
 
 const CopyrightIcon = () => (
   <svg
@@ -21,10 +23,14 @@ const CopyrightIcon = () => (
 
 const Copyright = () => {
   return (
-    <p className="flex flex-row items-center justify-center text-gray-200 text-xs opacity-60 pt-5">
-      <CopyrightIcon />
-      copyright {new Date().getFullYear()}
-    </p>
+    <Container className="text-gray-200 text-xs pt-10 opacity-60 text-center flex flex-col justify-center md:flex-row md:space-x-1">
+      <span className="flex flex-row items-center justify-center">
+        <CopyrightIcon />
+        copyright {new Date().getFullYear()}
+      </span>
+      <span>The Eileen Fitzgerald School of Speech & Drama.</span>
+      <span>All rights reserved.</span>
+    </Container>
   );
 };
 
@@ -32,17 +38,42 @@ const Footer = () => {
   return (
     <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5 bg-zinc-900 z-30">
       <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
-        <div className="w-full sm:w-fit space-y-10 sm:space-y-5">
-          <p className="text-gray-200 text-center md:text-left text-1xl sm:text-base">
+        <div className="w-full space-y-10 sm:space-y-5">
+          <p className="font-heading text-gray-200 text-center sm:text-left text-xl">
             The Eileen School of Speech & Drama
           </p>
           <img
             src="/logo.png"
-            className="w-36 md:w-24 mx-auto sm:mx-0"
+            className="w-36 md:w-24 mx-auto sm:mx-0 pb-5"
             alt="logo"
           />
+          <div className="flex flex-col space-y-2">
+            <Link
+              href="tel:+353 86 818 7549"
+              className="flex flex-row items-center gap-x-5 hover:cursor-pointer justify-center sm:justify-start"
+            >
+              <PhoneIcon size={25} className="text-gray-200 hidden sm:block" />
+              <span className="relative text-gray-200">
+                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                  (+353) 86 818 7549
+                </span>
+              </span>
+            </Link>
+            <Link
+              href="mailto:eileen.fitzgerald.school@gmail.com"
+              className="flex flex-row items-center gap-x-5 hover:cursor-pointer justify-center sm:justify-start"
+            >
+              <EmailIcon size={25} className="text-gray-200 hidden sm:block" />
+              <span className="relative text-gray-200">
+                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                  eileen.fitzgerald.school@gmail.com
+                </span>
+              </span>
+            </Link>
+          </div>
         </div>
-        <div className="text-gray-200 text-center sm:text-right text-1xl sm:text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0 pb-10">
+        <div className="text-gray-200 text-center sm:text-right text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0">
+          {/* Other useful links */}
           <Link href={"/gallery"} className="w-fit relative">
             <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
               Gallery
@@ -58,6 +89,7 @@ const Footer = () => {
               Locations
             </span>
           </Link>
+          {/* Social media icons */}
           <div className="flex flex-row justify-center md:justify-end space-x-5">
             <Link
               href="https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama"
