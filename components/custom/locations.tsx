@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin } from "lucide-react";
 import MotionDiv from "./motionDiv";
+import SectionHeading from "./sectionHeading";
 
 let iframeClassName = "w-full h-60 border-none border-0";
 
@@ -40,9 +41,7 @@ const locations = [
 const Locations = () => {
   return (
     <>
-      <h1 className="text-center text-2xl md:text-4xl my-10 md:mb-10">
-        Our Locations
-      </h1>
+      <SectionHeading title="Our Locations" />
       <div className="flex flex-col justify-center space-y-10 md:flex-row md:justify-between md:space-y-0 md:space-x-10">
         {locations.map((location, i) => {
           return (

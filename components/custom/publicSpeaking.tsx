@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import SectionHeading from "./sectionHeading";
 
 const publicSpeaking = [
   "Engaging an audience",
@@ -13,10 +14,8 @@ const publicSpeaking = [
 
 const PublicSpeaking = () => {
   return (
-    <Container className="py-10 text-gray-200" id="public-speaking">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-10">
-        Public Speaking
-      </h1>
+    <Container className="py-10" id="public-speaking">
+      <SectionHeading title="Public Speaking" />
       <p className="mb-5">
         Do you have an upcoming presentation? Do you have a fear of speaking in
         public? Is there an interview you really want to succeed at? Have you a

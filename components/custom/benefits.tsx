@@ -8,6 +8,7 @@ import InterpersonalSkillIcon from "./svgs/interpersonalSkills";
 import BodyLanguageIcon from "./svgs/bodyLanguage";
 import Container from "./container";
 import { useRouter } from "next/navigation";
+import SectionHeading from "./sectionHeading";
 
 let classes = "w-16 md:w-24";
 
@@ -94,13 +95,11 @@ const Benefits = () => {
   };
 
   return (
-    <Container className="text-gray-200 pt-10" id="benefits">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
-        Benefits of Speech and Drama
-      </h1>
-      <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
-        What are the benefits of speech and drama for my child?
-      </p>
+    <Container className="pt-10" id="benefits">
+      <SectionHeading
+        title="Benefits of Speech and Drama"
+        subtitle="What are the benefits of speech and drama for my child?"
+      />
       <div className="flex flex-col justify-between">
         <Benefit label={currentBenefit} />
 

@@ -7,7 +7,6 @@ import MotionDiv from "./motionDiv";
 import {
   ANIMATION_DELAY_1,
   ANIMATION_DELAY_2,
-  ANIMATION_DELAY_3,
   ANIMATION_DURATION,
 } from "@/lib/globals";
 import Image from "next/image";

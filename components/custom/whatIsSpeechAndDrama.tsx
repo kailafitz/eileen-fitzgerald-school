@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import SectionHeading from "./sectionHeading";
 
 const WhatIsSpeechAndDrama = () => {
   return (
@@ -7,10 +8,8 @@ const WhatIsSpeechAndDrama = () => {
       className="custom-vh-xs flex flex-col justify-center bg-primary"
       id="what-is-speech-and-drama"
     >
-      <Container className="text-gray-200 py-10">
-        <h1 className="text-center text-2xl md:text-4xl mb-10">
-          What is Speech and Drama?
-        </h1>
+      <Container className="py-10">
+        <SectionHeading title="What is Speech and Drama?" />
         <p>
           This is a weekly class to introduce students to all aspects of Speech
           and Drama, to develop creativity, build confidence, and enhance the

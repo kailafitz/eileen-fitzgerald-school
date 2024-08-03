@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { Quote } from "lucide-react";
+import SectionHeading from "./sectionHeading";
 
 const testimonials = [
   {
@@ -54,13 +55,11 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="pb-10 text-gray-200">
-      <h1 className="font-heading text-center text-2xl md:text-5xl mt-10 mb-2">
-        Testimonials
-      </h1>
-      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
-        See what our pupils have to say
-      </p>
+    <div className="pb-10">
+      <SectionHeading
+        title="Testimonials"
+        subtitle="See what our pupils have to say"
+      />
       <Carousel
         orientation="horizontal"
         opts={{

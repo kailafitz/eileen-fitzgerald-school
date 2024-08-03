@@ -9,6 +9,7 @@ import {
 } from "@/lib/globals";
 import MotionDiv from "./motionDiv";
 import Image from "next/image";
+import SectionHeading from "./sectionHeading";
 
 const staffMembers = [
   {
@@ -70,7 +71,7 @@ const StaffMembers = () => {
                           duration: ANIMATION_DURATION,
                           delay: ANIMATION_DELAY_1,
                         }}
-                        className="font-heading text-gray-200 text-4xl sm:text-5xl lg:text-6xl text-left"
+                        className="font-heading text-4xl sm:text-5xl lg:text-6xl text-left"
                       >
                         {member.name}
                       </motion.h2>{" "}
@@ -102,7 +103,7 @@ const StaffMembers = () => {
                           duration: ANIMATION_DURATION,
                           delay: ANIMATION_DELAY_3,
                         }}
-                        className="text-gray-200 mb-5"
+                        className="mb-5"
                       >
                         {paragraph}
                       </motion.p>
@@ -121,9 +122,7 @@ const StaffMembers = () => {
 const Staff = () => {
   return (
     <>
-      <h1 className="font-heading text-gray-200 text-center my-10 text-2xl md:text-4xl">
-        Meet our Teachers
-      </h1>
+      <SectionHeading title="Meet our Staff" />
       <StaffMembers />
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import SectionHeading from "./sectionHeading";
 
 const yearlyEvents = [
   {
@@ -30,14 +31,12 @@ const yearlyEvents = [
 
 const YearlyEvents = () => {
   return (
-    <Container className="text-gray-200 pt-10" id="yearly-events">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
-        Yearly Events
-      </h1>
-      <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
-        There are multiple events throughout the year that our students can get
-        involved in through our school
-      </p>
+    <Container className="pt-10" id="yearly-events">
+      <SectionHeading
+        title="Yearly Events"
+        subtitle="There are multiple events throughout the year that our students can get
+        involved in through our school"
+      />
       <div className="flex flex-col space-y-10">
         {yearlyEvents.map((event, i) => {
           return (

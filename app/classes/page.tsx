@@ -77,7 +77,7 @@ const Classes = () => {
           </MotionDiv>
         </div>
       </div>
-      <div className="flex flex-col w-full md:w-4/5">
+      <div className="flex flex-col w-full md:w-4/5 text-gray-200">
         <WhatIsSpeechAndDrama />
         <Benefits />
         <ClassSchedules />

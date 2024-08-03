@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import SectionHeading from "./sectionHeading";
 
 const schedules = [
   {
@@ -38,7 +39,7 @@ const ScheduleTables = () => {
         {schedules.map((school, i) => {
           return (
             <div key={`${school.school}_${i}`} className="flex flex-col w-full">
-              <h4 className="text-gray-200 text-left mb-3">{school.school}</h4>
+              <h4 className="text-left mb-3">{school.school}</h4>
               {/* Wrapper */}
               <div className="space-y-2 lg:space-y-0 lg:grid lg:gap-x-2 lg:grid-cols-6">
                 {/* Headings */}
@@ -77,13 +78,11 @@ const ScheduleTables = () => {
 
 const ClassSchedules = () => {
   return (
-    <Container id="class-schedules" className="text-gray-200 pt-10">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
-        Our Speech and Drama Classes
-      </h1>
-      <p className="text-center text-base mb-5 lg:w-1/2 mx-auto">
-        Our class schedules are based on our locations and age groups
-      </p>
+    <Container id="class-schedules" className="pt-10">
+      <SectionHeading
+        title="Our Speech and Drama Classes"
+        subtitle="Our class schedules are based on our locations and age groups"
+      />
       <p className="mb-10">
         With almost 30 years of experience, Eileen Fitzgerald teaches a wide
         range of acting and speech classes. Classes are offered for beginners,

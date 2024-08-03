@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <Container>
+    <Container className="text-gray-200">
       <Staff />
       <Testimonials />
     </Container>

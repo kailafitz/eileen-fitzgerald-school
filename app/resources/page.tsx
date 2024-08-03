@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
 import { ANIMATION_DELAY_1 } from "@/lib/globals";
+import SectionHeading from "@/components/custom/sectionHeading";
 
 export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
@@ -74,10 +75,10 @@ const links = [
 const Resources = () => {
   return (
     <Container className="my-10 text-gray-200 ">
-      <h1 className="text-center text-2xl md:text-4xl mb-2">Resources</h1>
-      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
-        Useful links for our students
-      </p>
+      <SectionHeading
+        title="Resources"
+        subtitle="Useful links for our students"
+      />
       <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
         {links.map((linkGroup, i) => {
           return (
