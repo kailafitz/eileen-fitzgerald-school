@@ -1,5 +1,5 @@
 import React from "react";
-import Team from "@/components/custom/team";
+import Staff from "@/components/custom/staff";
 import Testimonials from "@/components/custom/testimonials";
 import { Metadata } from "next";
 import Container from "@/components/custom/container";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <Container>
-      <Team />
+      <Staff />
       <Testimonials />
     </Container>
   );

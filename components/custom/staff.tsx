@@ -10,7 +10,7 @@ import {
 import MotionDiv from "./motionDiv";
 import Image from "next/image";
 
-const members = [
+const staffMembers = [
   {
     name: "Eileen Fitzgerald",
     position: "Director & Teacher",
@@ -33,10 +33,10 @@ const members = [
   },
 ];
 
-const Members = () => {
+const StaffMembers = () => {
   return (
     <div className="space-y-10 pb-10">
-      {members.map((member, i) => {
+      {staffMembers.map((member, i) => {
         return (
           <React.Fragment key={`${member.name}_${i}`}>
             <div className="flex flex-col justify-center my-10">
@@ -51,7 +51,9 @@ const Members = () => {
                         width={225}
                         height={318}
                         loading="eager"
-                        src={`/${member.name.split(" ")[0]}2.png`}
+                        src={`/staff/${member.name
+                          .split(" ")[0]
+                          .toLocaleLowerCase()}2.png`}
                         alt={member.name}
                         className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"
                       />
@@ -116,15 +118,15 @@ const Members = () => {
   );
 };
 
-const Team = () => {
+const Staff = () => {
   return (
     <>
       <h1 className="font-heading text-gray-200 text-center my-10 text-2xl md:text-4xl">
         Meet our Teachers
       </h1>
-      <Members />
+      <StaffMembers />
     </>
   );
 };
 
-export default Team;
+export default Staff;
