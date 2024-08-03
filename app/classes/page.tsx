@@ -25,7 +25,7 @@ const Classes = () => {
         <MobileMenuClasses />
         <div className="md:sticky md:top-5">
           <MotionDiv className="hidden md:block">
-            <p className="text-xl md:text-2xl mb-5">Contents</p>
+            <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
             <Link
               href="/classes/#what-is-speech-and-drama"
               className="relative w-fit mb-2 block"

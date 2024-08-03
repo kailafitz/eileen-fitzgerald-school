@@ -7,8 +7,14 @@ import EmpathyIcon from "./svgs/empathy";
 import InterpersonalSkillIcon from "./svgs/interpersonalSkills";
 import BodyLanguageIcon from "./svgs/bodyLanguage";
 import Container from "./container";
-import { useRouter } from "next/navigation";
 import SectionHeading from "./sectionHeading";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 let classes = "w-16 md:w-24";
 
@@ -35,7 +41,7 @@ const benefits = [
     icon: <BodyLanguageIcon className={classes} />,
     label: "Use of Positive Body Language",
     description:
-      "We create a safe environment for students to express themselves without feeling judged, building their confidence and developing new skills.",
+      "Our classes provide a trusting experience to learn and practice positive body language. Being aware of the message one’s own body sends out is a powerful way of communicating.",
   },
   {
     icon: <SpeechIcon className={classes} />,
@@ -55,23 +61,50 @@ type Props = {
   label: string;
 };
 
+const MobileBenefitMenu = ({ settingValue }: { settingValue: Function }) => {
+  return (
+    <Select
+      onValueChange={(value) => {
+        settingValue(value);
+      }}
+    >
+      <SelectTrigger className="md:hidden bg-zinc-900 text-left">
+        <SelectValue placeholder={benefits[0].label} />
+      </SelectTrigger>
+      <SelectContent>
+        {benefits.map((benefit, i) => {
+          return (
+            <SelectItem
+              key={`${benefit.label}_${i}`}
+              value={benefit.label}
+              className="pl-1"
+            >
+              {benefit.label}
+            </SelectItem>
+          );
+        })}
+      </SelectContent>
+    </Select>
+  );
+};
+
 const Benefit = (props: Props) => {
   const benefit = benefits.find(
     (benefitLabel) => props.label === benefitLabel.label
   );
   return (
     <div
-      className="flex flex-col space-y-8 mb-10 md:mb-5 transition-all"
+      className="flex flex-col space-y-8 mb-10 md:mb-5 transition-all border-primary bg-primary border-2 p-5 sm:py-10"
       id="benefit-container"
     >
-      <div className="mx-auto bg-primary p-6 md:p-10 rounded-full">
+      <div className="mx-auto p-6 md:p-10 rounded-full bg-white text-primary">
         {benefit?.icon}
       </div>
       <div>
         <h6 className="min-h-11 mb-3 md:min-h-0 text-xl md:text-2xl text-center mx-auto md:mb-5">
           {benefit?.label}
         </h6>
-        <p className="sm:min-h-36 md:min-h-24 w-full sm:w-3/4 xl:w-7/12 mx-auto text-center">
+        <p className="sm:min-h-20 md:min-h-20 w-full mx-auto text-center flex flex-col justify-center">
           {benefit?.description}
         </p>
       </div>
@@ -83,7 +116,6 @@ const Benefits = () => {
   const [currentBenefit, setCurrentBenefit] = useState(
     "Increases Self-Confidence"
   );
-  const router = useRouter();
 
   const resetAnimation = () => {
     const benefitContainer = document.getElementById("benefit-Container");
@@ -102,8 +134,8 @@ const Benefits = () => {
       />
       <div className="flex flex-col justify-between">
         <Benefit label={currentBenefit} />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-3">
+        <MobileBenefitMenu settingValue={setCurrentBenefit} />
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-3">
           {benefits.map((benefit, i) => {
             return (
               <button
@@ -116,7 +148,6 @@ const Benefits = () => {
                 onClick={() => {
                   setCurrentBenefit(benefit.label);
                   resetAnimation();
-                  router.push("/classes/#benefits");
                 }}
               >
                 {benefit.label}

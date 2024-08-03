@@ -14,7 +14,7 @@ const BodyLanguageIcon = (props: Props) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
       className={`lucide lucide-hand ${props.className}`}
