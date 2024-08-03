@@ -8,7 +8,7 @@ const WhatIsSpeechAndDrama = () => {
       className="custom-vh-xs flex flex-col justify-center bg-primary"
       id="what-is-speech-and-drama"
     >
-      <Container className="py-10">
+      <Container className="pb-10">
         <SectionHeading title="What is Speech and Drama?" />
         <p>
           This is a weekly class to introduce students to all aspects of Speech
