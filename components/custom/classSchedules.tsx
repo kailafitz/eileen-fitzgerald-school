@@ -35,7 +35,7 @@ const schedules = [
 const ScheduleTables = () => {
   return (
     <>
-      <div className="flex flex-col justify-between items-start pt-10 space-y-10">
+      <div className="flex flex-col justify-between items-start space-y-10">
         {schedules.map((school, i) => {
           return (
             <div key={`${school.school}_${i}`} className="flex flex-col w-full">

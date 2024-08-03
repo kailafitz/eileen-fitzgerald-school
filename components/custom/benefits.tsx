@@ -16,7 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-let classes = "w-16 md:w-24";
+let classes = "w-16 lg:w-24";
 
 const benefits = [
   {
@@ -68,7 +68,7 @@ const MobileBenefitMenu = ({ settingValue }: { settingValue: Function }) => {
         settingValue(value);
       }}
     >
-      <SelectTrigger className="md:hidden bg-zinc-900 text-left">
+      <SelectTrigger className="lg:hidden bg-zinc-900 text-left">
         <SelectValue placeholder={benefits[0].label} />
       </SelectTrigger>
       <SelectContent>
@@ -94,17 +94,17 @@ const Benefit = (props: Props) => {
   );
   return (
     <div
-      className="flex flex-col space-y-8 mb-10 md:mb-5 transition-all border-primary bg-primary border-2 p-5 sm:py-10"
+      className="flex flex-col space-y-8 transition-all border-primary bg-primary border-2 p-5 sm:py-10 lg:w-full"
       id="benefit-container"
     >
-      <div className="mx-auto p-6 md:p-10 rounded-full bg-white text-primary">
+      <div className="mx-auto p-6 lg:p-10 rounded-full bg-zinc-900 text-white">
         {benefit?.icon}
       </div>
-      <div>
-        <h6 className="min-h-11 mb-3 md:min-h-0 text-xl md:text-2xl text-center mx-auto md:mb-5">
+      <div className="flex flex-col flex-grow">
+        <h6 className="min-h-11 mb-3 lg:min-h-0 text-xl lg:text-2xl text-center mx-auto lg:mb-5">
           {benefit?.label}
         </h6>
-        <p className="sm:min-h-20 md:min-h-20 w-full mx-auto text-center flex flex-col justify-center">
+        <p className="sm:min-h-20 lg:flex-grow w-full mx-auto text-center flex flex-col justify-center">
           {benefit?.description}
         </p>
       </div>
@@ -132,15 +132,15 @@ const Benefits = () => {
         title="Benefits of Speech and Drama"
         subtitle="What are the benefits of speech and drama for my child?"
       />
-      <div className="flex flex-col justify-between">
-        <Benefit label={currentBenefit} />
+      <p className="mb-2 lg:mb-10">Find out by more by selecting the below:</p>
+      <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-14 justify-between w-full">
         <MobileBenefitMenu settingValue={setCurrentBenefit} />
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-3">
+        <div className="hidden lg:!ml-0 lg:grid lg:grid-cols-1 grid-rows-6 gap-3">
           {benefits.map((benefit, i) => {
             return (
               <button
                 key={`${benefit.label}_${i}`}
-                className={`p-5 transition-all border-2 hover:bg-violet-800 hover:border-violet-800 ${
+                className={`px-5 py-2 transition-all border-2 hover:bg-violet-800 hover:border-violet-800 ${
                   currentBenefit === benefit.label
                     ? "bg-zinc-900 border-primary"
                     : "bg-primary border-primary"
@@ -155,6 +155,7 @@ const Benefits = () => {
             );
           })}
         </div>
+        <Benefit label={currentBenefit} />
       </div>
     </Container>
   );
