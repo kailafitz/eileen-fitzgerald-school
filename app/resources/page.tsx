@@ -74,7 +74,7 @@ const links = [
 
 const Resources = () => {
   return (
-    <Container className="my-10 text-gray-200 ">
+    <Container className="mb-10 text-gray-200 ">
       <SectionHeading
         title="Resources"
         subtitle="Useful links for our students"
@@ -86,7 +86,9 @@ const Resources = () => {
               key={`${linkGroup.title}_${i}`}
               className="bg-primary p-5 w-full md:w-1/3 mx-auto"
             >
-              <h2 className="text-2xl mb-5 text-center">{linkGroup.title}</h2>
+              <h2 className="font-heading text-2xl mb-5 text-center">
+                {linkGroup.title}
+              </h2>
               <div className="flex flex-col">
                 {linkGroup.links.map((link, i) => {
                   return (
