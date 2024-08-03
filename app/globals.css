@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: theme("colors.zinc.900");
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -73,9 +73,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   background-color: theme("colors.zinc.900");
-}
+} */
 
 .custom-vh-xs {
   min-height: calc(100vh - 104px);
@@ -112,4 +112,53 @@ body {
 
 .flip {
   transform: scaleX(-1);
+}
+
+/* .mask {
+  -webkit-mask: url(/public/mask.svg#mask);
+  mask: url(/public/mask.svg#mask);
+  -webkit-mask-image: url(/public/mask.svg#mask);
+  mask-image: url(/public/mask.svg#mask);
+  -webkit-clip-path: url(/public/mask.svg#mask);
+  clip-path: url(/public/mask.svg#mask);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-type: luminance;
+  mask-type: luminance;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+} */
+
+/* .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask: url(/public/mask.svg#mask);
+  mask: url(/public/mask.svg#mask);
+  -webkit-mask-image: url(/public/mask.svg#mask);
+  mask-image: url(/public/mask.svg#mask);
+  -webkit-clip-path: url(/public/mask.svg#mask);
+  clip-path: url(/public/mask.svg#mask);
+  -webkit-mask-image: url(#mask);
+  mask-image: url(#mask);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-type: luminance;
+  mask-type: luminance;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+} */
+
+.mask {
+  /* clip-path: url(#mask); */
+  -webkit-mask-image: url(#mask);
+  mask-image: url(#mask);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
 }
