@@ -8,6 +8,7 @@ import {
   ANIMATION_DURATION,
 } from "@/lib/globals";
 import MotionDiv from "./motionDiv";
+import Image from "next/image";
 
 const members = [
   {
@@ -46,7 +47,10 @@ const Members = () => {
                   <MotionDiv className="w-full sm:w-2/5">
                     <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto">
                       <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
-                      <img
+                      <Image
+                        width={225}
+                        height={318}
+                        loading="eager"
                         src={`/${member.name.split(" ")[0]}2.png`}
                         alt={member.name}
                         className="object-contain w-full h-auto mx-auto border-zinc-900 border-2"

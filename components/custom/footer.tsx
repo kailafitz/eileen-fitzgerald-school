@@ -5,6 +5,7 @@ import FacebookIcon from "./svgs/facebook";
 import InstagramIcon from "./svgs/instagram";
 import PhoneIcon from "./svgs/phone";
 import EmailIcon from "./svgs/email";
+import Image from "next/image";
 
 const CopyrightIcon = () => (
   <svg
@@ -42,7 +43,9 @@ const Footer = () => {
           <p className="font-heading text-gray-200 text-center sm:text-left text-xl">
             The Eileen School of Speech & Drama
           </p>
-          <img
+          <Image
+            width={100}
+            height={100}
             src="/logo.png"
             className="w-36 md:w-24 mx-auto sm:mx-0 pb-5"
             alt="logo"

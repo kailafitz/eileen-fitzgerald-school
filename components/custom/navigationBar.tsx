@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import Container from "./container";
 import MobileMenu from "./mobileMenu";
+import Image from "next/image";
 
 const links = [
   { label: "Home", link: "/" },
@@ -22,7 +23,13 @@ const NavigationBar = () => {
   return (
     <NavigationMenu>
       <Container className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7">
-        <img src="/logo.png" className="w-16 md:w-32" alt="logo" />
+        <Image
+          width={128}
+          height={128}
+          src="/logo.png"
+          className="w-16 md:w-32"
+          alt="logo"
+        />
         <MobileMenu />
         <div className="md:w-4/5 lg:w-3/5 hidden md:block">
           <NavigationMenuList>

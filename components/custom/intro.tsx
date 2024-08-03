@@ -10,6 +10,7 @@ import {
   ANIMATION_DELAY_3,
   ANIMATION_DURATION,
 } from "@/lib/globals";
+import Image from "next/image";
 
 const sectionInfo = [
   {
@@ -53,8 +54,10 @@ const Intro = () => {
               {/* Image div */}
               <MotionDiv className="relative w-full md:w-1/3">
                 <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10"></div>
-                <img
-                  src={`${info.image}.png`}
+                <Image
+                  width={360}
+                  height={610}
+                  src={`/${info.image}.png`}
                   alt="Drama student image"
                   className={`w-full h-auto object-contain border-zinc-900 border-2 ${
                     i % 2 !== 0 ? "flip" : ""
