@@ -6,7 +6,7 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <Container className="text-gray-200">
+      <Container className="text-gray-200 relative overflow-hidden w-full">
         <ContactDetails />
       </Container>
       <div className="bg-primary mt-10">

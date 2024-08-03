@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import FacebookIcon from "./svgs/facebook";
 import EmailIcon from "./svgs/email";
 import PhoneIcon from "./svgs/phone";
@@ -7,22 +7,21 @@ import Link from "next/link";
 import MotionDiv from "./motionDiv";
 import MessengerIcon from "./svgs/messenger";
 
-const size = 28;
-const classes = "text-primary";
+const classes = "text-primary w-5";
 
 const contactDetails = [
   {
-    icon: <PhoneIcon size={size} className={classes} />,
+    icon: <PhoneIcon className={classes} />,
     label: "+353 86 818 7549",
     link: "tel:+353 86 818 7549",
   },
   {
-    icon: <EmailIcon size={size} className={classes} />,
+    icon: <EmailIcon className={classes} />,
     label: "eileen.fitzgerald.school@gmail.com",
     link: "mailto:eileen.fitzgerald.school@gmail.com",
   },
   {
-    icon: <MessengerIcon size={size} className={classes} />,
+    icon: <MessengerIcon className={classes} />,
     label: "Eileen Fitzgerald School of Speech & Drama",
     link: "m.me/611752942268562",
   },
@@ -30,16 +29,41 @@ const contactDetails = [
 
 const socialMediaDetails = [
   {
-    icon: <InstagramIcon size={size} className={classes} />,
+    icon: <InstagramIcon className={classes} />,
     label: "eileenfitzgerald_drama",
     link: "https://www.instagram.com/eileenfitzgerald_drama/",
   },
   {
-    icon: <FacebookIcon size={size} className={classes} />,
+    icon: <FacebookIcon className={classes} />,
     label: "Eileen Fitzgerald School of Speech & Drama",
     link: "https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama",
   },
 ];
+
+type Props = {
+  label: string;
+  link: string;
+  icon: ReactNode;
+};
+
+const ContactDetail = (props: Props) => {
+  return (
+    <MotionDiv delay={1}>
+      <Link
+        href={props.link}
+        target="_blank"
+        className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
+      >
+        <div className="bg-gray-200 p-2 rounded-full">{props.icon}</div>
+        <span className="relative">
+          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+            {props.label}
+          </span>
+        </span>
+      </Link>
+    </MotionDiv>
+  );
+};
 
 const ContactDetails = () => {
   return (
@@ -57,25 +81,14 @@ const ContactDetails = () => {
             to find out more information, please get in touch with us.
           </p>
           <div className="w-fit space-y-5">
-            {contactDetails.map((contactMethod, i) => {
+            {contactDetails.map((detail, i) => {
               return (
-                <MotionDiv key={`${contactMethod.label}_${i}`} delay={1}>
-                  <Link
-                    key={`${contactMethod.label}_${i}`}
-                    href={contactMethod.link}
-                    target="_blank"
-                    className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
-                  >
-                    <div className="bg-gray-200 p-2 rounded-full">
-                      {contactMethod.icon}
-                    </div>
-                    <span className="relative">
-                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                        {contactMethod.label}
-                      </span>
-                    </span>
-                  </Link>
-                </MotionDiv>
+                <ContactDetail
+                  key={`${detail.label}_${i}`}
+                  label={detail.label}
+                  link={detail.link}
+                  icon={detail.icon}
+                />
               );
             })}
           </div>
@@ -87,25 +100,14 @@ const ContactDetails = () => {
             media platforms where we post the latest news and updates!
           </p>
           <div className="w-fit space-y-5">
-            {socialMediaDetails.map((socialMedia, i) => {
+            {socialMediaDetails.map((detail, i) => {
               return (
-                <MotionDiv key={`${socialMedia.label}_${i}`} delay={1}>
-                  <Link
-                    key={`${socialMedia.label}_${i}`}
-                    href={socialMedia.link}
-                    target="_blank"
-                    className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
-                  >
-                    <div className="bg-gray-200 p-2 rounded-full">
-                      {socialMedia.icon}
-                    </div>
-                    <span className="relative">
-                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                        {socialMedia.label}
-                      </span>
-                    </span>
-                  </Link>
-                </MotionDiv>
+                <ContactDetail
+                  key={`${detail.label}_${i}`}
+                  label={detail.label}
+                  link={detail.link}
+                  icon={detail.icon}
+                />
               );
             })}
           </div>

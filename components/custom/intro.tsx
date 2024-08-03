@@ -17,21 +17,21 @@ const sectionInfo = [
       "Empowering voices: Where the art of drama meets the impact of expressive speech",
     body: "Here at The Eileen Fitzgerald School, various classes are on offer for pupils of all ages. Whether you're interested in expressing yourself through the arts or if you're looking to vastly improve your confidence and communication skills for an important presentation at work, speech and drama is an empowering discipline.",
     link: "classes",
-    image: "actress-3",
+    image: "actress",
   },
   {
     title:
       "Established in Co. Clare in 1992, our school continues to foster a love of drama, communications and clear speech in our students",
     body: "Learn more about Eileen Fitzgerald and her achievements as a teacher, mentor and advocate for the art of Speech and Drama over the years of her long and successful career. As an accredited teacher and mentor, so many students have been shaped by the power of Speech and Drama at the school of Eileen Fitzgerald. Read more about Eileen and what her students have to say by visiting our About page.",
     link: "about",
-    image: "actor-3",
+    image: "actor",
   },
   {
     title:
       "For queries relating to enrolments and fees, please contact us directly",
     body: "Browse our website to get a glimpse into what we do and we hope you join us in celebrating the art that is Speech & Drama. If you would like to keep up to date with all our latest news and updates, please follow us on our social media pages. You can follow us or get in touch by visiting our Contact page which has all of our contact information. We look forward to hearing from you!",
     link: "contact",
-    image: "pupil-girl2",
+    image: "pupil-girl",
   },
 ];
 
@@ -57,7 +57,7 @@ const Intro = () => {
                   width={360}
                   height={610}
                   src={`/${info.image}.png`}
-                  alt="Drama student image"
+                  alt="Speech and Drama student"
                   className={`w-full h-auto object-contain border-zinc-900 border-2 ${
                     i % 2 !== 0 ? "flip" : ""
                   }`}
@@ -92,7 +92,7 @@ const Intro = () => {
                 <MotionDiv delay={3}>
                   <Link
                     href={`/${info.link}`}
-                    className="flex flex-col justify-center capitalize p-3 w-full sm:w-fit bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 text-center text-gray-200"
+                    className="flex flex-col justify-center capitalize p-3 w-full sm:w-fit bg-primary border-primary hover:bg-violet-800 hover:border-violet-800 text-center"
                   >
                     {info.link}
                   </Link>
