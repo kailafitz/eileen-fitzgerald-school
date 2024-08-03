@@ -5,16 +5,16 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <>
-      <Container className="text-gray-200 relative overflow-hidden w-full">
+    <div className="relative w-full overflow-hidden md:overflow-x-clip md:overflow-y-visible">
+      <Container className="text-gray-200">
         <ContactDetails />
       </Container>
-      <div className="bg-primary mt-10">
-        <Container className="mb-10 text-gray-200">
+      <div className="bg-primary pb-10">
+        <Container className="text-gray-200">
           <Locations />
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

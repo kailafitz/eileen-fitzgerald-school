@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const Classes = () => {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="sticky top-0 bg-gray-200 p-5 block md:block md:w-1/5">
+      <div className="sticky top-0 bg-white md:bg-gray-200 p-5 block md:block md:w-1/5">
         <MobileMenuClasses />
         <div className="md:sticky md:top-5">
           <MotionDiv className="hidden md:block">

@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen flex scroll-smooth">
       <body
-        className={`${open.variable} ${alegreya.variable} font-body flex-1 flex flex-col justify-between relative overflow-x-hidden`}
+        className={`${open.variable} ${alegreya.variable} font-body flex-1 flex flex-col justify-between relative overflow-x-hidden w-full`}
       >
         {/* <OpeningAnimation /> */}
         <NavigationBar />
