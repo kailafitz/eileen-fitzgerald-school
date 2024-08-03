@@ -53,13 +53,13 @@ const ContactDetails = () => {
         <div className="w-full md:w-1/2 text-left">
           <h1 className="text-2xl md:text-4xl my-10">Contact Us</h1>
           <p className="text-base mb-10">
-            If you're interested in enrolling in any of our classes or wish to
-            find out more information, please get in touch with us.
+            If you&#39;re interested in enrolling in any of our classes or wish
+            to find out more information, please get in touch with us.
           </p>
           <div className="w-fit space-y-5">
             {contactDetails.map((contactMethod, i) => {
               return (
-                <MotionDiv delay={1}>
+                <MotionDiv key={`${contactMethod.label}_${i}`} delay={1}>
                   <Link
                     key={`${contactMethod.label}_${i}`}
                     href={contactMethod.link}
@@ -89,7 +89,7 @@ const ContactDetails = () => {
           <div className="w-fit space-y-5">
             {socialMediaDetails.map((socialMedia, i) => {
               return (
-                <MotionDiv delay={1}>
+                <MotionDiv key={`${socialMedia.label}_${i}`} delay={1}>
                   <Link
                     key={`${socialMedia.label}_${i}`}
                     href={socialMedia.link}
