@@ -38,12 +38,12 @@ const Members = () => {
       {members.map((member, i) => {
         return (
           <React.Fragment key={`${member.name}_${i}`}>
-            <div className="flex flex-col justify-center md:min-h-screen">
+            <div className="flex flex-col justify-center my-10">
               <div className="space-y-10">
                 {/* Image and name div */}
-                <div className="flex flex-col md:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
+                <div className="flex flex-col sm:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
                   {/* Image div */}
-                  <MotionDiv className="w-2/5">
+                  <MotionDiv className="w-full sm:w-2/5">
                     <div className="border-zinc-900 border-2 w-1/2 md:w-1/2 relative mx-auto">
                       <div className="absolute bottom-0 right-0 w-full h-full dark-gradient-radial z-10"></div>
                       <img
@@ -54,8 +54,8 @@ const Members = () => {
                     </div>
                   </MotionDiv>
                   {/* Name div */}
-                  <div className="flex flex-col justify-center w-3/5">
-                    <MotionDiv className="bg-primary w-full h-28 md:h-4/5 flex flex-col justify-between">
+                  <div className="flex flex-col justify-center w-full sm:w-3/5">
+                    <div className="w-full h-28 md:h-4/5 flex flex-col justify-center">
                       <motion.h2
                         initial={{ opacity: 0, translateY: "-6rem" }}
                         whileInView={{ opacity: 1, translateY: "0" }}
@@ -64,23 +64,23 @@ const Members = () => {
                           duration: ANIMATION_DURATION,
                           delay: ANIMATION_DELAY_1,
                         }}
-                        className="text-zinc-900 text-xl md:text-6xl text-left"
+                        className="font-heading text-gray-200 text-4xl sm:text-5xl lg:text-6xl text-left"
                       >
                         {member.name}
                       </motion.h2>{" "}
                       <motion.h2
-                        initial={{ opacity: 0, translateY: "-6rem" }}
+                        initial={{ opacity: 0, translateY: "6rem" }}
                         whileInView={{ opacity: 1, translateY: "0" }}
-                        exit={{ opacity: 0, translateY: "6rem" }}
+                        exit={{ opacity: 0, translateY: "-6rem" }}
                         transition={{
                           duration: ANIMATION_DURATION,
                           delay: ANIMATION_DELAY_2,
                         }}
-                        className="text-zinc-900 text-xl md:text-6xl text-right"
+                        className="font-heading text-violet-500 text-4xl sm:text-5xl lg:text-6xl text-right"
                       >
                         {member.position}
                       </motion.h2>
-                    </MotionDiv>
+                    </div>
                   </div>
                 </div>
                 {/* Bio paragraphs div */}
@@ -115,7 +115,7 @@ const Members = () => {
 const Team = () => {
   return (
     <>
-      <h1 className="text-gray-200 text-center my-10 text-2xl md:text-4xl">
+      <h1 className="font-heading text-gray-200 text-center my-10 text-2xl md:text-4xl">
         Meet our Teachers
       </h1>
       <Members />
