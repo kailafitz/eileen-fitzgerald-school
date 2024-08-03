@@ -43,22 +43,35 @@ const MobileMenu = () => {
             </SheetClose>
           ))}
           <hr className="h-1 w-full bg-zinc-900 my-5" />
-          <Link
-            href="/about/#testimonials"
-            className="text-2xl hover:underline"
-          >
-            Testimonials
-          </Link>
-          <Link href="/gallery" className="text-2xl hover:underline">
-            Gallery
-          </Link>
-          <Link href="/contact/locations" className="text-2xl hover:underline">
-            Locations
-          </Link>
+          <SheetClose asChild>
+            <Link
+              href="/about/#testimonials"
+              className="text-2xl hover:underline"
+            >
+              Testimonials
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link href="/gallery" className="text-2xl hover:underline">
+              Gallery
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link
+              href="/contact/locations"
+              className="text-2xl hover:underline"
+            >
+              Locations
+            </Link>
+          </SheetClose>
           <hr className="h-1 w-full bg-zinc-900 my-5" />
           <div className="flex flex-row space-x-5">
-            <FacebookIcon size={40} />
-            <InstagramIcon size={40} />
+            <SheetClose asChild>
+              <FacebookIcon size={40} />
+            </SheetClose>
+            <SheetClose asChild>
+              <InstagramIcon size={40} />
+            </SheetClose>
           </div>
         </div>
       </SheetContent>
