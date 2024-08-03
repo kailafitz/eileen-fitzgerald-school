@@ -48,7 +48,7 @@ const GalleryColumns = () => {
                   <Image
                     key={`${img.imageName}_${i}`}
                     width={100}
-                    height={300}
+                    height={100}
                     src={`/gallery/${img.imageName}.jpg`}
                     alt={img.alt}
                     className="object-cover w-full group brightness-105 hue-rotate-15 h-full"
