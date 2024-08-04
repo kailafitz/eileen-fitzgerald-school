@@ -29,7 +29,7 @@ const PublicSpeaking = () => {
         range of skills to help pupils overcome these challenges.
         <br />
         <br />
-        The contents of the course is as follows:
+        The contents of the course are as follows:
       </p>
       <ul className="mb-5">
         {publicSpeaking.map((activity, i) => {
