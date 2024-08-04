@@ -97,7 +97,7 @@ const ClassSchedules = () => {
         <br />
         <br />
         <em>
-          Professionals looking for one to one sessions are by appointment at a
+          Professionals looking for one-to-one sessions are by appointment at a
           time to be agreed.
         </em>
       </p>

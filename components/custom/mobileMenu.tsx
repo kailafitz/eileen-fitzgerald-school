@@ -21,7 +21,7 @@ const MobileMenu = () => {
         </div>
       </SheetTrigger>
       <SheetContent>
-        <div className="flex flex-col justify-start space-y-4 p-5">
+        <div className="flex flex-col justify-start space-y-4 p-5 text-secondary-foreground">
           {links.map((link, i) => (
             <SheetClose asChild key={`${link.label}_${i}_mobile`}>
               <Link href={link.link} className="text-2xl hover:underline">
