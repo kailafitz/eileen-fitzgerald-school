@@ -66,7 +66,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       <Container className="pt-10">
-        <SheetPrimitive.Close className="w-full flex flex-row justify-end opacity-70 focus:ring-0 transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary">
+        <SheetPrimitive.Close className="w-full flex flex-row justify-end opacity-70 focus:ring-0 focus:outline-none focus:border-none transition-opacity hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-secondary">
           <div className="w-10 space-y-2">
             <span className="h-0.5 w-full bg-zinc-900 block rotate-45 translate-y-2.5"></span>
             <span className="h-0.5 w-full bg-zinc-900 block -rotate-45"></span>
