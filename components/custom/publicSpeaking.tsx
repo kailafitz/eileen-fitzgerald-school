@@ -28,6 +28,7 @@ const PublicSpeaking = () => {
         The Eileen Fitzgerald School offers a course to specifically enhance a
         range of skills to help pupils overcome these challenges.
         <br />
+        <br />
         The contents of the course is as follows:
       </p>
       <ul className="mb-5">
