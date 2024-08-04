@@ -72,7 +72,7 @@ const Footer = () => {
             <LinkAnimation>Locations</LinkAnimation>
           </Link>
           {/* Social media icons */}
-          <div className="flex flex-row justify-center md:justify-end space-x-5">
+          <div className="flex flex-row justify-center md:justify-end space-x-5 pt-1">
             <Link
               href="https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama"
               target="_blank"

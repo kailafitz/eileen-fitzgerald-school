@@ -3,7 +3,6 @@ import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
-import { ANIMATION_DELAY_1 } from "@/lib/globals";
 import SectionHeading from "@/components/custom/sectionHeading";
 import LinkAnimation from "@/components/custom/linkAnimation";
 
@@ -85,19 +84,19 @@ const Resources = () => {
           return (
             <MotionDiv
               key={`${linkGroup.title}_${i}`}
-              className="bg-primary p-5 w-full md:w-1/3 mx-auto"
+              className="w-full md:w-1/3 mx-auto border-primary border-2"
             >
-              <h2 className="font-heading text-2xl mb-5 text-center">
+              <h2 className="font-heading text-2xl text-center bg-primary py-2">
                 {linkGroup.title}
               </h2>
-              <div className="flex flex-col">
+              <div className="flex flex-col p-5 space-y-4">
                 {linkGroup.links.map((link, i) => {
                   return (
                     <Link
                       key={`${link.label}_${i}`}
                       href={link.link}
                       target="_blank"
-                      className="mb-3 relative w-fit block"
+                      className="relative w-fit block"
                     >
                       <LinkAnimation>{link.label}</LinkAnimation>
                     </Link>
