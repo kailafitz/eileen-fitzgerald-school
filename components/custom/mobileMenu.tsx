@@ -25,15 +25,15 @@ const MobileMenu = () => {
     <Sheet>
       <SheetTrigger className="block md:hidden">
         <div className="w-10 space-y-2">
-          <span className="h-1 w-full bg-gray-200 block"></span>
-          <span className="h-1 w-full bg-gray-200 block"></span>
-          <span className="h-1 w-full bg-gray-200 block"></span>
+          <span className="h-0.5 w-full bg-gray-200 block"></span>
+          <span className="h-0.5 w-full bg-gray-200 block"></span>
+          <span className="h-0.5 w-full bg-gray-200 block"></span>
         </div>
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader>
+        {/* <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
-        </SheetHeader>
+        </SheetHeader> */}
         <div className="flex flex-col justify-start space-y-4 p-5">
           {links.map((link, i) => (
             <SheetClose asChild key={`${link.label}_${i}_mobile`}>
@@ -42,7 +42,7 @@ const MobileMenu = () => {
               </Link>
             </SheetClose>
           ))}
-          <hr className="h-1 w-full bg-zinc-900 my-5" />
+          <hr className="h-0.5 w-full bg-zinc-900 my-5" />
           <SheetClose asChild>
             <Link
               href="/about/#testimonials"
@@ -58,13 +58,13 @@ const MobileMenu = () => {
           </SheetClose>
           <SheetClose asChild>
             <Link
-              href="/contact/locations"
+              href="/contact#locations"
               className="text-2xl hover:underline"
             >
               Locations
             </Link>
           </SheetClose>
-          <hr className="h-1 w-full bg-zinc-900 my-5" />
+          <hr className="h-0.5 w-full bg-zinc-900 my-5" />
           <div className="flex flex-row space-x-5">
             <SheetClose asChild>
               <FacebookIcon size={40} />

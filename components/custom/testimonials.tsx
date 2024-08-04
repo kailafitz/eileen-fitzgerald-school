@@ -55,7 +55,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="pb-10">
+    <div className="pb-10" id="testimonials">
       <SectionHeading
         title="Testimonials"
         subtitle="See what our pupils have to say"

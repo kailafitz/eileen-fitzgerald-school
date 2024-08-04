@@ -13,7 +13,7 @@ const SectionHeading = (props: Props) => {
       <h1
         className={`${
           props.left ? "text-left" : "text-center"
-        } text-2xl md:text-4xl mt-10 ${props.className} ${
+        } font-heading text-2xl md:text-4xl mt-10 ${props.className} ${
           props.subtitle !== "" ? "mb-2" : "mb-10"
         }`}
       >
