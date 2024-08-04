@@ -19,7 +19,11 @@ const Name = () => {
       </Container>
       <Link href="#intro" className="w-fit mx-auto">
         <div className="bg-gray-200 rounded-full p-0.5 animate-bounce">
-          <ChevronDown className="text-zinc-900 block mx-auto" size="40" />
+          <ChevronDown
+            className="text-zinc-900 block mx-auto"
+            size="40"
+            strokeWidth={1.2}
+          />
         </div>
       </Link>
     </div>
