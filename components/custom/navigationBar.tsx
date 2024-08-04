@@ -23,13 +23,15 @@ const NavigationBar = () => {
   return (
     <NavigationMenu>
       <Container className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7">
-        <Image
-          width={128}
-          height={128}
-          src="/logo.png"
-          className="w-16 md:w-32"
-          alt="logo"
-        />
+        <Link href="/">
+          <Image
+            width={128}
+            height={128}
+            src="/logo.png"
+            className="w-16 md:w-32"
+            alt="logo"
+          />
+        </Link>
         <MobileMenu />
         <div className="md:w-4/5 lg:w-3/5 hidden md:block">
           <NavigationMenuList>
