@@ -16,10 +16,10 @@ const staffMembers = [
     name: "Eileen Fitzgerald",
     position: "Director & Teacher",
     bio: [
-      "Eileen Fitzgerald A.I.B.S.D., L.T.C.L. runs a very successful Speech & Drama School which was established in 1992. Eileen has been involved in and studied speech & drama from a young age. She teaches all aspects of communication skills and drama from 4-year olds to 85-year olds!",
+      "Eileen Fitzgerald A.I.B.S.D., L.T.C.L. runs a very successful Speech and Drama School which was established in 1992. Eileen has been involved in and studied speech & drama from a young age. She teaches all aspects of communication skills and drama from 4-year olds to 85-year olds!",
       "Eileen studied with Trinity College London attaining a Licentiate Teachers Diploma. She has an Associate Diploma with the Irish Board of Speech & Drama.",
       "In 1995 she was appointed an examiner with the Irish Board of Speech & Drama and travels throughout the country examining students. Eileen also examines diploma students with the Board.",
-      " Currently President of the 75th Feile Luimnigh, the largest voluntary festival of its kind in the North Munster area, Eileen (together with her team) are presently organising 7000 competitors between Instrumental, Vocal, Speech & Drama and Roinn na Gaeilge.",
+      "Currently President of the 75th Feile Luimnigh, the largest voluntary festival of its kind in the North Munster area, Eileen (together with her team) are presently organising 7000 competitors between Instrumental, Vocal, Speech and Drama and Roinn na Gaeilge.",
       "Along with her colleague Ailbhe Donnelly Flanagan, Eileen has also en running the popular and friendly Cratloe Speechfest for the last eight years. She has adjudicated at feiseanna throughout the Island of Ireland.",
     ],
   },

@@ -19,7 +19,7 @@ const yearlyEvents = [
     months: "March & April",
     event: "Irish Board Examinations",
     description:
-      "The Irish Board of Speech & Drama are the favoured body in Ireland for speech & drama examinations. Each grade has a structured syllabus and includes elements of performance and theory.",
+      "The Irish Board of Speech & Drama are the favoured body in Ireland for Speech and Drama examinations. Each grade has a structured syllabus and includes elements of performance and theory.",
   },
   {
     months: "April",
