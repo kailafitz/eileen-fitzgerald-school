@@ -15,7 +15,7 @@ const sectionInfo = [
   {
     title:
       "Empowering voices: Where the art of drama meets the impact of expressive speech",
-    body: "Here at The Eileen Fitzgerald School, various classes are on offer for pupils of all ages. Whether you're interested in expressing yourself through the arts or if you're looking to vastly improve your confidence and communication skills for an important presentation at work, speech and drama is an empowering discipline.",
+    body: "Here at The Eileen Fitzgerald School, various classes are on offer for pupils of all ages. Whether you're interested in expressing yourself through the arts or if you're looking to vastly improve your confidence and communication skills for an important presentation at work, Speech and Drama is an empowering discipline.",
     link: "classes",
     image: "actress",
   },
