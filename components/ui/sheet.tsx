@@ -73,8 +73,9 @@ const SheetContent = React.forwardRef<
           </div>
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
+
+        {children}
       </Container>
-      {children}
     </SheetPrimitive.Content>
   </SheetPortal>
 ));
