@@ -3,22 +3,12 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import FacebookIcon from "./svgs/facebook";
 import InstagramIcon from "./svgs/instagram";
-
-const links = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "about" },
-  { label: "Classes", link: "classes" },
-  { label: "Gallery", link: "gallery" },
-  { label: "Resources", link: "resources" },
-  { label: "Contact", link: "contact" },
-];
+import { links } from "./navigationBar";
 
 const MobileMenu = () => {
   return (
@@ -31,9 +21,6 @@ const MobileMenu = () => {
         </div>
       </SheetTrigger>
       <SheetContent>
-        {/* <SheetHeader>
-          <SheetTitle>Menu</SheetTitle>
-        </SheetHeader> */}
         <div className="flex flex-col justify-start space-y-4 p-5">
           {links.map((link, i) => (
             <SheetClose asChild key={`${link.label}_${i}_mobile`}>

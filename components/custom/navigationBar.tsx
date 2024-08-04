@@ -2,7 +2,6 @@
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
@@ -10,13 +9,13 @@ import Container from "./container";
 import MobileMenu from "./mobileMenu";
 import Image from "next/image";
 
-const links = [
+export const links = [
   { label: "Home", link: "/" },
   { label: "About", link: "about" },
   { label: "Classes", link: "classes" },
-  { label: "Gallery", link: "gallery" },
   { label: "Resources", link: "resources" },
   { label: "Contact", link: "contact" },
+  { label: "Announcements '24", link: "announcements" },
 ];
 
 const NavigationBar = () => {
