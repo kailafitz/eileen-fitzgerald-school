@@ -89,12 +89,17 @@ const ClassSchedules = () => {
         range of acting and speech classes. Classes are offered for beginners,
         children, teenagers and adults focusing on developing public speaking
         skills, and performance technique training. To enroll for any of our
-        classes, please get in touch for availability and prices by contacting
-        us. Visit our{" "}
+        classes, please get in touch for availability and prices. Visit our{" "}
         <Link href="/classes" className="relative">
           <LinkAnimation underline>Contact</LinkAnimation>
         </Link>{" "}
         page for our contact information.
+        <br />
+        <br />
+        <em>
+          Professionals looking for one to one sessions are by appointment at a
+          time to be agreed.
+        </em>
       </p>
       <ScheduleTables />
     </Container>

@@ -1,7 +1,14 @@
 import ContactDetails from "@/components/custom/contactDetails";
 import Container from "@/components/custom/container";
 import Locations from "@/components/custom/locations";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Contact | Eileen Fitzgerald",
+  description:
+    "Get in touch with The Eileen School of Speech & Drama by email, phone or through social media. Class location details can also be found on this page.",
+};
 
 const Contact = () => {
   return (
