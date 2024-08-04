@@ -16,7 +16,7 @@ const Contact = () => {
       <Container className="pb-10">
         <ContactDetails />
       </Container>
-      <div className="bg-primary pb-10">
+      <div className="bg-primary pb-10" id="locations">
         <Container>
           <Locations />
         </Container>
