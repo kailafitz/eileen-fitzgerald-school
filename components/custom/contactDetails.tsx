@@ -25,7 +25,7 @@ const contactDetails = [
   {
     icon: <MessengerIcon className={classes} />,
     label: "Eileen Fitzgerald School of Speech & Drama",
-    link: "m.me/611752942268562",
+    link: "http://m.me/611752942268562",
   },
 ];
 
