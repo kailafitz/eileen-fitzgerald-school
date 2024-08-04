@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const Gallery = () => {
   return (
-    <Container className="text-gray-200">
+    <Container>
       <SectionHeading
         title="Our Gallery"
         subtitle="We take pride in our students&#39; achievements and the fun and memories

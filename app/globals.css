@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: theme("colors.zinc.900");
+    --foreground: theme("colors.gray.200");
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: theme("colors.violet.500");
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: #6c4dd2;
+    --primary-foreground: theme("colors.gray.200");
+    --secondary: theme("colors.gray.200");
+    --secondary-foreground: theme("colors.zinc.900");
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
@@ -71,10 +71,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background-color: theme("colors.zinc.900");
 }
 
 .custom-vh-xs {

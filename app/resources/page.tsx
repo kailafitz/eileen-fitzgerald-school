@@ -74,7 +74,7 @@ const links = [
 
 const Resources = () => {
   return (
-    <Container className="mb-10 text-gray-200 ">
+    <Container className="mb-10">
       <SectionHeading
         title="Resources"
         subtitle="Useful links for our students"

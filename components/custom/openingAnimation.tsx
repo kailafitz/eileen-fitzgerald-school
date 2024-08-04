@@ -10,7 +10,7 @@ const OpeningAnimation = () => {
         className="w-52 h-52 mx-auto animate-logo z-50"
         alt="logo"
       />
-      <h1 className="text-gray-200 animate-logo text-center text-xl w-full absolute z-40 top-[65%]">
+      <h1 className="animate-logo text-center text-xl w-full absolute z-40 top-[65%]">
         The Eileen Fitzgerald <br /> School of Speech and Drama
       </h1>
     </div>

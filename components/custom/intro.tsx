@@ -43,7 +43,7 @@ const Intro = () => {
           <Container
             key={`${info.link}_${i}`}
             id={`${i === 0 ? "intro" : ""}`}
-            className="min-h-screen py-10 flex flex-col justify-center text-gray-200"
+            className="min-h-screen py-10 flex flex-col justify-center"
           >
             <div
               className={`flex flex-col md:flex-row ${

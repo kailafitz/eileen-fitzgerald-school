@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 const Classes = () => {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="sticky top-0 bg-white md:bg-gray-200 p-5 block md:block md:w-1/5">
+      <div className="sticky top-0 bg-secondary p-5 block md:block md:w-1/5">
         <MobileMenuClasses />
         <div className="md:sticky md:top-5">
-          <MotionDiv className="hidden md:block">
+          <MotionDiv className="hidden md:block text-secondary-foreground">
             <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
             <Link
               href="/classes/#what-is-speech-and-drama"
@@ -77,7 +77,7 @@ const Classes = () => {
           </MotionDiv>
         </div>
       </div>
-      <div className="flex flex-col w-full md:w-4/5 text-gray-200">
+      <div className="flex flex-col w-full md:w-4/5">
         <WhatIsSpeechAndDrama />
         <Benefits />
         <ClassSchedules />

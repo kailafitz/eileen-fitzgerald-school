@@ -23,7 +23,7 @@ const MobileMenuClasses = () => {
         setValue(value);
       }}
     >
-      <SelectTrigger className="md:hidden bg-white">
+      <SelectTrigger className="md:hidden bg-secondary">
         <SelectValue placeholder={value === "" ? "Contents" : value} />
       </SelectTrigger>
       <SelectContent>

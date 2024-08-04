@@ -6,11 +6,11 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="relative w-full overflow-hidden md:overflow-x-clip md:overflow-y-visible">
-      <Container className="text-gray-200 pb-10">
+      <Container className="pb-10">
         <ContactDetails />
       </Container>
       <div className="bg-primary pb-10">
-        <Container className="text-gray-200">
+        <Container>
           <Locations />
         </Container>
       </div>

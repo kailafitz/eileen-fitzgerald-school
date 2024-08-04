@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Name = () => {
   return (
-    <div className="bg-primary w-full py-10 custom-vh-xs custom-vh-md flex flex-col text-gray-200">
+    <div className="bg-primary w-full py-10 custom-vh-xs custom-vh-md flex flex-col">
       <Container className="text-center flex-1 flex flex-col justify-evenly">
         <div>
           <p className="text-lg sm:text-2xl mb-5 uppercase tracking-widest">
