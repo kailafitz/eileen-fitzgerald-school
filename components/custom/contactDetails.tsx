@@ -7,6 +7,7 @@ import Link from "next/link";
 import MotionDiv from "./motionDiv";
 import MessengerIcon from "./svgs/messenger";
 import SectionHeading from "./sectionHeading";
+import LinkAnimation from "./linkAnimation";
 
 const classes = "text-primary w-5";
 
@@ -57,9 +58,7 @@ const ContactDetail = (props: Props) => {
       >
         <div className="bg-gray-200 p-2 rounded-full">{props.icon}</div>
         <span className="relative">
-          <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-            {props.label}
-          </span>
+          <LinkAnimation>{props.label}</LinkAnimation>
         </span>
       </Link>
     </MotionDiv>

@@ -8,6 +8,8 @@ import Link from "next/link";
 import Container from "./container";
 import MobileMenu from "./mobileMenu";
 import Image from "next/image";
+import CustomLink from "./linkAnimation";
+import LinkAnimation from "./linkAnimation";
 
 export const links = [
   { label: "Home", link: "/" },
@@ -35,12 +37,12 @@ const NavigationBar = () => {
         <div className="md:w-4/5 lg:w-3/5 hidden md:block">
           <NavigationMenuList>
             {links.map((link, i) => (
-              <NavigationMenuItem key={link.label} className="relative">
-                <Link
-                  href={link.link}
-                  className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100"
-                >
-                  {link.label}
+              <NavigationMenuItem
+                key={`${link.label}_${i}`}
+                className="relative"
+              >
+                <Link href={link.link} className="relative">
+                  <LinkAnimation>{link.label}</LinkAnimation>
                 </Link>
               </NavigationMenuItem>
             ))}

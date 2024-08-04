@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import MobileMenuClasses from "@/components/custom/mobileMenuClasses";
 import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
+import LinkAnimation from "@/components/custom/linkAnimation";
 
 export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
@@ -30,49 +31,37 @@ const Classes = () => {
               href="/classes/#what-is-speech-and-drama"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                What is Speech and Drama?
-              </span>
+              <LinkAnimation>What is Speech and Drama?</LinkAnimation>
             </Link>
             <Link
               href="/classes/#benefits"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                Benefits of Speech and Drama
-              </span>
+              <LinkAnimation>Benefits of Speech and Drama</LinkAnimation>
             </Link>
             <Link
               href="/classes/#class-schedules"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                Class Schedules
-              </span>
+              <LinkAnimation>Class Schedules</LinkAnimation>
             </Link>
             <Link
               href="/classes/#activities"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                Class Activities
-              </span>
+              <LinkAnimation>Class Activities</LinkAnimation>
             </Link>
             <Link
               href="/classes/#yearly-events"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                Yearly Events
-              </span>
+              <LinkAnimation>Yearly Events</LinkAnimation>
             </Link>
             <Link
               href="/classes/#public-speaking"
               className="relative w-fit mb-2 block"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                Public Speaking
-              </span>
+              <LinkAnimation>Public Speaking</LinkAnimation>
             </Link>
           </MotionDiv>
         </div>

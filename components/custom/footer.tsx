@@ -7,6 +7,7 @@ import PhoneIcon from "./svgs/phone";
 import EmailIcon from "./svgs/email";
 import Image from "next/image";
 import CopyrightIcon from "./svgs/copyright";
+import LinkAnimation from "./linkAnimation";
 
 const Copyright = () => {
   return (
@@ -43,9 +44,7 @@ const Footer = () => {
             >
               <PhoneIcon size={25} className="hidden sm:block" />
               <span className="relative">
-                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                  (+353) 86 818 7549
-                </span>
+                <LinkAnimation>(+353) 86 818 7549</LinkAnimation>
               </span>
             </Link>
             <Link
@@ -54,9 +53,9 @@ const Footer = () => {
             >
               <EmailIcon size={25} className="hidden sm:block" />
               <span className="relative">
-                <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+                <LinkAnimation>
                   eileen.fitzgerald.school@gmail.com
-                </span>
+                </LinkAnimation>
               </span>
             </Link>
           </div>
@@ -64,19 +63,13 @@ const Footer = () => {
         <div className="text-center sm:text-right text-base flex flex-col items-center sm:items-end space-y-3 sm:space-y-2 mx-auto sm:mx-0">
           {/* Other useful links */}
           <Link href={"/gallery"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Gallery
-            </span>
+            <LinkAnimation>Gallery</LinkAnimation>
           </Link>
           <Link href={"/testimonials"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Testimonials
-            </span>
+            <LinkAnimation>Testimonials</LinkAnimation>
           </Link>
           <Link href={"/locations"} className="w-fit relative">
-            <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-0.5 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-              Locations
-            </span>
+            <LinkAnimation>Locations</LinkAnimation>
           </Link>
           {/* Social media icons */}
           <div className="flex flex-row justify-center md:justify-end space-x-5">
@@ -85,18 +78,18 @@ const Footer = () => {
               target="_blank"
               className="w-fit relative"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              <LinkAnimation mb>
                 <FacebookIcon size={25} />
-              </span>
+              </LinkAnimation>
             </Link>
             <Link
               href="https://www.instagram.com/eileenfitzgerald_drama/"
               target="_blank"
               className="w-fit relative"
             >
-              <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-2 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+              <LinkAnimation mb>
                 <InstagramIcon size={25} />
-              </span>
+              </LinkAnimation>
             </Link>
           </div>
         </div>

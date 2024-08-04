@@ -5,6 +5,7 @@ import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
 import { ANIMATION_DELAY_1 } from "@/lib/globals";
 import SectionHeading from "@/components/custom/sectionHeading";
+import LinkAnimation from "@/components/custom/linkAnimation";
 
 export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
@@ -98,9 +99,7 @@ const Resources = () => {
                       target="_blank"
                       className="mb-3 relative w-fit block"
                     >
-                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-gray-200 after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                        {link.label}
-                      </span>
+                      <LinkAnimation>{link.label}</LinkAnimation>
                     </Link>
                   );
                 })}
