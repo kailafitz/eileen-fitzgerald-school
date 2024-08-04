@@ -65,10 +65,10 @@ const Footer = () => {
           <Link href={"/gallery"} className="w-fit relative">
             <LinkAnimation>Gallery</LinkAnimation>
           </Link>
-          <Link href={"/testimonials"} className="w-fit relative">
+          <Link href={"/about#testimonials"} className="w-fit relative">
             <LinkAnimation>Testimonials</LinkAnimation>
           </Link>
-          <Link href={"/locations"} className="w-fit relative">
+          <Link href={"/contact#locations"} className="w-fit relative">
             <LinkAnimation>Locations</LinkAnimation>
           </Link>
           {/* Social media icons */}
