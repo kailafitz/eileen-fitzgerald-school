@@ -130,7 +130,7 @@ const Benefits = () => {
     <Container className="pt-10" id="benefits">
       <SectionHeading
         title="Benefits of Speech and Drama"
-        subtitle="What are the benefits of speech and drama for my child?"
+        subtitle="What are the benefits of Speech and Drama for my child?"
       />
       <p className="mb-2 lg:mb-10">Find out by more by selecting the below:</p>
       <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-14 justify-between w-full">
