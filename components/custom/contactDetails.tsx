@@ -73,7 +73,7 @@ const ContactDetails = () => {
         alt="logo"
         className="absolute top-44 w-screen md:w-3/5 md:-top-6 md:-right-48 opacity-10 rotate-12 -z-10"
       />
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col">
         <div className="w-full md:w-1/2 text-left">
           <SectionHeading
             title="Contact Us"
