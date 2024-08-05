@@ -52,13 +52,13 @@ const Intro = () => {
             >
               {/* Image div */}
               <MotionDiv className="relative w-full md:w-1/3">
-                <div className="absolute bottom-0 right-0 w-full h-full dark-gradient z-10"></div>
+                <div className="absolute -bottom-px -right-px w-full h-full dark-gradient z-10"></div>
                 <Image
                   width={360}
                   height={610}
                   src={`/${info.image}.png`}
                   alt="Speech and Drama student"
-                  className={`w-full h-auto object-contain border-zinc-900 border-2 ${
+                  className={`w-full h-auto object-contain ${
                     i % 2 !== 0 ? "flip" : ""
                   }`}
                 />
