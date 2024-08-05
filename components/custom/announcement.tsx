@@ -69,7 +69,7 @@ const Announcement = () => {
     <>
       {announcements.map((announcement, i) => {
         return (
-          <div>
+          <div key={`${announcement.heading}_${i}`}>
             <h6 className="text-2xl mb-5">
               <Asterisk className="text-primary inline" />
               <span>{announcement.heading}</span>
