@@ -28,39 +28,24 @@ const Classes = () => {
           <MotionDiv className="hidden md:block text-secondary-foreground">
             <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
             <Link
-              href="/classes/#what-is-speech-and-drama"
+              href="#what-is-speech-and-drama"
               className="relative w-fit mb-2 block"
             >
               <LinkAnimation>What is Speech and Drama?</LinkAnimation>
             </Link>
-            <Link
-              href="/classes/#benefits"
-              className="relative w-fit mb-2 block"
-            >
+            <Link href="#benefits" className="relative w-fit mb-2 block">
               <LinkAnimation>Benefits of Speech and Drama</LinkAnimation>
             </Link>
-            <Link
-              href="/classes/#class-schedules"
-              className="relative w-fit mb-2 block"
-            >
+            <Link href="#class-schedules" className="relative w-fit mb-2 block">
               <LinkAnimation>Class Schedules</LinkAnimation>
             </Link>
-            <Link
-              href="/classes/#activities"
-              className="relative w-fit mb-2 block"
-            >
+            <Link href="#activities" className="relative w-fit mb-2 block">
               <LinkAnimation>Class Activities</LinkAnimation>
             </Link>
-            <Link
-              href="/classes/#yearly-events"
-              className="relative w-fit mb-2 block"
-            >
+            <Link href="#yearly-events" className="relative w-fit mb-2 block">
               <LinkAnimation>Yearly Events</LinkAnimation>
             </Link>
-            <Link
-              href="/classes/#public-speaking"
-              className="relative w-fit mb-2 block"
-            >
+            <Link href="#public-speaking" className="relative w-fit mb-2 block">
               <LinkAnimation>Public Speaking</LinkAnimation>
             </Link>
           </MotionDiv>

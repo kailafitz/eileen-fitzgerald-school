@@ -3,6 +3,8 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
@@ -21,6 +23,10 @@ const MobileMenu = () => {
         </div>
       </SheetTrigger>
       <SheetContent>
+        <SheetTitle className="hidden">Mobile Menu</SheetTitle>
+        <SheetDescription className="hidden">
+          Mobile navigation menu where links to different pages are accessible.
+        </SheetDescription>
         <div className="flex flex-col justify-start space-y-4 text-secondary-foreground pt-5">
           {links.map((link, i) => (
             <SheetClose asChild key={`${link.label}_${i}_mobile`}>
