@@ -140,16 +140,17 @@ const Benefits = () => {
             return (
               <button
                 key={`${benefit.label}_${i}`}
-                className={`px-5 py-2 transition-all border-2 hover:bg-violet-800 hover:border-violet-800 ${
+                className={`relative px-5 py-2 after:block after:absolute after:border-l-2 after:border-r-2 after:border-white after:h-0 after:top-0 after:left-0 after:w-full hover:after:h-full after:z-10 after:transition-all after:hover:transition-all after:duration-500 after:hover:duration-500 after:hover:delay-75 before:block before:absolute before:border-t-2 before:border-b-2 before:border-white before:h-full before:top-0 before:left-0 before:w-0 hover:before:w-full before:z-10 before:transition-all before:hover:transition-all before:duration-500 before:hover:duration-500 ${
                   currentBenefit === benefit.label
-                    ? "bg-zinc-900 border-primary"
-                    : "bg-primary border-primary"
+                    ? "bg-primary"
+                    : "border-primary"
                 }`}
                 onClick={() => {
                   setCurrentBenefit(benefit.label);
                   resetAnimation();
                 }}
               >
+                <div className="block absolute top-0 left-0 h-full w-full border-2 border-primary"></div>
                 {benefit.label}
               </button>
             );

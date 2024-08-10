@@ -64,7 +64,7 @@ const config = {
       },
       transitionProperty: {
         "height": "height",
-        "background-color": "background-color"
+        "bg": "background-color",
       },
       keyframes: {
         "accordion-down": {
