@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
-import { alegreya, open } from "./app/fonts";
 
 const config = {
   darkMode: ["class"],
