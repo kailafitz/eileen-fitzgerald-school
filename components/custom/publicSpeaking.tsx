@@ -48,7 +48,7 @@ const PublicSpeaking = () => {
         <div className="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row mb-2">
           <div>
             <div className="bg-primary text-center p-1 flex flex-col justify-center">
-              €160
+              Option 1
             </div>
             <ul className="border-primary border-2 p-5">
               <li className="list-disc ml-4 marker:text-primary">
@@ -62,7 +62,7 @@ const PublicSpeaking = () => {
           </div>
           <div>
             <div className="bg-primary text-center p-1 flex flex-col justify-center">
-              €320
+              Option 2
             </div>
             <ul className="border-primary border-2 p-5">
               <li className="list-disc ml-4 marker:text-primary">One-to-one</li>

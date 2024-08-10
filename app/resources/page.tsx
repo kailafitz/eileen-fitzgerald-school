@@ -32,10 +32,6 @@ const dramaLinks = [
 
 const poetryLinks = [
   { label: "Poetry4Kids", link: "http://www.poetry4kids.com/" },
-  {
-    label: "DLTK Holidays",
-    link: "https://www.dltk-holidays.com/",
-  },
   { label: "FizzyFunnyFuzzy", link: "http://www.fizzyfunnyfuzzy.com/" },
   {
     label: "Classroom Tested Resources",

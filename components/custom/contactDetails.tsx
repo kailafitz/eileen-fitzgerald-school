@@ -9,7 +9,7 @@ import MessengerIcon from "./svgs/messenger";
 import SectionHeading from "./sectionHeading";
 import LinkAnimation from "./linkAnimation";
 
-const classes = "text-primary w-5";
+const classes = "text-primary w-5 md:w-6";
 
 const contactDetails = [
   {
@@ -57,7 +57,7 @@ const ContactDetail = (props: Props) => {
         className="flex flex-row items-center gap-x-5 w-fit hover:cursor-pointer"
       >
         <div className="bg-gray-200 p-2 rounded-full">{props.icon}</div>
-        <span className="relative">
+        <span className="relative break-all">
           <LinkAnimation>{props.label}</LinkAnimation>
         </span>
       </Link>

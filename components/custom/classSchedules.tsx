@@ -85,8 +85,8 @@ const ClassSchedules = () => {
         subtitle="Our class schedules are based on our locations and age groups"
       />
       <p className="mb-10">
-        With almost 30 years of experience, Eileen Fitzgerald teaches a wide
-        range of acting and speech classes. Classes are offered for beginners,
+        With over 30 years of experience, Eileen Fitzgerald teaches a wide range
+        of acting and speech classes. Classes are offered for beginners,
         children, teenagers and adults focusing on developing public speaking
         skills, and performance technique training. To enroll for any of our
         classes, please get in touch for availability and prices. Visit our{" "}
@@ -101,7 +101,6 @@ const ClassSchedules = () => {
           time to be agreed.
         </em>
       </p>
-      <ScheduleTables />
     </Container>
   );
 };

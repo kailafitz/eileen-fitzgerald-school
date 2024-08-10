@@ -9,7 +9,6 @@ import {
 } from "@/lib/globals";
 import MotionDiv from "./motionDiv";
 import Image from "next/image";
-import SectionHeading from "./sectionHeading";
 
 const staffMembers = [
   {
@@ -19,28 +18,20 @@ const staffMembers = [
       "Eileen Fitzgerald A.I.B.S.D., L.T.C.L. runs a very successful Speech and Drama School which was established in 1992. Eileen has been involved in and studied speech & drama from a young age. She teaches all aspects of communication skills and drama from 4-year olds to 85-year olds!",
       "Eileen studied with Trinity College London attaining a Licentiate Teachers Diploma. She has an Associate Diploma with the Irish Board of Speech & Drama.",
       "In 1995 she was appointed an examiner with the Irish Board of Speech & Drama and travels throughout the country examining students. Eileen also examines diploma students with the Board.",
-      "Currently President of the 75th Feile Luimnigh, the largest voluntary festival of its kind in the North Munster area, Eileen (together with her team) are presently organising 7000 competitors between Instrumental, Vocal, Speech and Drama and Roinn na Gaeilge.",
-      "Along with her colleague Ailbhe Donnelly Flanagan, Eileen has also en running the popular and friendly Cratloe Speechfest for the last eight years. She has adjudicated at feiseanna throughout the Island of Ireland.",
-    ],
-  },
-  {
-    name: "Ciara Felle",
-    position: "Student Teacher",
-    bio: [
-      "Ciara Felle began her speech & drama training at a very young age.",
-      "In her final year in primary school she moved to the Eileen Fitzgerald School to complete her studies. After finishing her secondary & university years, Ciara spent a number of years living and teaching in Edinburgh. Her passion is travel and at last count Ciara has travelled to 60 countries.",
-      "In 2010 Ciara returned to Ennis to live and studied for her Speech & Drama diploma. She has been an integral part of the school since 2011 and loves teaching drama.",
+      "Former President of the 75th Feile Luimnigh, the largest voluntary festival of its kind in the North Munster area",
+      "Along with her colleague Ailbhe Donnelly Flanagan, Eileen has also ran the popular and friendly Cratloe Speechfest for the last eight years. She has adjudicated at feiseanna throughout the Island of Ireland.",
+      "In 2023, Eileen was invited to adjudicate at the 75th Hong Kong Schools Speech Festival. The Hong Kong Schools Speech Festival is one of Hong Kong's largest inter-school competitions. It is known as one of the prime events in which primary through secondary school students have the chance to challenge themselves in spoken English. Eileen will join the adjudicating panel again in 2024",
     ],
   },
 ];
 
 const StaffMembers = () => {
   return (
-    <div className="space-y-10 pb-10">
+    <div className="space-y-10 py-10">
       {staffMembers.map((member, i) => {
         return (
           <React.Fragment key={`${member.name}_${i}`}>
-            <div className="flex flex-col justify-center my-10">
+            <div className="flex flex-col justify-center">
               <div className="space-y-10">
                 {/* Image and name div */}
                 <div className="flex flex-col sm:flex-row justify-center space-y-5 md:space-y-0 md:space-x-10">
@@ -103,7 +94,7 @@ const StaffMembers = () => {
                           duration: ANIMATION_DURATION,
                           delay: ANIMATION_DELAY_3,
                         }}
-                        className="mb-5"
+                        className="mb-5 last:mb-0"
                       >
                         {paragraph}
                       </motion.p>
@@ -122,7 +113,6 @@ const StaffMembers = () => {
 const Staff = () => {
   return (
     <>
-      <SectionHeading title="Meet our Staff" />
       <StaffMembers />
     </>
   );

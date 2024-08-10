@@ -1,8 +1,8 @@
+import React from "react";
 import ContactDetails from "@/components/custom/contactDetails";
 import Container from "@/components/custom/container";
 import Locations from "@/components/custom/locations";
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
   title: "Contact | Eileen Fitzgerald",
