@@ -84,16 +84,31 @@ const ClassSchedules = () => {
         title="Our Speech and Drama Classes"
         subtitle="Our class schedules are based on our locations and age groups"
       />
-      <p className="mb-10">
+      <p className="mb-3">
         With over 30 years of experience, Eileen Fitzgerald teaches a wide range
         of acting and speech classes. Classes are offered for beginners,
         children, teenagers and adults focusing on developing public speaking
-        skills, and performance technique training. To enroll for any of our
-        classes, please get in touch for availability and prices. Visit our{" "}
+        skills, and performance technique training. Class schedules are subject
+        to change each year along with our class locations.
+        <br />
+        <br />
+        This year's classes will take place at the following locations:
+      </p>
+      <ul className="mb-5">
+        <li className="list-disc ml-8 marker:text-primary">
+          Clarecastle National School Library
+        </li>
+        <li className="list-disc ml-8 marker:text-primary">
+          Maria Assumpta Hall
+        </li>
+      </ul>
+      <p>
+        To enroll for any of our classes, please get in touch for availability
+        and prices. Visit our{" "}
         <Link href="/classes" className="relative">
           <LinkAnimation underline>Contact</LinkAnimation>
         </Link>{" "}
-        page for our contact information.
+        page for our contact information and location co-ordinates.
         <br />
         <br />
         <em>
