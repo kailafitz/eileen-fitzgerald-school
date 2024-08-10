@@ -20,7 +20,7 @@ const staffMembers = [
       "In 1995 she was appointed an examiner with the Irish Board of Speech & Drama and travels throughout the country examining students. Eileen also examines diploma students with the Board.",
       "Former President of the 75th Feile Luimnigh, the largest voluntary festival of its kind in the North Munster area",
       "Along with her colleague Ailbhe Donnelly Flanagan, Eileen has also ran the popular and friendly Cratloe Speechfest for the last eight years. She has adjudicated at feiseanna throughout the Island of Ireland.",
-      "In 2023, Eileen was invited to adjudicate at the 75th Hong Kong Schools Speech Festival. The Hong Kong Schools Speech Festival is one of Hong Kong's largest inter-school competitions. It is known as one of the prime events in which primary through secondary school students have the chance to challenge themselves in spoken English. Eileen will join the adjudicating panel again in 2024",
+      "In 2023, Eileen was invited to adjudicate at the 75th Hong Kong Schools Speech Festival. The Hong Kong Schools Speech Festival is one of Hong Kong's largest inter-school competitions. It is known as one of the prime events in which primary through secondary school students have the chance to challenge themselves in spoken English. Eileen will join the adjudicating panel again in 2024.",
     ],
   },
 ];
