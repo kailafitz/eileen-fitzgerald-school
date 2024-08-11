@@ -126,7 +126,7 @@ const config = {
         "logo": "fade 1s linear 2.8s both, fade 1.3s linear reverse forwards 5s",
         "spotlight": "spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",
-        "home-spotlight": "home-spotlight 15s ease 6.5s infinite alternate",
+        "home-spotlight": "home-spotlight 15s ease infinite alternate",
       },
     },
   },
