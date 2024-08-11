@@ -14,7 +14,9 @@ const MobileMenuClasses = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push(`#${value}`);
+    if (value !== "") {
+      router.push(`#${value}`);
+    }
   }, [value]);
 
   return (

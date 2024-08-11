@@ -92,7 +92,11 @@ const ClassSchedules = () => {
         to change each year along with our class locations.
         <br />
         <br />
-        This year's classes will take place at the following locations:
+        This year&#39;s classes will take place at the following{" "}
+        <Link href="/contact#locations" className="relative">
+          <LinkAnimation underline>locations</LinkAnimation>
+        </Link>
+        :
       </p>
       <ul className="mb-5">
         <li className="list-disc ml-8 marker:text-primary">

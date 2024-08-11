@@ -15,6 +15,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import MotionDiv from "./motionDiv";
+import { motion } from "framer-motion";
 
 let classes = "w-16 lg:w-24";
 
@@ -93,18 +95,15 @@ const Benefit = (props: Props) => {
     (benefitLabel) => props.label === benefitLabel.label
   );
   return (
-    <div
-      className="flex flex-col space-y-8 transition-all border-primary bg-primary border-2 p-5 sm:py-10 lg:w-full"
-      id="benefit-container"
-    >
-      <div className="mx-auto p-6 lg:p-10 rounded-full bg-zinc-900 text-white">
+    <div className="flex flex-col space-y-8 transition-all border-primary bg-primary border-2 p-5 sm:py-10 lg:w-full">
+      <motion.div className="mx-auto p-6 lg:p-10 rounded-full bg-zinc-900 text-white benefit-details">
         {benefit?.icon}
-      </div>
+      </motion.div>
       <div className="flex flex-col flex-grow">
-        <h6 className="min-h-11 mb-3 lg:min-h-0 text-xl lg:text-2xl text-center mx-auto lg:mb-5">
+        <h6 className="min-h-11 mb-3 lg:min-h-0 text-xl lg:text-2xl text-center mx-auto lg:mb-5 benefit-details">
           {benefit?.label}
         </h6>
-        <p className="sm:min-h-20 lg:flex-grow w-full mx-auto text-center flex flex-col justify-center">
+        <p className="sm:min-h-20 lg:flex-grow w-full mx-auto text-center flex flex-col justify-center benefit-details">
           {benefit?.description}
         </p>
       </div>
@@ -117,14 +116,14 @@ const Benefits = () => {
     "Increases Self-Confidence"
   );
 
-  const resetAnimation = () => {
-    const benefitContainer = document.getElementById("benefit-Container");
-    benefitContainer?.classList.add("animate-fade-in");
+  // const resetAnimation = () => {
+  //   const benefitContainer = document.getElementsByClassName("benefit-details");
+  //   benefitContainer?.classList.add("animate-fade-in");
 
-    setTimeout(() => {
-      benefitContainer?.classList.remove("animate-fade-in");
-    }, 600);
-  };
+  //   setTimeout(() => {
+  //     benefitContainer?.classList.remove("animate-fade-in");
+  //   }, 600);
+  // };
 
   return (
     <Container className="pt-10" id="benefits">
@@ -147,7 +146,7 @@ const Benefits = () => {
                 }`}
                 onClick={() => {
                   setCurrentBenefit(benefit.label);
-                  resetAnimation();
+                  // resetAnimation();
                 }}
               >
                 <div className="block absolute top-0 left-0 h-full w-full border-2 border-primary"></div>

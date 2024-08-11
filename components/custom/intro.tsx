@@ -64,7 +64,7 @@ const Intro = () => {
                 />
               </MotionDiv>
               {/* Info and link div */}
-              <div className="flex flex-col justify-center w-full md:w-2/3">
+              <div className="flex flex-col justify-center w-full md:w-2/3 z-30">
                 <motion.h1
                   initial={{ opacity: 0, translateY: "-6rem" }}
                   whileInView={{ opacity: 1, translateY: "0" }}
