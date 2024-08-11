@@ -97,7 +97,7 @@ const config = {
         },
         "spotlight": {
           "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },
-          "20%": { opacity: "1", top: "60%", left: "80%", width: "450px", height: "450px" },
+          "20%": { opacity: "1", top: "60%", left: "80%", width: "350px", height: "350px" },
           "35%": { opacity: "1", top: "80%", left: "15%", width: "290px", height: "290px" },
           "75%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
@@ -127,7 +127,7 @@ const config = {
         "logo": "fade 1s linear 1.99s both, fade 1.3s linear reverse forwards 4s",
         "spotlight": "spotlight 3s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 7s both",
-        "home-spotlight": "home-spotlight 15s ease infinite alternate",
+        "home-spotlight": "home-spotlight 15s ease 6s infinite alternate",
       },
     },
   },
