@@ -24,7 +24,7 @@ const Copyright = () => {
 
 const Footer = () => {
   return (
-    <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5 z-30">
+    <div className="border-t-2 border-t-primary pt-10 pb-3 md:py-5">
       <Container className="flex flex-col sm:flex-row justify-between items-start space-y-10 sm:space-y-0">
         <div className="w-full space-y-10 sm:space-y-5">
           <p className="font-heading text-center sm:text-left text-xl">

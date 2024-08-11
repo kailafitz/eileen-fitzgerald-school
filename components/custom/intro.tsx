@@ -64,7 +64,7 @@ const Intro = () => {
                 />
               </MotionDiv>
               {/* Info and link div */}
-              <div className="flex flex-col justify-center w-full md:w-2/3 z-30">
+              <div className="flex flex-col justify-center w-full md:w-2/3">
                 <motion.h1
                   initial={{ opacity: 0, translateY: "-6rem" }}
                   whileInView={{ opacity: 1, translateY: "0" }}
@@ -73,7 +73,7 @@ const Intro = () => {
                     duration: ANIMATION_DURATION,
                     delay: ANIMATION_DELAY_1,
                   }}
-                  className="font-heading text-3xl md:text-4xl mb-3"
+                  className="font-heading text-3xl md:text-4xl mb-3 -z-0"
                 >
                   {info.title}
                 </motion.h1>
@@ -85,11 +85,11 @@ const Intro = () => {
                     duration: ANIMATION_DURATION,
                     delay: ANIMATION_DELAY_2,
                   }}
-                  className="mb-10"
+                  className="mb-10 -z-0"
                 >
                   {info.body}
                 </motion.p>
-                <MotionDiv delay={3}>
+                <MotionDiv delay={3} className="z-40">
                   <Link
                     href={`/${info.link}`}
                     className="flex flex-col justify-center capitalize p-3 w-full sm:w-64 text-center relative after:block after:absolute after:border-l-2 after:border-r-2 after:border-white after:h-0 after:top-0 after:left-0 after:w-full hover:after:h-full after:z-10 after:transition-all after:hover:transition-all after:duration-500 after:hover:duration-500 after:hover:delay-75 before:block before:absolute before:border-t-2 before:border-b-2 before:border-white before:h-full before:top-0 before:left-0 before:w-0 hover:before:w-full before:z-10 before:transition-all before:hover:transition-all before:duration-500 before:hover:duration-500"

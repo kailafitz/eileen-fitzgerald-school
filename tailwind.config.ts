@@ -93,7 +93,7 @@ const config = {
         },
         "slide-out-container": {
           "0%": { height: "100vh" },
-          "100%": { height: "0vh" }
+          "100%": { height: "0vh", display: "none" },
         },
         "spotlight": {
           "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },

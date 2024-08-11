@@ -16,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="min-h-screen flex scroll-smooth">
+    <html
+      lang="en"
+      className="min-h-screen flex scroll-smooth animate-disable-scroll"
+    >
       <body
         className={`${open.variable} ${alegreya.variable} bg-background font-body flex-1 flex flex-col justify-between relative overflow-x-hidden w-full`}
       >
