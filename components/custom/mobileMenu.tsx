@@ -15,7 +15,7 @@ import { links } from "./navigationBar";
 const MobileMenu = () => {
   return (
     <Sheet>
-      <SheetTrigger className="block z-40 md:hidden">
+      <SheetTrigger className="block z-50 md:hidden">
         <div className="w-10 space-y-2">
           <span className="h-0.5 w-full bg-gray-200 block"></span>
           <span className="h-0.5 w-full bg-gray-200 block"></span>
