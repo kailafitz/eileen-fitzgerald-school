@@ -115,3 +115,7 @@ html {
   /* background: radial-gradient(circle, rgba(255, 255, 255, 1) 12%, rgba(255, 255, 255, 0) 100%); */
   filter: blur(50px);
 }
+
+.z-99 {
+  z-index: 99;
+}
