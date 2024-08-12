@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${open.variable} ${alegreya.variable} bg-background font-body flex-1 flex flex-col justify-between relative overflow-x-hidden w-full`}
       >
-        <OpeningAnimation />
+        {/* <OpeningAnimation /> */}
         <NavigationBar />
         {children}
         <Footer />
