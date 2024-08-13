@@ -8,7 +8,6 @@ import Link from "next/link";
 import Container from "./container";
 import MobileMenu from "./mobileMenu";
 import Image from "next/image";
-import CustomLink from "./linkAnimation";
 import LinkAnimation from "./linkAnimation";
 
 export const links = [
@@ -17,7 +16,6 @@ export const links = [
   { label: "Classes", link: "classes" },
   { label: "Resources", link: "resources" },
   { label: "Contact", link: "contact" },
-  { label: "Announcements '24", link: "announcements" },
 ];
 
 const NavigationBar = () => {
