@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="min-h-screen flex scroll-smooth animate-disable-scroll"
-    >
+    <html lang="en" className="min-h-screen flex scroll-smooth">
       <body
-        className={`${open.variable} ${alegreya.variable} bg-background font-body flex-1 flex flex-col justify-between relative w-full`}
+        id="body"
+        className={`${open.variable} ${alegreya.variable} bg-background font-body flex-1 flex flex-col justify-between relative w-full animate-disable-scroll`}
       >
         <OpeningAnimation />
         <NavigationBar />

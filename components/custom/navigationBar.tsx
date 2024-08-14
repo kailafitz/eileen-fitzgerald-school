@@ -1,4 +1,3 @@
-"use client";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,6 +14,7 @@ export const links = [
   { label: "About", link: "about" },
   { label: "Classes", link: "classes" },
   { label: "Resources", link: "resources" },
+  { label: "Gallery", link: "gallery" },
   { label: "Contact", link: "contact" },
 ];
 

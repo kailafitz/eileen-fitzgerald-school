@@ -12,14 +12,19 @@ import SectionHeading from "./sectionHeading";
 
 const testimonials = [
   {
-    name: "Siobhan McGrath",
+    name: "Hannah Morrissey",
     testimonial:
-      "I attended Eileen's school for many years and I have found the experience I gained there has benefit me so much in college and work life. The skills I have learnt in public speaking make giving presentations an enjoyable experience and job interviews a much less daunting thought. Excellent school and an excellent teacher!",
+      "Attending Eileen's speech and drama classes significantly boosted my confidence, both on stage and in life. Thanks to her lessons, I have acquired skills that aid in social situations, performance, presentations and other areas of life. The classes provided a welcome break from the real world, providing an opportunity to explore the rich worlds of poetry and drama. As I progressed through the grade system, Eileen continued to provide a space for skills and talent to develop and be nurtured. For anyone considering starting speech and drama, I would highly recommend attending Eileen's classes.",
   },
   {
     name: "Stephen McNamara",
     testimonial:
       "Had many a wonderful year at this school under the guidance of Eileen Fitzgerald. Eileen creates a warm and friendly environment where all students learn different acting traits in a fun and enjoyable way. She also continues to keep a very close relationship with all her students many years after you have completed your degree. Speech and Drama provides brilliant opportunities to improve in public speaking and acting where your social skills automatically develop also. It is an excellent hobby for any young child and The Eileen Fitzgerald School is a superb place to master this hobby.",
+  },
+  {
+    name: "Siobhan McGrath",
+    testimonial:
+      "I attended Eileen's school for many years and I have found the experience I gained there has benefit me so much in college and work life. The skills I have learnt in public speaking make giving presentations an enjoyable experience and job interviews a much less daunting thought. Excellent school and an excellent teacher!",
   },
   {
     name: "Sarah Coote",
