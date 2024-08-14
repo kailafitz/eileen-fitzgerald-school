@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import SectionHeading from "./sectionHeading";
+import LinkAnimation from "./linkAnimation";
 
 const schedules = [
   {
@@ -34,11 +36,11 @@ const schedules = [
 const ScheduleTables = () => {
   return (
     <>
-      <div className="flex flex-col justify-between items-start pt-10 space-y-10">
+      <div className="flex flex-col justify-between items-start space-y-10">
         {schedules.map((school, i) => {
           return (
             <div key={`${school.school}_${i}`} className="flex flex-col w-full">
-              <h4 className="text-gray-200 text-left mb-3">{school.school}</h4>
+              <h4 className="text-left mb-3">{school.school}</h4>
               {/* Wrapper */}
               <div className="space-y-2 lg:space-y-0 lg:grid lg:gap-x-2 lg:grid-cols-6">
                 {/* Headings */}
@@ -77,28 +79,47 @@ const ScheduleTables = () => {
 
 const ClassSchedules = () => {
   return (
-    <Container id="class-schedules" className="text-gray-200 pt-10">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
-        Our Speech and Drama Classes
-      </h1>
-      <p className="text-center text-base mb-5 lg:w-1/2 mx-auto">
-        Our class schedules are based on our locations and age groups
-      </p>
-      <p className="mb-10">
-        With almost 30 years of experience, Eileen Fitzgerald teaches a wide
-        range of acting and speech classes. Classes are offered for beginners,
+    <Container id="class-schedules" className="pt-10">
+      <SectionHeading
+        title="Our Speech and Drama Classes"
+        subtitle="Our class schedules are based on our locations and age groups"
+      />
+      <p className="mb-3">
+        With over 30 years of experience, Eileen Fitzgerald teaches a wide range
+        of acting and speech classes. Classes are offered for beginners,
         children, teenagers and adults focusing on developing public speaking
-        skills, and performance technique training. To enroll for any of our
-        classes, please get in touch for availability and prices by contacting
-        us. Visit our{" "}
-        <Link href="/classes" className="relative">
-          <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-1 before:left-0 before:bg-gray-200 before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
-            Contact
-          </span>
-        </Link>{" "}
-        page for our details.
+        skills, and performance technique training. Class schedules are subject
+        to change each year along with our class locations.
+        <br />
+        <br />
+        This year&#39;s classes will take place at the following{" "}
+        <Link href="/contact#locations" className="relative">
+          <LinkAnimation underline>locations</LinkAnimation>
+        </Link>
+        :
       </p>
-      <ScheduleTables />
+      <ul className="mb-5">
+        <li className="list-disc ml-8 marker:text-primary">
+          Clarecastle National School Library
+        </li>
+        <li className="list-disc ml-8 marker:text-primary">
+          Maria Assumpta Hall
+        </li>
+      </ul>
+      <p>
+        To enroll for any of our classes, please get in touch for availability
+        and prices. Visit our{" "}
+        <Link href="/classes" className="relative">
+          <LinkAnimation underline>Contact</LinkAnimation>
+        </Link>{" "}
+        page for our contact information and location co-ordinates.
+        <br />
+        <br />
+        <em>
+          Professionals looking for one-to-one sessions are by appointment at a
+          time to be agreed.
+        </em>
+      </p>
     </Container>
   );
 };

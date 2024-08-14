@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion";
 import MotionDiv from "./motionDiv";
+import Image from "next/image";
 
 const col1 = [
   { imageName: 1, alt: "4th Class @ Cratloe Speechfest 2019!" },
@@ -46,13 +45,15 @@ const GalleryColumns = () => {
                   key={`${img.imageName}_${i}`}
                   className="group relative flex flex-col justify-between"
                 >
-                  <img
+                  <Image
                     key={`${img.imageName}_${i}`}
+                    width={100}
+                    height={100}
                     src={`/gallery/${img.imageName}.jpg`}
                     alt={img.alt}
                     className="object-cover w-full group brightness-105 hue-rotate-15 h-full"
                   />
-                  <p className="group p-5 min-h-10 flex md:absolute w-full bottom-0 md:h-0 flex-col text-gray-200 text-center justify-center transition-all bg-primary group-hover:h-full group-hover:transition-all group-hover:flex group-hover:p-5 md:opacity-0 group-hover:opacity-100">
+                  <p className="group p-5 min-h-10 flex md:absolute w-full bottom-0 md:h-0 flex-col text-center justify-center transition-all bg-primary group-hover:h-full group-hover:transition-all group-hover:flex group-hover:p-5 md:opacity-0 group-hover:opacity-100">
                     {img.alt}
                   </p>
                 </MotionDiv>

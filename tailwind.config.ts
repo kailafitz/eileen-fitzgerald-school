@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 const config = {
   darkMode: ["class"],
@@ -18,20 +17,24 @@ const config = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      body: ["var(--font-open-sans)"],
+      heading: ["var(--font-alegreya-sans)"]
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "var(--background)",
-        foreground: "hsl(var(--foreground))",
+        foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -61,7 +64,7 @@ const config = {
       },
       transitionProperty: {
         "height": "height",
-        "background-color": "background-color"
+        "bg": "background-color",
       },
       keyframes: {
         "accordion-down": {
@@ -90,12 +93,12 @@ const config = {
         },
         "slide-out-container": {
           "0%": { height: "100vh" },
-          "100%": { height: "0vh" }
+          "100%": { height: "0vh", display: "none", zIndex: "-10" },
         },
         "spotlight": {
           "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },
-          "20%": { opacity: "1", top: "60%", left: "80%", width: "450px", height: "450px" },
-          "35%": { opacity: "1", top: "80%", left: "15%", width: "290px", height: "290px" },
+          "20%": { opacity: "1", top: "30%", left: "80%", width: "350px", height: "350px" },
+          "35%": { opacity: "1", top: "60%", left: "15%", width: "290px", height: "290px" },
           "75%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "100%": { opacity: "0", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
@@ -104,6 +107,14 @@ const config = {
           from: { overflow: "hidden" },
           to: { overflow: "scroll" }
         },
+        "home-spotlight": {
+          "0%": { top: "0%", left: "-10%", width: "200px", height: "200px" },
+          "20%": { top: "30%", left: "70%", width: "500px", height: "500px" },
+          "40%": { top: "50%", left: "15%", width: "350px", height: "350px" },
+          "60%": { top: "70%", left: "60%", width: "450px", height: "450px" },
+          "80%": { top: "90%", left: "2%", width: "250px", height: "250px" },
+          "100%": { top: "88%", left: "80%", width: "250px", height: "250px" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -111,10 +122,11 @@ const config = {
         "fade-in": "fade .5s ease-in",
         "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 1.3s linear 5.7s both",
-        "logo": "fade 1s linear 1.99s both, fade 1.3s linear reverse forwards 4s",
-        "spotlight": "spotlight 3s ease-in-out forwards",
-        "disable-scroll": "disable-scroll .5s linear 7s both",
+        "slide-out-container": "slide-out-container 1.3s linear 6.8s both",
+        "logo": "fade 1s linear 2.8s both, fade 1.3s linear reverse forwards 5s",
+        "spotlight": "spotlight 4s ease-in-out forwards",
+        "disable-scroll": "disable-scroll .5s linear 8s both",
+        "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
       },
     },
   },

@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/custom/navigationBar";
 import Footer from "@/components/custom/footer";
+import { alegreya, open } from "./fonts";
 import OpeningAnimation from "@/components/custom/openingAnimation";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Eileen Fitzgerald School of Speech and Drama",
@@ -23,7 +21,7 @@ export default function RootLayout({
       className="min-h-screen flex scroll-smooth animate-disable-scroll"
     >
       <body
-        className={`${inter.className} flex-1 flex flex-col justify-between relative overflow-x-hidden`}
+        className={`${open.variable} ${alegreya.variable} bg-background font-body flex-1 flex flex-col justify-between relative w-full`}
       >
         <OpeningAnimation />
         <NavigationBar />

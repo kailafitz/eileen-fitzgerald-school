@@ -1,6 +1,8 @@
 import React from "react";
 import Container from "./container";
 import Link from "next/link";
+import SectionHeading from "./sectionHeading";
+import LinkAnimation from "./linkAnimation";
 
 const publicSpeaking = [
   "Engaging an audience",
@@ -13,10 +15,8 @@ const publicSpeaking = [
 
 const PublicSpeaking = () => {
   return (
-    <Container className="py-10 text-gray-200" id="public-speaking">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-10">
-        Public Speaking
-      </h1>
+    <Container className="py-10" id="public-speaking">
+      <SectionHeading title="Public Speaking" />
       <p className="mb-5">
         Do you have an upcoming presentation? Do you have a fear of speaking in
         public? Is there an interview you really want to succeed at? Have you a
@@ -28,7 +28,8 @@ const PublicSpeaking = () => {
         The Eileen Fitzgerald School offers a course to specifically enhance a
         range of skills to help pupils overcome these challenges.
         <br />
-        The contents of the course is as follows:
+        <br />
+        The contents of the course are as follows:
       </p>
       <ul className="mb-5">
         {publicSpeaking.map((activity, i) => {
@@ -47,7 +48,7 @@ const PublicSpeaking = () => {
         <div className="flex flex-col space-y-2 md:space-x-2 md:space-y-0 md:flex-row mb-2">
           <div>
             <div className="bg-primary text-center p-1 flex flex-col justify-center">
-              €160
+              Option 1
             </div>
             <ul className="border-primary border-2 p-5">
               <li className="list-disc ml-4 marker:text-primary">
@@ -61,7 +62,7 @@ const PublicSpeaking = () => {
           </div>
           <div>
             <div className="bg-primary text-center p-1 flex flex-col justify-center">
-              €320
+              Option 2
             </div>
             <ul className="border-primary border-2 p-5">
               <li className="list-disc ml-4 marker:text-primary">One-to-one</li>
@@ -83,9 +84,9 @@ const PublicSpeaking = () => {
           href="mailto:eileen.fitzgerald.school@gmail.com"
           className="relative"
         >
-          <span className="before:w-full before:h-0.5 before:absolute before:block before:-bottom-1 before:left-0 before:bg-gray-200 before:scale-x-100 after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-primary after:scale-x-0 after:transition-all hover:after:scale-x-100">
+          <LinkAnimation underline>
             eileen.fitzgerald.school@gmail.com
-          </span>
+          </LinkAnimation>
         </Link>
         .
       </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "./container";
+import SectionHeading from "./sectionHeading";
 
 const activities = [
   {
@@ -100,13 +101,11 @@ const activities = [
 
 const Activities = () => {
   return (
-    <Container id="activities" className="text-gray-200 pt-10">
-      <h1 className="text-center text-2xl md:text-4xl mt-10 mb-2">
-        Class Activities
-      </h1>
-      <p className="text-center text-base mb-10 lg:w-1/2 mx-auto">
-        See the different programs in place for our students
-      </p>
+    <Container id="activities" className="pt-10">
+      <SectionHeading
+        title="Class Activities"
+        subtitle="See the different programs in place for our students"
+      />
       <div className="flex flex-col space-y-10">
         {activities.map((group, i) => {
           return (

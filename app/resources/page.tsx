@@ -3,7 +3,8 @@ import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
-import { ANIMATION_DELAY_1 } from "@/lib/globals";
+import SectionHeading from "@/components/custom/sectionHeading";
+import LinkAnimation from "@/components/custom/linkAnimation";
 
 export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
@@ -31,10 +32,6 @@ const dramaLinks = [
 
 const poetryLinks = [
   { label: "Poetry4Kids", link: "http://www.poetry4kids.com/" },
-  {
-    label: "DLTK Holidays",
-    link: "https://www.dltk-holidays.com/",
-  },
   { label: "FizzyFunnyFuzzy", link: "http://www.fizzyfunnyfuzzy.com/" },
   {
     label: "Classroom Tested Resources",
@@ -73,31 +70,31 @@ const links = [
 
 const Resources = () => {
   return (
-    <Container className="my-10 text-gray-200 ">
-      <h1 className="text-center text-2xl md:text-4xl mb-2">Resources</h1>
-      <p className="text-center text-base mb-10 md:w-1/2 mx-auto">
-        Useful links for our students
-      </p>
+    <Container className="mb-10">
+      <SectionHeading
+        title="Resources"
+        subtitle="Useful links for our students"
+      />
       <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
         {links.map((linkGroup, i) => {
           return (
             <MotionDiv
               key={`${linkGroup.title}_${i}`}
-              className="bg-primary p-5 w-full md:w-1/3 mx-auto"
+              className="w-full md:w-1/3 mx-auto border-primary border-2"
             >
-              <h2 className="text-2xl mb-5 text-center">{linkGroup.title}</h2>
-              <div className="flex flex-col">
+              <h2 className="font-heading text-2xl text-center bg-primary py-2">
+                {linkGroup.title}
+              </h2>
+              <div className="flex flex-col p-5 space-y-4">
                 {linkGroup.links.map((link, i) => {
                   return (
                     <Link
                       key={`${link.label}_${i}`}
                       href={link.link}
                       target="_blank"
-                      className="mb-3 relative w-fit block"
+                      className="relative w-fit block"
                     >
-                      <span className="after:w-full after:h-0.5 after:absolute after:block after:-bottom-1 after:left-0 after:bg-gray-200 after:scale-x-0 after:transition-all hover:after:scale-x-100">
-                        {link.label}
-                      </span>
+                      <LinkAnimation>{link.label}</LinkAnimation>
                     </Link>
                   );
                 })}
