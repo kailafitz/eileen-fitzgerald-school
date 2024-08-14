@@ -87,7 +87,7 @@ const Intro = () => {
                   }}
                   className="mb-10 -z-0"
                 >
-                  {info.body} HI
+                  {info.body}
                 </motion.p>
                 <MotionDiv delay={3} className="z-40">
                   <Link
