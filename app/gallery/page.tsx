@@ -24,7 +24,7 @@ const Gallery = () => {
               playsInline
               className="object-contain mx-auto"
             >
-              <source src="/video-1.mp4" type="video/mp4"></source>
+              <source src="/video.mp4" type="video/mp4"></source>
             </video>
             <div className="flex flex-col justify-between space-y-10 lg:space-y-0">
               <div>
