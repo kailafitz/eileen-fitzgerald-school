@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import GalleryColumns from "@/components/custom/galleryColumns";
@@ -24,8 +24,14 @@ const Gallery = () => {
               playsInline
               className="object-contain mx-auto"
             >
-              <source src="/video.mp4" type="video/mp4"></source>
+              <source
+                src="/video.mp4"
+                type="video/mp4"
+                height={480}
+                width={480}
+              ></source>
             </video>
+
             <div className="flex flex-col justify-between space-y-10 lg:space-y-0">
               <div>
                 <h6 className="font-heading text-3xl mb-2">
@@ -74,7 +80,7 @@ const Gallery = () => {
                 communities!
               </p>
             </div>
-            <div className="flex flex-col items-end space-y-5 xl:space-y-0 xl:space-x-5 xl:flex-row">
+            <div className="flex flex-col xl:items-end space-y-5 xl:space-y-0 xl:space-x-5 xl:flex-row">
               <p>
                 Would you like to join in? Contact us to arrange a class that
                 best accommodates you and/or your child!
