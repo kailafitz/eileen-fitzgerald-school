@@ -55,7 +55,7 @@ const Gallery = () => {
                     Fitzgerald
                   </p>
                   <Image
-                    className="rotate-12 w-24 lg:w-36 xl:w-auto"
+                    className="rotate-12 w-24 lg:w-36 xl:w-44"
                     src="/logo.png"
                     alt="logo"
                     width={200}
