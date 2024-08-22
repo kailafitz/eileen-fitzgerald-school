@@ -115,6 +115,15 @@ const config = {
           "80%": { top: "90%", left: "2%", width: "250px", height: "250px" },
           "100%": { top: "88%", left: "80%", width: "250px", height: "250px" }
         },
+        "logo-test": {
+          "0%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "100%": { top: "2.5%", left: "calc(50% - 64px)", width: "128px", height: "128px" }
+        },
+        "transform-up": {
+          "0%": { transform: "translateY(20px)" },
+          "100%": { transform: "translateY(0px)" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -122,11 +131,14 @@ const config = {
         "fade-in": "fade .5s ease-in",
         "fade-out": "fade .5s ease 1.5s reverse forwards",
         "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 1.3s linear 6.8s both",
-        "logo": "fade 1s linear 2.8s both, fade 1.3s linear reverse forwards 5s",
+        "slide-out-container": "slide-out-container 1.3s linear 6s both",
+        "logo": "fade 1s linear 2.8s both, logo-test 3s linear 2.5s forwards",
         "spotlight": "spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
+        "nav": "fade .4s linear 7.4s both, transform-up .4s linear 7.4s both",
+        "home-page": "fade .4s linear 8s both, transform-up .4s linear 8s both",
+        "navbar": "fade .4s linear 7s both, transform-up .4s linear 7s both",
       },
     },
   },

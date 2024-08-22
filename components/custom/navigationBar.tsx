@@ -20,9 +20,9 @@ export const links = [
 
 const NavigationBar = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="animate-navbar">
       <Container className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7">
-        <Link href="/">
+        <Link href="/" className="opacity-0">
           <Image
             width={128}
             height={128}
@@ -32,7 +32,7 @@ const NavigationBar = () => {
           />
         </Link>
         <MobileMenu />
-        <div className="md:w-4/5 lg:w-3/5 hidden md:block">
+        <div className="md:w-4/5 lg:w-3/5 hidden md:block animate-nav">
           <NavigationMenuList>
             {links.map((link, i) => (
               <NavigationMenuItem

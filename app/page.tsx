@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <>
       <HomePageAnimation />
-      <Name />
-      <Intro />
+      <div className="animate-home-page z-70">
+        <Name />
+        <Intro />
+      </div>
     </>
   );
 }
