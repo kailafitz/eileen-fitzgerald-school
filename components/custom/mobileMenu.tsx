@@ -44,11 +44,11 @@ const MobileMenu = () => {
               Testimonials
             </Link>
           </SheetClose>
-          <SheetClose asChild>
+          {/* <SheetClose asChild>
             <Link href="/gallery" className="text-2xl hover:underline">
               Gallery
             </Link>
-          </SheetClose>
+          </SheetClose> */}
           <SheetClose asChild>
             <Link
               href="/contact#locations"
