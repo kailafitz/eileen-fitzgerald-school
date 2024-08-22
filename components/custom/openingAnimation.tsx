@@ -7,8 +7,10 @@ const OpeningAnimation = () => {
   const pathname = usePathname();
 
   useEffect(() => {
+    const body = document.getElementById("body");
     setTimeout(() => {
       setAnimationActivate(false);
+      body?.classList.remove("animate-disable-scroll");
     }, 7000);
   }, []);
 

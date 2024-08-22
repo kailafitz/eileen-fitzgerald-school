@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import GalleryColumns from "@/components/custom/galleryColumns";
@@ -80,7 +80,7 @@ const Gallery = () => {
                 communities!
               </p>
             </div>
-            <div className="flex flex-col xl:items-end space-y-5 xl:space-y-0 xl:space-x-5 xl:flex-row">
+            <div className="flex flex-col xl:items-start space-y-5 xl:space-y-0 xl:space-x-5 xl:flex-row">
               <p>
                 Would you like to join in? Contact us to arrange a class that
                 best accommodates you and/or your child!
