@@ -92,8 +92,8 @@ const config = {
           to: { transform: "translateY(10px)" }
         },
         "slide-out-container": {
-          "0%": { width: "100vw" },
-          "100%": { width: "0vw" },
+          "0%": { height: "100vh" },
+          "100%": { height: "0vh" },
         },
         "spotlight": {
           "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },
