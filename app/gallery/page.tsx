@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const Gallery = () => {
   return (
     <>
-      <div className="bg-primary py-10">
+      <div className="bg-primary py-10 md:py-0">
         <Container className="custom-vh-xs flex flex-col justify-center">
           <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-10 lg:space-y-0 md:space-x-10">
             <video controls playsInline className="object-contain mx-auto">
@@ -89,10 +89,7 @@ const Gallery = () => {
               </Link>
             </div>
           </div>
-          <video
-            controls
-            className="lg:w-1/2 min-h-64 lg:border-primary lg:border-b-8 lg:border-r-8 object-cover"
-          >
+          <video controls className="lg:w-1/2 min-h-64 object-cover">
             <source src="/video-2.mp4" type="video/mp4"></source>
           </video>
         </div>

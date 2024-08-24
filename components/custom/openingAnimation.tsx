@@ -9,6 +9,13 @@ const OpeningAnimation = () => {
   useEffect(() => {
     const body = document.getElementById("body");
     const homeContent = document.getElementById("home-content");
+    const navbarLogo = document.getElementById("logo");
+    const navbarLinks = document.getElementById("links");
+
+    if (pathname === "/") {
+      navbarLogo?.classList.add("animate-stationary-logo");
+      navbarLinks?.classList.add("animate-navbar");
+    }
     homeContent?.classList.add("animate-home-content");
     setTimeout(() => {
       setAnimationActivate(false);

@@ -27,27 +27,44 @@ const Classes = () => {
         <div className="md:sticky md:top-5">
           <MotionDiv className="hidden md:block text-secondary-foreground">
             <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
-            <Link
-              href="#what-is-speech-and-drama"
-              className="relative w-fit mb-2 block"
-            >
-              <LinkAnimation>What is Speech and Drama?</LinkAnimation>
-            </Link>
-            <Link href="#benefits" className="relative w-fit mb-2 block">
-              <LinkAnimation>Benefits of Speech and Drama</LinkAnimation>
-            </Link>
-            <Link href="#class-schedules" className="relative w-fit mb-2 block">
-              <LinkAnimation>Class Schedules</LinkAnimation>
-            </Link>
-            <Link href="#activities" className="relative w-fit mb-2 block">
-              <LinkAnimation>Class Activities</LinkAnimation>
-            </Link>
-            <Link href="#yearly-events" className="relative w-fit mb-2 block">
-              <LinkAnimation>Yearly Events</LinkAnimation>
-            </Link>
-            <Link href="#public-speaking" className="relative w-fit mb-2 block">
-              <LinkAnimation>Public Speaking</LinkAnimation>
-            </Link>
+            <div className="md:space-y-4">
+              <Link
+                href="#what-is-speech-and-drama"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>What is Speech and Drama?</LinkAnimation>
+              </Link>
+              <Link
+                href="#benefits"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>Benefits of Speech and Drama</LinkAnimation>
+              </Link>
+              <Link
+                href="#class-schedules"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>Class Schedules</LinkAnimation>
+              </Link>
+              <Link
+                href="#activities"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>Class Activities</LinkAnimation>
+              </Link>
+              <Link
+                href="#yearly-events"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>Yearly Events</LinkAnimation>
+              </Link>
+              <Link
+                href="#public-speaking"
+                className="relative w-fit block border-l-2 border-primary pl-1.5"
+              >
+                <LinkAnimation>Public Speaking</LinkAnimation>
+              </Link>
+            </div>
           </MotionDiv>
         </div>
       </div>
