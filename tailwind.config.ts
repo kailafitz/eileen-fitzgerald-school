@@ -111,6 +111,11 @@ const config = {
           "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "100%": { top: "2.5%", left: "calc(50% - 64px)", width: "128px", height: "128px" }
         },
+        "logo-mobile": {
+          "0%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "100%": { top: "2.9%", left: "11.2%", width: "64px", height: "64px" }
+        },
         "transform-up": {
           "0%": { transform: "translateY(20px)" },
           "100%": { transform: "translateY(0px)" },
@@ -121,6 +126,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade .5s ease-in",
         "logo": "fade 1s linear 2.8s both, logo 3s linear 2.5s forwards",
+        "logo-mobile": "fade 1s linear 2.8s both, logo-mobile 3s linear 2.5s forwards",
         "opening-container": "height 1s linear 5s both",
         "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",

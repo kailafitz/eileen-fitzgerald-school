@@ -13,8 +13,8 @@ const OpeningAnimation = () => {
     const navbarLinks = document.getElementById("links");
 
     if (pathname === "/") {
-      navbarLogo?.classList.add("animate-stationary-logo");
-      navbarLinks?.classList.add("animate-navbar");
+      navbarLogo?.classList.add("md:animate-stationary-logo");
+      navbarLinks?.classList.add("md:animate-navbar");
     }
     homeContent?.classList.add("animate-home-content");
     setTimeout(() => {
@@ -36,7 +36,7 @@ const OpeningAnimation = () => {
             <div className="bg-white absolute rounded-full animate-opening-spotlight z-60"></div>
             <img
               src="/logo.png"
-              className="w-52 h-52 mx-auto animate-logo z-60 absolute"
+              className="w-52 h-52 mx-auto animate-logo-mobile md:animate-logo z-60 absolute"
               alt="logo"
             />
           </div>
