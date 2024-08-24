@@ -114,7 +114,7 @@ const config = {
         "logo-mobile": {
           "0%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
-          "100%": { top: "2.9%", left: "11.2%", width: "64px", height: "64px" }
+          "100%": { top: "20px", left: "40px", width: "64px", height: "64px" }
         },
         "transform-up": {
           "0%": { transform: "translateY(20px)" },
