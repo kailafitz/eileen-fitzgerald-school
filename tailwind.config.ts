@@ -63,7 +63,6 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       transitionProperty: {
-        "height": "height",
         "bg": "background-color",
       },
       keyframes: {
@@ -84,20 +83,12 @@ const config = {
           }
         },
         "height": {
-          to: { height: "0" },
-          from: { height: "100%" }
+          from: { height: "100vh" },
+          to: { height: "0vh" }
         },
-        "bouncing": {
-          from: { transform: "translateY(0px)" },
-          to: { transform: "translateY(10px)" }
-        },
-        "slide-out-container": {
-          "0%": { height: "100vh" },
-          "100%": { height: "0vh" },
-        },
-        "spotlight": {
+        "opening-spotlight": {
           "0%": { opacity: "1", top: "10%", left: "10%", width: "200px", height: "200px" },
-          "20%": { opacity: "1", top: "30%", left: "80%", width: "350px", height: "350px" },
+          "20%": { opacity: "1", top: "30%", left: "70%", width: "350px", height: "350px" },
           "35%": { opacity: "1", top: "60%", left: "15%", width: "290px", height: "290px" },
           "75%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
@@ -115,7 +106,7 @@ const config = {
           "80%": { top: "90%", left: "2%", width: "250px", height: "250px" },
           "100%": { top: "88%", left: "80%", width: "250px", height: "250px" }
         },
-        "logo-test": {
+        "logo": {
           "0%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "100%": { top: "2.5%", left: "calc(50% - 64px)", width: "128px", height: "128px" }
@@ -129,16 +120,14 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade .5s ease-in",
-        "fade-out": "fade .5s ease 1.5s reverse forwards",
-        "bouncing": "bouncing 1s ease infinite alternate",
-        "slide-out-container": "slide-out-container 1.3s linear 6s both",
-        "logo": "fade 1s linear 2.8s both, logo-test 3s linear 2.5s forwards",
-        "spotlight": "spotlight 4s ease-in-out forwards",
+        "logo": "fade 1s linear 2.8s both, logo 3s linear 2.5s forwards",
+        "opening-container": "height 1s linear 5s both",
+        "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
-        "nav": "fade .4s linear 7.4s both, transform-up .4s linear 7.4s both",
-        "home-page": "fade .4s linear 8s both, transform-up .4s linear 8s both",
-        "navbar": "fade .4s linear 7s both, transform-up .4s linear 7s both",
+        "navbar": "fade .4s linear 6s both, transform-up .4s linear 6s both",
+        "home-content": "fade .4s linear 5.8s both, transform-up .4s linear 5.8s both",
+        "stationary-logo": "fade .1s linear 5.8s both"
       },
     },
   },

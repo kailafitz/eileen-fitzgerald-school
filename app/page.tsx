@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <HomePageAnimation />
-      <div className="animate-home-page z-70">
+      <div id="home-content" className="overflow-hidden">
         <Name />
         <Intro />
       </div>

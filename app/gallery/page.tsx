@@ -18,12 +18,7 @@ const Gallery = () => {
       <div className="bg-primary py-10">
         <Container className="custom-vh-xs flex flex-col justify-center">
           <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-10 lg:space-y-0 md:space-x-10">
-            <video
-              controls
-              autoPlay
-              playsInline
-              className="object-contain mx-auto"
-            >
+            <video controls playsInline className="object-contain mx-auto">
               <source
                 src="/video.mp4"
                 type="video/mp4"
