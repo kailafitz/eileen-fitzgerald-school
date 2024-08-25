@@ -131,8 +131,8 @@ const config = {
         "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
-        "navbar": "fade .4s linear 4.5s both, transform-up .4s linear 4.5s both",
-        "home-content": "fade .4s linear 4.8s both, transform-up .4s linear 4.8s both",
+        "navbar": "fade .4s linear 5s both, transform-up .4s linear 5s both",
+        "home-content": "fade .4s linear 5.5s both, transform-up .4s linear 5.5s both",
         "stationary-logo": "fade .1s linear 5.8s both"
       },
     },

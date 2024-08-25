@@ -15,6 +15,7 @@ const OpeningAnimation = () => {
     if (pathname === "/") {
       navbarLogo?.classList.add("md:animate-stationary-logo");
       navbarLinks?.classList.add("md:animate-navbar");
+      body?.classList.add("animate-disable-scroll");
     }
     homeContent?.classList.add("animate-home-content");
     setTimeout(() => {

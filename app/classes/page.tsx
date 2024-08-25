@@ -17,7 +17,13 @@ export const metadata: Metadata = {
     "Classes ran by The Eileen Fitzgerald School of Speech and Drama. Read through details on classes held around Ennis, Co.Clare, for various age groups. Details are provided on class activities for each age group, from 4 year olds to adults. The Eileen Fitzgerald School of Speech and Drama gets involved in many events around Ireland whilst holding events of their own to keep students simulated and engaged whilst practising the arts of Speech and Drama. Public speaking classes are also offered by Eileen.",
 };
 
-// [&_div:nth-child(2)]:justify-end
+const classPageSectionLinks = [
+  { title: "What is Speech and Drama?", href: "what-is-speech-and-drama" },
+  { title: "Benefits of Speech and Drama", href: "benefits" },
+  { title: "Classes", href: "class-schedules" },
+  { title: "Yearly Events", href: "yearly-events" },
+  { title: "Public Speaking", href: "public-speaking" },
+];
 
 const Classes = () => {
   return (
@@ -28,42 +34,17 @@ const Classes = () => {
           <MotionDiv className="hidden md:block text-secondary-foreground">
             <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
             <div className="md:space-y-4">
-              <Link
-                href="#what-is-speech-and-drama"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>What is Speech and Drama?</LinkAnimation>
-              </Link>
-              <Link
-                href="#benefits"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>Benefits of Speech and Drama</LinkAnimation>
-              </Link>
-              <Link
-                href="#class-schedules"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>Class Schedules</LinkAnimation>
-              </Link>
-              <Link
-                href="#activities"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>Class Activities</LinkAnimation>
-              </Link>
-              <Link
-                href="#yearly-events"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>Yearly Events</LinkAnimation>
-              </Link>
-              <Link
-                href="#public-speaking"
-                className="relative w-fit block border-l-2 border-primary pl-1.5"
-              >
-                <LinkAnimation>Public Speaking</LinkAnimation>
-              </Link>
+              {classPageSectionLinks.map((link) => {
+                return (
+                  <Link
+                    key={link.href}
+                    href={`#${link.href}`}
+                    className="relative w-fit block border-l-2 border-primary pl-1.5"
+                  >
+                    <LinkAnimation>{link.title}</LinkAnimation>
+                  </Link>
+                );
+              })}
             </div>
           </MotionDiv>
         </div>
