@@ -36,14 +36,6 @@ const Gallery = () => {
                   Celebrating 30 Years
                 </h6>
                 <p className="mb-3">
-                  {/* In 2022, we celebrated over 30 years of The Eileen Fitzgerald
-                  School of Speech & Drama! Eileen has been inspired by all of
-                  her students over the years for their fun, resilience and
-                  passion, not to mention their talent. The support from
-                  students and their families has meant so much and Eileen&#39;s
-                  vision for her school would not be possible without them.
-                  Here&#39;s to many more years of learning and laughing, and of
-                  course, sharing the love of Speech and Drama. */}
                   30 years ago in 2022 I made a decision to pursue my dream by
                   transforming my hobby into my career. In that time I&#39;ve
                   met so many inspirational, passionate & talented young people.

@@ -131,3 +131,7 @@ html {
 .z-90 {
   z-index: 90;
 }
+
+.opening-animation-text {
+  left: calc(50% - 122.345px);
+}

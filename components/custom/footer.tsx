@@ -52,7 +52,7 @@ const Footer = () => {
               className="flex flex-row items-center gap-x-5 hover:cursor-pointer justify-center sm:justify-start"
             >
               <EmailIcon size={25} className="hidden sm:block" />
-              <span className="relative">
+              <span className="relative break-all">
                 <LinkAnimation>
                   eileen.fitzgerald.school@gmail.com
                 </LinkAnimation>

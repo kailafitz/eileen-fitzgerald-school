@@ -45,6 +45,10 @@ const OpeningAnimation = () => {
               className="w-52 h-52 mx-auto animate-logo-mobile md:animate-logo z-60 absolute"
               alt="logo"
             />
+            <p className="absolute top-[65%] text-2xl opening-animation-text text-center text-foreground opacity-0 z-60 font-heading animate-opening-text">
+              The Eileen Fitzgerald <br />
+              School of Speech & Drama
+            </p>
           </div>
           <div
             className={`bg-background z-50 fixed top-0 left-0 w-screen animate-opening-container ${

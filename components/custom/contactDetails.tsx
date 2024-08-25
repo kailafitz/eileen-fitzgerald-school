@@ -81,8 +81,6 @@ const ContactDetails = () => {
             to find out more information, please get in touch with us."
             className="text-center md:text-left md:mx-0 lg:w-full"
           />
-          {/* <h1 className="text-2xl md:text-4xl my-10">Contact Us</h1>
-          <p className="text-base mb-10"></p> */}
           <div className="w-fit space-y-5">
             {contactDetails.map((detail, i) => {
               return (
@@ -103,11 +101,6 @@ const ContactDetails = () => {
             media platforms where we post the latest news and updates!"
             className="text-center md:text-left md:mx-0 lg:w-full"
           />
-          {/* <h1 className="text-2xl md:text-4xl mb-10">Follow Us</h1>
-          <p className="text-base mb-10">
-            Get to know our school even further by following us on our social
-            media platforms where we post the latest news and updates!
-          </p> */}
           <div className="w-fit space-y-5">
             {socialMediaDetails.map((detail, i) => {
               return (
