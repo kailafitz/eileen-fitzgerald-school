@@ -5,6 +5,7 @@ import GalleryColumns from "@/components/custom/galleryColumns";
 import SectionHeading from "@/components/custom/sectionHeading";
 import Image from "next/image";
 import Link from "next/link";
+import { Quote } from "lucide-react";
 import ScrollToTop from "@/components/custom/scrollToTop";
 
 export const metadata: Metadata = {
@@ -33,37 +34,66 @@ const Gallery = () => {
                 <h6 className="font-heading text-3xl mb-2">
                   Celebrating 30 Years
                 </h6>
-                <p>
-                  In 2022, we celebrated over 30 years of The Eileen Fitzgerald
+                <p className="mb-3">
+                  {/* In 2022, we celebrated over 30 years of The Eileen Fitzgerald
                   School of Speech & Drama! Eileen has been inspired by all of
                   her students over the years for their fun, resilience and
                   passion, not to mention their talent. The support from
                   students and their families has meant so much and Eileen&#39;s
                   vision for her school would not be possible without them.
                   Here&#39;s to many more years of learning and laughing, and of
-                  course, sharing the love of Speech and Drama.
+                  course, sharing the love of Speech and Drama. */}
+                  30 years ago in 2022 I made a decision to pursue my dream by
+                  transforming my hobby into my career. In that time I&#39;ve
+                  met so many inspirational, passionate & talented young people.
+                  You have taught me so much! We have laughed, cried & shared
+                  some emotional times together. To all the pupils (both former
+                  and current) along with your families I am forever grateful
+                  that you had the belief in me to guide you on a journey and
+                  supported me in my vision for my school. The current students
+                  have been on a journey over the last 22 months like none
+                  before! You have shown your resilience and how good you are at
+                  adapting to challenges. I&#39;m so proud of every one of you.
+                </p>
+                <p className="italic pb-10">
+                  <Quote className="rotate-180 inline mr-2 opacity-50" />
+                  <span>
+                    People will forget what you said, people will forget what
+                    you did, but people will never forget how you made them
+                    feel.
+                  </span>
+                  <Quote className="inline ml-2 opacity-50" />
+                  <span className="w-7 bg-gray-200 h-0.5 mx-2 inline-block mb-0.5"></span>
+                  Maya Angelou 1928 - 2014
                 </p>
               </div>
               <div className="flex justify-end">
-                <div className="flex flex-row space-x-10 items-end">
+                <div className="flex flex-row space-x-5 items-end">
                   <p className="flex flex-row items-center justify-end">
                     <span className="w-7 bg-slate-200 h-0.5 mr-2"></span>Eileen
                     Fitzgerald
                   </p>
-                  <Image
-                    className="rotate-12 w-24 lg:w-36 xl:w-44"
+                  <div className="">
+                    <Quote
+                      className="inline opacity-15 rotate-180 mb-2"
+                      size={60}
+                    />
+                    <Quote className="inline opacity-15 -mb-2" size={60} />
+                  </div>
+                  {/* <Image
+                    className="rotate-12 w-24 lg:w-30 xl:w-28"
                     src="/logo.png"
                     alt="logo"
                     width={200}
                     height={200}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
           </div>
         </Container>
       </div>
-      <Container className="pt-20">
+      <Container className="pt-10 lg:pt-20">
         <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-20 lg:pb-10">
           <div className="lg:flex flex-col space-y-10">
             <div>

@@ -13,11 +13,13 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <Container>
-      <Staff />
-      <Testimonials />
-      <ScrollToTop />
-    </Container>
+    <>
+      <Container>
+        <Staff />
+        <Testimonials />
+        <ScrollToTop />
+      </Container>
+    </>
   );
 };
 

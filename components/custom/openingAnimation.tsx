@@ -12,6 +12,11 @@ const OpeningAnimation = () => {
     const navLogo = document.getElementById("logo");
     const navLinks = document.getElementById("links");
 
+    if (animationActivate) {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     if (pathname === "/") {
       navLogo?.classList.add("md:animate-stationary-logo");
       navLinks?.classList.add("md:animate-nav-links");

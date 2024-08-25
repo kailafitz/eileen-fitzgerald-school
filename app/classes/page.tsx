@@ -40,8 +40,9 @@ const Classes = () => {
                   <Link
                     key={link.href}
                     href={`#${link.href}`}
-                    className="relative w-fit block border-l-2 border-primary pl-1.5"
+                    className="relative w-fit block pl-2"
                   >
+                    <div className="absolute top-0 left-0 w-full h-full border-l-2 border-primary -z-10"></div>
                     <LinkAnimation>{link.label}</LinkAnimation>
                   </Link>
                 );

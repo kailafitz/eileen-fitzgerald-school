@@ -34,7 +34,7 @@ const Footer = () => {
             width={100}
             height={100}
             src="/logo.png"
-            className="w-36 md:w-24 mx-auto sm:mx-0 pb-5"
+            className="w-36 sm:w-24 mx-auto sm:mx-0 pb-5"
             alt="logo"
           />
           <div className="flex flex-col space-y-2">
