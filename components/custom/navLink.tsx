@@ -17,7 +17,7 @@ const NavLink = (props: Props) => {
   return (
     <NavigationMenuItem className="relative">
       <Link href={props.link.href} className="relative">
-        <LinkAnimation underline={pathname === props.link.href}>
+        <LinkAnimation underline={pathname.includes(props.link.href)}>
           {props.link.label}
         </LinkAnimation>
       </Link>

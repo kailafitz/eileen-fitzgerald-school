@@ -10,11 +10,11 @@ import NavLink from "./navLink";
 
 export const links = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Classes", href: "/classes" },
-  { label: "Resources", href: "/resources" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "about" },
+  { label: "Classes", href: "classes" },
+  { label: "Resources", href: "resources" },
+  { label: "Gallery", href: "gallery" },
+  { label: "Contact", href: "contact" },
 ];
 
 const NavigationBar = () => {
