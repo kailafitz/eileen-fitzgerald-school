@@ -10,6 +10,7 @@ import MobileMenuClasses from "@/components/custom/mobileMenuClasses";
 import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
 import LinkAnimation from "@/components/custom/linkAnimation";
+import ScrollToTop from "@/components/custom/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
@@ -18,11 +19,11 @@ export const metadata: Metadata = {
 };
 
 const classPageSectionLinks = [
-  { title: "What is Speech and Drama?", href: "what-is-speech-and-drama" },
-  { title: "Benefits of Speech and Drama", href: "benefits" },
-  { title: "Classes", href: "class-schedules" },
-  { title: "Yearly Events", href: "yearly-events" },
-  { title: "Public Speaking", href: "public-speaking" },
+  { label: "What is Speech and Drama?", href: "what-is-speech-and-drama" },
+  { label: "Benefits of Speech and Drama", href: "benefits" },
+  { label: "Classes", href: "class-schedules" },
+  { label: "Yearly Events", href: "yearly-events" },
+  { label: "Public Speaking", href: "public-speaking" },
 ];
 
 const Classes = () => {
@@ -41,7 +42,7 @@ const Classes = () => {
                     href={`#${link.href}`}
                     className="relative w-fit block border-l-2 border-primary pl-1.5"
                   >
-                    <LinkAnimation>{link.title}</LinkAnimation>
+                    <LinkAnimation>{link.label}</LinkAnimation>
                   </Link>
                 );
               })}
@@ -57,6 +58,7 @@ const Classes = () => {
         <YearlyEvents />
         <PublicSpeaking />
       </div>
+      <ScrollToTop />
     </div>
   );
 };

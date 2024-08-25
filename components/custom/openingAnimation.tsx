@@ -9,12 +9,12 @@ const OpeningAnimation = () => {
   useEffect(() => {
     const body = document.getElementById("body");
     const homeContent = document.getElementById("home-content");
-    const navbarLogo = document.getElementById("logo");
-    const navbarLinks = document.getElementById("links");
+    const navLogo = document.getElementById("logo");
+    const navLinks = document.getElementById("links");
 
     if (pathname === "/") {
-      navbarLogo?.classList.add("md:animate-stationary-logo");
-      navbarLinks?.classList.add("md:animate-navbar");
+      navLogo?.classList.add("md:animate-stationary-logo");
+      navLinks?.classList.add("md:animate-nav-links");
       body?.classList.add("animate-disable-scroll");
     }
     homeContent?.classList.add("animate-home-content");

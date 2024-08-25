@@ -30,7 +30,7 @@ const MobileMenu = () => {
         <div className="flex flex-col justify-start space-y-4 text-secondary-foreground pt-5">
           {links.map((link, i) => (
             <SheetClose asChild key={`${link.label}_${i}_mobile`}>
-              <Link href={link.link} className="text-2xl hover:underline">
+              <Link href={link.href} className="text-2xl hover:underline">
                 {link.label}
               </Link>
             </SheetClose>

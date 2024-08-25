@@ -5,6 +5,7 @@ import GalleryColumns from "@/components/custom/galleryColumns";
 import SectionHeading from "@/components/custom/sectionHeading";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollToTop from "@/components/custom/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Gallery | Eileen Fitzgerald",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const Gallery = () => {
   return (
     <>
-      <div className="bg-primary py-10 md:py-0">
+      <div className="bg-primary py-10 xl:py-0">
         <Container className="custom-vh-xs flex flex-col justify-center">
           <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-10 lg:space-y-0 md:space-x-10">
             <video controls playsInline className="object-contain mx-auto">
@@ -97,6 +98,8 @@ const Gallery = () => {
           <GalleryColumns />
         </div>
       </Container>
+
+      <ScrollToTop />
     </>
   );
 };

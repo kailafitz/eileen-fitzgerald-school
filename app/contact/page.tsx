@@ -3,6 +3,7 @@ import ContactDetails from "@/components/custom/contactDetails";
 import Container from "@/components/custom/container";
 import Locations from "@/components/custom/locations";
 import { Metadata } from "next";
+import ScrollToTop from "@/components/custom/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Contact | Eileen Fitzgerald",
@@ -21,6 +22,7 @@ const Contact = () => {
           <Locations />
         </Container>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

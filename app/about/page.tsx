@@ -3,6 +3,7 @@ import Staff from "@/components/custom/staff";
 import Testimonials from "@/components/custom/testimonials";
 import { Metadata } from "next";
 import Container from "@/components/custom/container";
+import ScrollToTop from "@/components/custom/scrollToTop";
 
 export const metadata: Metadata = {
   title: "About | Eileen Fitzgerald",
@@ -15,6 +16,7 @@ const About = () => {
     <Container>
       <Staff />
       <Testimonials />
+      <ScrollToTop />
     </Container>
   );
 };

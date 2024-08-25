@@ -64,6 +64,7 @@ const config = {
       },
       transitionProperty: {
         "bg": "background-color",
+        "opacity": "opacity"
       },
       keyframes: {
         "accordion-down": {
@@ -124,14 +125,15 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade .5s ease-in",
+        "fade-in": "fade .5s ease-in both",
+        "fade-out": "fade .5s ease-in reverse both",
         "logo": "fade 1s linear 2.8s both, logo 3s linear 2.5s forwards",
         "logo-mobile": "fade 1s linear 2.8s both, logo-mobile 3s linear 2.5s forwards",
         "opening-container": "height 1s linear 5s both",
         "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
         "disable-scroll": "disable-scroll .5s linear 8s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
-        "navbar": "fade .4s linear 5s both, transform-up .4s linear 5s both",
+        "nav-links": "fade .4s linear 5s both, transform-up .4s linear 5s both",
         "home-content": "fade .4s linear 5.5s both, transform-up .4s linear 5.5s both",
         "stationary-logo": "fade .1s linear 5.8s both"
       },

@@ -111,7 +111,7 @@ const ClassSchedules = () => {
         and prices. Visit our{" "}
         <Link href="/classes" className="relative">
           <LinkAnimation underline>Contact</LinkAnimation>
-        </Link>{" "}
+        </Link>
         page for our contact information and location co-ordinates.
         <br />
         <br />

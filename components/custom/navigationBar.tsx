@@ -1,26 +1,25 @@
 import {
   NavigationMenu,
-  NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import Container from "./container";
 import MobileMenu from "./mobileMenu";
 import Image from "next/image";
-import LinkAnimation from "./linkAnimation";
+import NavLink from "./navLink";
 
 export const links = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "about" },
-  { label: "Classes", link: "classes" },
-  { label: "Resources", link: "resources" },
-  { label: "Gallery", link: "gallery" },
-  { label: "Contact", link: "contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Classes", href: "/classes" },
+  { label: "Resources", href: "/resources" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const NavigationBar = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu id="nav">
       <Container
         id="navbar"
         className="flex flex-row md:flex-col w-full items-center justify-between md:justify-center p-5 md:space-y-7"
@@ -41,14 +40,7 @@ const NavigationBar = () => {
         >
           <NavigationMenuList>
             {links.map((link, i) => (
-              <NavigationMenuItem
-                key={`${link.label}_${i}`}
-                className="relative"
-              >
-                <Link href={link.link} className="relative">
-                  <LinkAnimation>{link.label}</LinkAnimation>
-                </Link>
-              </NavigationMenuItem>
+              <NavLink key={`${link.label}_${i}`} link={link} />
             ))}
           </NavigationMenuList>
         </div>
