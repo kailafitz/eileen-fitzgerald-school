@@ -33,7 +33,7 @@ const Locations = () => {
     <>
       <SectionHeading
         title="Our Locations"
-        subtitle="Our locations can changes year on year so make sure to check back for class location updates!"
+        subtitle="Our locations are subject to change year on year so make sure to check back for class location updates!"
       />
       <div className="flex flex-col justify-center space-y-10 md:flex-row md:space-y-0 md:space-x-10">
         {locations.map((location, i) => {

@@ -131,7 +131,7 @@ const config = {
         "logo-mobile": "fade 1s linear 2.8s both, logo-mobile 3s linear 2.5s forwards",
         "opening-container": "height 1s linear 5s both",
         "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
-        "disable-scroll": "disable-scroll .5s linear 8s both",
+        "disable-scroll": "disable-scroll .5s linear 6.5s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
         "nav-links": "fade .4s linear 5s both, transform-up .4s linear 5s both",
         "home-content": "fade .4s linear 5.5s both, transform-up .4s linear 5.5s both",
