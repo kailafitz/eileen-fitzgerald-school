@@ -5,6 +5,7 @@ import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
 import SectionHeading from "@/components/custom/sectionHeading";
 import LinkAnimation from "@/components/custom/linkAnimation";
+import ActionBanner from "@/components/custom/actionBanner";
 
 export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
@@ -70,40 +71,43 @@ const links = [
 
 const Resources = () => {
   return (
-    <Container className="mb-10">
-      <SectionHeading
-        title="Resources"
-        subtitle="Useful links for our students"
-      />
-      <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
-        {links.map((linkGroup, i) => {
-          return (
-            <MotionDiv
-              key={`${linkGroup.title}_${i}`}
-              className="w-full md:w-1/3 mx-auto border-primary border-2"
-            >
-              <h2 className="font-heading text-2xl text-center bg-primary py-2">
-                {linkGroup.title}
-              </h2>
-              <div className="flex flex-col p-5 space-y-4">
-                {linkGroup.links.map((link, i) => {
-                  return (
-                    <Link
-                      key={`${link.label}_${i}`}
-                      href={link.link}
-                      target="_blank"
-                      className="relative w-fit block"
-                    >
-                      <LinkAnimation>{link.label}</LinkAnimation>
-                    </Link>
-                  );
-                })}
-              </div>
-            </MotionDiv>
-          );
-        })}
-      </div>
-    </Container>
+    <>
+      <Container className="mb-20">
+        <SectionHeading
+          title="Resources"
+          subtitle="A variety of useful links for our students to explore for inspiration and information"
+        />
+        <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 xl:space-x-10">
+          {links.map((linkGroup, i) => {
+            return (
+              <MotionDiv
+                key={`${linkGroup.title}_${i}`}
+                className="w-full md:w-1/3 mx-auto border-primary border-2"
+              >
+                <h2 className="font-heading text-2xl text-center bg-primary py-2">
+                  {linkGroup.title}
+                </h2>
+                <div className="flex flex-col p-5 space-y-4">
+                  {linkGroup.links.map((link, i) => {
+                    return (
+                      <Link
+                        key={`${link.label}_${i}`}
+                        href={link.link}
+                        target="_blank"
+                        className="relative w-fit block"
+                      >
+                        <LinkAnimation>{link.label}</LinkAnimation>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </MotionDiv>
+            );
+          })}
+        </div>
+      </Container>
+      <ActionBanner />
+    </>
   );
 };
 

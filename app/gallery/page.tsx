@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import ScrollToTop from "@/components/custom/scrollToTop";
+import ActionBanner from "@/components/custom/actionBanner";
 
 export const metadata: Metadata = {
   title: "Gallery | Eileen Fitzgerald",
@@ -93,7 +94,7 @@ const Gallery = () => {
           </div>
         </Container>
       </div>
-      <Container className="pt-10 lg:pt-20">
+      <Container className="pt-10 lg:pt-20 mb-20">
         <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-20 lg:pb-10">
           <div className="lg:flex flex-col space-y-10">
             <div>
@@ -124,11 +125,11 @@ const Gallery = () => {
             <source src="/video-2.mp4" type="video/mp4"></source>
           </video>
         </div>
-        <div className="mb-10 mt-3 sm:mt-5 lg:mt-10 grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-4 md:grid-cols-4">
+        <div className="mt-3 sm:mt-5 lg:mt-10 grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-4 md:grid-cols-4">
           <GalleryColumns />
         </div>
       </Container>
-
+      <ActionBanner />
       <ScrollToTop />
     </>
   );
