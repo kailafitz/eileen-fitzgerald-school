@@ -9,7 +9,7 @@ import Image from "next/image";
 import NavLink from "./navLink";
 
 export const links = [
-  { label: "Home", href: "/" },
+  // { label: "Home", href: "/" },
   { label: "About", href: "about" },
   { label: "Classes", href: "classes" },
   { label: "Resources", href: "resources" },
@@ -36,7 +36,7 @@ const NavigationBar = () => {
         <MobileMenu />
         <div
           id="links"
-          className={`md:w-4/5 lg:w-3/5 hidden md:block overflow-hidden`}
+          className={`md:w-4/5 lg:w-2/5 hidden md:block overflow-hidden`}
         >
           <NavigationMenuList>
             {links.map((link, i) => (
