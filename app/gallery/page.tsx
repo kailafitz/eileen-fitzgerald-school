@@ -36,13 +36,13 @@ const Gallery = () => {
                   Celebrating 30 Years
                 </h6>
                 <p className="mb-3">
-                  30 years ago in 2022 I made a decision to pursue my dream by
-                  transforming my hobby into my career. In that time I&#39;ve
-                  met so many inspirational, passionate & talented young people.
-                  You have taught me so much! We have laughed, cried & shared
-                  some emotional times together. To all the pupils (both former
-                  and current) along with your families I am forever grateful
-                  that you had the belief in me to guide you on a journey and
+                  In 1992, I made a decision to pursue my dream by transforming
+                  my hobby into my career. In that time I&#39;ve met so many
+                  inspirational, passionate & talented young people. You have
+                  taught me so much! We have laughed, cried & shared some
+                  emotional times together. To all the pupils (both former and
+                  current) along with your families I am forever grateful that
+                  you had the belief in me to guide you on a journey and
                   supported me in my vision for my school. The current students
                   have been on a journey over the last 22 months like none
                   before! You have shown your resilience and how good you are at

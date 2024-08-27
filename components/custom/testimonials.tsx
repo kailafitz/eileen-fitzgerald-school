@@ -22,6 +22,16 @@ const testimonials = [
       "Had many a wonderful year at this school under the guidance of Eileen Fitzgerald. Eileen creates a warm and friendly environment where all students learn different acting traits in a fun and enjoyable way. She also continues to keep a very close relationship with all her students many years after you have completed your degree. Speech and Drama provides brilliant opportunities to improve in public speaking and acting where your social skills automatically develop also. It is an excellent hobby for any young child and The Eileen Fitzgerald School is a superb place to master this hobby.",
   },
   {
+    name: "Ailbhe Concannon",
+    testimonial:
+      "I've been going to Eileen since senior infants and love every minute of it. Eileen is a great teacher. Her classes are loads of fun. Looking forward to continuing my Speech and Drama journey with Eileen.",
+  },
+  {
+    name: "Siofra Mulquen",
+    testimonial:
+      "I attended Eileen’s speech and drama classes for over 12 years. Starting off as a ferociously shy 8 year old, to now working in media/radio where my presenting skills are relied upon everyday, is definitely down to the confidence and sense of performance Eileen instilled in me. From imaginative improvisation classes, to choosing dramas to suit our personalities, reciting poetry and playing games to prepare us for presentation projects, Eileen’s classes were one of the highlights of my week. Eileen has the ability to encourage self-belief and allow students to express themselves in a safe space where they might not necessarily do so in school or any other environment. Her kindness and empathy towards students is infectious. For me, it’s where my personality came alive, while also entering into a world of escapism for an hour or so each week.",
+  },
+  {
     name: "Siobhan McGrath",
     testimonial:
       "I attended Eileen's school for many years and I have found the experience I gained there has benefit me so much in college and work life. The skills I have learnt in public speaking make giving presentations an enjoyable experience and job interviews a much less daunting thought. Excellent school and an excellent teacher!",
@@ -49,7 +59,7 @@ const testimonials = [
   {
     name: "Sorchie Roche",
     testimonial:
-      "I attended classes with Eileen for 10 years and I am so glad I did. It gave me confidence to be able to get up and speak in front of people and it was always great fun too :) Eileen is a fantastic teacher, who was very patient with me and very encouraging :) I really enjoyed my time in the class and recommend it to everyone",
+      "I attended classes with Eileen for 10 years and I am so glad I did. It gave me confidence to be able to get up and speak in front of people and it was always great fun too :) Eileen is a fantastic teacher, who was very patient with me and very encouraging :) I really enjoyed my time in the class and recommend it to everyone.",
   },
   {
     name: "Karoline O'Sullivan",
