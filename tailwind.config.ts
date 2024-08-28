@@ -95,6 +95,14 @@ const config = {
           "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "100%": { opacity: "0", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
         },
+        "opening-spotlight-mobile": {
+          "0%": { opacity: "1", top: "10%", left: "20%", width: "150px", height: "150px" },
+          "20%": { opacity: "1", top: "30%", left: "70%", width: "100px", height: "100px" },
+          "35%": { opacity: "1", top: "70%", left: "15%", width: "190px", height: "190px" },
+          "75%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "85%": { opacity: "1", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "100%": { opacity: "0", top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+        },
         "disable-scroll": {
           from: { overflow: "hidden" },
           to: { overflow: "scroll" }
@@ -117,6 +125,11 @@ const config = {
           "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
           "100%": { top: "20px", left: "40px", width: "64px", height: "64px" }
         },
+        "logo-sm": {
+          "0%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "70%": { top: "calc(50% - 104px)", left: "calc(50% - 104px)", width: "208px", height: "208px" },
+          "100%": { top: "20px", left: "48px", width: "64px", height: "64px" }
+        },
         "transform-up": {
           "0%": { transform: "translateY(20px)" },
           "100%": { transform: "translateY(0px)" },
@@ -129,8 +142,10 @@ const config = {
         "fade-out": "fade .5s ease-in reverse both",
         "logo": "fade 1s linear 2.8s both, logo 3s linear 2.5s forwards",
         "logo-mobile": "fade 1s linear 2.8s both, logo-mobile 3s linear 2.5s forwards",
+        "logo-sm": "fade 1s linear 2.8s both, logo-sm 3s linear 2.5s forwards",
         "opening-container": "height 1s linear 5s both",
         "opening-spotlight": "opening-spotlight 4s ease-in-out forwards",
+        "opening-spotlight-mobile": "opening-spotlight-mobile 4s ease-in-out forwards",
         "opening-text": "fade .5s ease-in 3s forwards, fade 1s ease-in 4.3s reverse forwards",
         "disable-scroll": "disable-scroll .5s linear 6.5s both",
         "home-spotlight": "home-spotlight 15s ease-in infinite alternate",
