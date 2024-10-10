@@ -31,7 +31,7 @@ const sectionInfo = [
       "For queries relating to enrolments and fees, please contact us directly",
     body: "Browse our website to get a glimpse into what we do and we hope you join us in celebrating the art that is Speech and Drama. If you would like to keep up to date with all our latest news and updates, please follow us on our social media pages. You can follow us or get in touch by visiting our Contact page which has all of our contact information. We look forward to hearing from you!",
     link: "contact",
-    image: "pupil-girl",
+    image: "speech-and-drama-pupil",
   },
 ];
 
