@@ -77,6 +77,7 @@ const Footer = () => {
               href="https://www.facebook.com/eileenfitzgeraldschoolofspeechanddrama"
               target="_blank"
               className="w-fit relative"
+              aria-label="External link to Facebook account"
             >
               <LinkAnimation mb>
                 <FacebookIcon size={25} />
@@ -86,6 +87,7 @@ const Footer = () => {
               href="https://www.instagram.com/eileenfitzgerald_drama/"
               target="_blank"
               className="w-fit relative"
+              aria-label="External link to Instagram account"
             >
               <LinkAnimation mb>
                 <InstagramIcon size={25} />
