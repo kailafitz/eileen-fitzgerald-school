@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Resources | Eileen Fitzgerald",
   description:
     "Drama, poetry and exam links that are useful to the students of The Eileen Fitzgerald School of Speech and Drama",
+  openGraph: {
+    title: "Resources | The Eileen Fitzgerald School of Speech and Drama",
+    description:
+      "Drama, poetry and exam links that are useful to the students of The Eileen Fitzgerald School of Speech and Drama",
+  },
 };
 
 const dramaLinks = [

@@ -3,7 +3,6 @@ import Container from "@/components/custom/container";
 import { Metadata } from "next";
 import GalleryColumns from "@/components/custom/galleryColumns";
 import SectionHeading from "@/components/custom/sectionHeading";
-import Image from "next/image";
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import ScrollToTop from "@/components/custom/scrollToTop";
@@ -12,7 +11,12 @@ import ActionBanner from "@/components/custom/actionBanner";
 export const metadata: Metadata = {
   title: "Gallery | Eileen Fitzgerald",
   description:
-    "A photo gallery showcasing the events, siverlware and activities of The Eileen Fitzgerald School of Speech and Drama.",
+    "A photo gallery showcasing the events, siverlware and activities of The Eileen Fitzgerald School of Speech and Drama",
+  openGraph: {
+    title: "Gallery | The Eileen Fitzgerald School of Speech and Drama",
+    description:
+      "A photo gallery showcasing the events, siverlware and activities of The Eileen Fitzgerald School of Speech and Drama",
+  },
 };
 
 const Gallery = () => {
@@ -73,13 +77,6 @@ const Gallery = () => {
                     />
                     <Quote className="inline opacity-15 -mb-2" size={60} />
                   </div>
-                  {/* <Image
-                    className="rotate-12 w-24 lg:w-30 xl:w-28"
-                    src="/logo.png"
-                    alt="logo"
-                    width={200}
-                    height={200}
-                  /> */}
                 </div>
               </div>
             </div>

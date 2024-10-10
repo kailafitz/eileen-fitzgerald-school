@@ -7,7 +7,11 @@ import OpeningAnimation from "@/components/custom/openingAnimation";
 
 export const metadata: Metadata = {
   title: "The Eileen Fitzgerald School of Speech and Drama",
-  description: "The Eileen Fitzgerald School of Speech and Drama",
+  description: "Check out The Eileen Fitzgerald School of Speech and Drama",
+  openGraph: {
+    title: "The Eileen Fitzgerald School of Speech and Drama",
+    description: "Check out The Eileen Fitzgerald School of Speech and Drama",
+  },
 };
 
 export default function RootLayout({

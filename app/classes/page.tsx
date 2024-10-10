@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
   description:
     "Classes ran by The Eileen Fitzgerald School of Speech and Drama. Read through details on classes held around Ennis, Co.Clare, for various age groups. Details are provided on class activities for each age group, from 4 year olds to adults. The Eileen Fitzgerald School of Speech and Drama gets involved in many events around Ireland whilst holding events of their own to keep students simulated and engaged whilst practising the arts of Speech and Drama. Public speaking classes are also offered by Eileen.",
+  openGraph: {
+    title: "Classes | The Eileen Fitzgerald School of Speech and Drama",
+    description:
+      "Check out the classes on offer at The Eileen Fitzgerald School of Speech and Drama",
+  },
 };
 
 const classPageSectionLinks = [

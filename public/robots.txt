@@ -1,0 +1,5 @@
+User-Agent: *
+
+Allow: *
+
+Sitemap: https://eileenfitzgerald-school/sitemap.xml
