@@ -12,7 +12,7 @@ const ActionBanner = () => {
             Interested to find out more?
           </h6>
           <p className="text-foreground">
-            Do you want to join us? Get in touch to secure you place for the
+            Do you want to join us? Get in touch to secure your place for the
             coming school year!
           </p>
         </div>
