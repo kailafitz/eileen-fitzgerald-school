@@ -7,6 +7,55 @@ import Link from "next/link";
 import { Quote } from "lucide-react";
 import ScrollToTop from "@/components/custom/scrollToTop";
 import ActionBanner from "@/components/custom/actionBanner";
+import Script from "next/script";
+import { ImageGallery, WithContext } from "schema-dts";
+
+const jsonLd: WithContext<ImageGallery> = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "The Eileen Fitzgerald School of Speech and Drama Gallery",
+  description:
+    "A curated collection of photographs from our classes and events!",
+  url: "https://eileenfitzgerald-school.com/gallery",
+  creator: {
+    "@type": "Person",
+    name: "Eileen Fitzgerald",
+    url: "https://eileenfitzgerald-school.com/about",
+  },
+  associatedMedia: [
+    {
+      "@type": "ImageObject",
+      name: "Students",
+      caption: "Students at The Eileen Fitzgerald School of Speech and Drama",
+      url: "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F9.jpg&w=256&q=75",
+      contentUrl:
+        "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F9.jpg&w=256&q=75",
+      thumbnailUrl:
+        "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F9.jpg&w=256&q=75",
+      creator: {
+        "@type": "Person",
+        name: "Eileen Fitzgerald",
+        url: "https://eileenfitzgerald-school.com/about",
+      },
+    },
+    {
+      "@type": "ImageObject",
+      name: "Competition Winners",
+      caption:
+        "Students participating at the Feile Luimnigh Speech and Drama Festival",
+      url: "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F3.jpg&w=256&q=75",
+      contentUrl:
+        "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F3.jpg&w=256&q=75",
+      thumbnailUrl:
+        "https://www.eileenfitzgerald-school.com/_next/image?url=%2Fgallery%2F3.jpg&w=256&q=75",
+      creator: {
+        "@type": "Person",
+        name: "Eileen Fitzgerald",
+        url: "https://eileenfitzgerald-school.com/about",
+      },
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Gallery | Eileen Fitzgerald",
@@ -22,6 +71,13 @@ export const metadata: Metadata = {
 const Gallery = () => {
   return (
     <>
+      <Script
+        id="organisation-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <div className="bg-primary py-10 xl:py-0">
         <Container className="custom-vh-xs flex flex-col justify-center">
           <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-10 lg:space-y-0 md:space-x-10">

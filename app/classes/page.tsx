@@ -11,6 +11,33 @@ import Link from "next/link";
 import MotionDiv from "@/components/custom/motionDiv";
 import LinkAnimation from "@/components/custom/linkAnimation";
 import ScrollToTop from "@/components/custom/scrollToTop";
+import Script from "next/script";
+import { Course, WithContext } from "schema-dts";
+
+const jsonLd: WithContext<Course> = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "Speech and Drama Classes",
+  description:
+    "An class in Speech and Drama, covering basic acting techniques, improvisation, and stage presence",
+  provider: {
+    "@type": "Organization",
+    name: "The Eileen Fitzgerald School of Speech and Drama",
+    url: "https://eileenfitzgerald-school.com/",
+  },
+  coursePrerequisites: "No prior experience required",
+  hasCourseInstance: {
+    "@type": "CourseInstance",
+    name: "Speech and Drama Class",
+    description:
+      "A 10-week beginner drama class, focusing on acting and improvisation",
+    instructor: {
+      "@type": "Person",
+      name: "Eileen Fitzgerald",
+      url: "https://eileenfitzgerald-school.com/about",
+    },
+  },
+};
 
 export const metadata: Metadata = {
   title: "Classes | Eileen Fitzgerald",
@@ -33,39 +60,48 @@ const classPageSectionLinks = [
 
 const Classes = () => {
   return (
-    <div className="flex flex-col md:flex-row">
-      <div className="sticky top-0 bg-secondary px-12 py-3 md:p-5 block md:block md:w-1/5">
-        <MobileMenuClasses />
-        <div className="md:sticky md:top-5">
-          <MotionDiv className="hidden md:block text-secondary-foreground">
-            <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
-            <div className="md:space-y-4">
-              {classPageSectionLinks.map((link) => {
-                return (
-                  <Link
-                    key={link.href}
-                    href={`#${link.href}`}
-                    className="relative w-fit block pl-2"
-                  >
-                    <div className="absolute top-0 left-0 w-full h-full border-l-2 border-primary -z-10"></div>
-                    <LinkAnimation>{link.label}</LinkAnimation>
-                  </Link>
-                );
-              })}
-            </div>
-          </MotionDiv>
+    <>
+      <Script
+        id="organisation-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+      <div className="flex flex-col md:flex-row">
+        <div className="sticky top-0 bg-secondary px-12 py-3 md:p-5 block md:block md:w-1/5">
+          <MobileMenuClasses />
+          <div className="md:sticky md:top-5">
+            <MotionDiv className="hidden md:block text-secondary-foreground">
+              <p className="font-heading text-xl md:text-3xl mb-5">Contents</p>
+              <div className="md:space-y-4">
+                {classPageSectionLinks.map((link) => {
+                  return (
+                    <Link
+                      key={link.href}
+                      href={`#${link.href}`}
+                      className="relative w-fit block pl-2"
+                    >
+                      <div className="absolute top-0 left-0 w-full h-full border-l-2 border-primary -z-10"></div>
+                      <LinkAnimation>{link.label}</LinkAnimation>
+                    </Link>
+                  );
+                })}
+              </div>
+            </MotionDiv>
+          </div>
         </div>
+        <div className="flex flex-col w-full md:w-4/5">
+          <WhatIsSpeechAndDrama />
+          <Benefits />
+          <ClassSchedules />
+          <Activities />
+          <YearlyEvents />
+          <PublicSpeaking />
+        </div>
+        <ScrollToTop />
       </div>
-      <div className="flex flex-col w-full md:w-4/5">
-        <WhatIsSpeechAndDrama />
-        <Benefits />
-        <ClassSchedules />
-        <Activities />
-        <YearlyEvents />
-        <PublicSpeaking />
-      </div>
-      <ScrollToTop />
-    </div>
+    </>
   );
 };
 
