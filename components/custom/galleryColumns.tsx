@@ -1,15 +1,13 @@
-import React from "react";
-import MotionDiv from "./motionDiv";
-import Image from "next/image";
+import React, { Fragment } from "react";
 
 const col1 = [
   { imageName: 22, alt: "" },
-  { imageName: 2, alt: "The boys!" },
-  { imageName: 26, alt: "" },
+  { imageName: 2, alt: "" },
+  { imageName: 26, alt: "Feile Luimnigh winners!" },
   { imageName: 16, alt: "Annual Showcase individual performances!" },
   { imageName: 20, alt: "" },
-  { imageName: 3, alt: "Feile Luimnigh winners!" },
-  { imageName: 1, alt: "4th Class @ Cratloe Speechfest 2019!" },
+  { imageName: 3, alt: "The boys!" },
+  { imageName: 1, alt: "" },
 ];
 
 const col2 = [
@@ -29,7 +27,6 @@ const col3 = [
   { imageName: 11, alt: "Senior class photo!" },
   { imageName: 12, alt: "Class projects!" },
   { imageName: 17, alt: "Lots of wins at Feile Luimnigh!" },
-  { imageName: 28, alt: "" },
 ];
 
 const col4 = [
@@ -52,26 +49,32 @@ const GalleryColumns = () => {
           <div key={`photo_col_${i}`} className="grid grid-row-2 gap-y-4">
             {col.map((img, i) => {
               return (
-                <MotionDiv
-                  key={`${img.imageName}_${i}`}
+                <picture
                   className="group relative flex flex-col justify-between"
+                  key={`${img.imageName}_${i}`}
                 >
-                  <Image
+                  <source
+                    srcSet={`/gallery/${img.imageName}.webp`}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={`/gallery/${img.imageName}.jpg`}
+                    type="image/jpg"
+                  />
+                  <img
                     key={`${img.imageName}_${i}`}
-                    width={100}
-                    height={100}
                     src={`/gallery/${img.imageName}.jpg`}
                     alt={
                       img.alt === "" ? "Eileen Fitzgerald students" : img.alt
                     }
-                    className="object-cover w-full group brightness-105 hue-rotate-15 h-full"
+                    className="object-cover w-full group brightness-105 hue-rotate-15 h-full saturate-[1.3]"
                   />
                   {img.alt && (
                     <p className="group p-5 min-h-10 flex md:absolute w-full bottom-0 md:h-0 flex-col text-center justify-center transition-all bg-primary group-hover:h-full group-hover:transition-all group-hover:flex group-hover:p-5 md:opacity-0 group-hover:opacity-100">
                       {img.alt}
                     </p>
                   )}
-                </MotionDiv>
+                </picture>
               );
             })}
           </div>

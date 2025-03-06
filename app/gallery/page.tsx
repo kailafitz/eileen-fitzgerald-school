@@ -9,6 +9,7 @@ import ScrollToTop from "@/components/custom/scrollToTop";
 import ActionBanner from "@/components/custom/actionBanner";
 import Script from "next/script";
 import { ImageGallery, WithContext } from "schema-dts";
+import AnniversaryVideo from "@/components/custom/anniversaryVideo";
 
 const jsonLd: WithContext<ImageGallery> = {
   "@context": "https://schema.org",
@@ -78,19 +79,11 @@ const Gallery = () => {
           __html: JSON.stringify(jsonLd),
         }}
       />
-      <div className="bg-primary py-10 xl:py-0">
+      <div className="bg-primary py-10">
         <Container className="custom-vh-xs flex flex-col justify-center">
-          <div className="flex flex-col lg:flex-row justify-between items-stretch space-y-10 lg:space-y-0 md:space-x-10">
-            <video controls playsInline className="object-contain mx-auto">
-              <source
-                src="/video.mp4"
-                type="video/mp4"
-                height={480}
-                width={480}
-              ></source>
-            </video>
-
-            <div className="flex flex-col justify-between space-y-10 lg:space-y-0">
+          <div className="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 md:space-x-10">
+            <AnniversaryVideo />
+            <div className="flex flex-col justify-between space-y-10 lg:space-y-0 w-full xl:w-1/2">
               <div>
                 <h6 className="font-heading text-3xl mb-2">
                   Celebrating 30 Years

@@ -19,14 +19,20 @@ const ScrollToTop = () => {
     }
   }
 
+  useEffect(() => {
+    window.onscroll = function () {
+      scrollFunction();
+    };
+  });
+
   return (
     <Link
       href="#navbar"
-      className={`fixed bottom-6 right-6 w-fit mx-auto z-50 transition-all duration-200 ${visibility}`}
+      className={`fixed bottom-6 right-6 w-fit mx-auto z-[9999] transition-all duration-200 ${visibility}`}
     >
       <div className="group bg-gray-200 rounded-full p-0.5 md:hover:bg-primary transition-all duration-200">
         <ChevronDown
-          className="text-zinc-900 group-hover:text-grey-200 block mx-auto rotate-180 transition-all duration-200"
+          className="text-zinc-900 group-hover:text-white block mx-auto rotate-180 transition-all duration-200"
           size="40"
           strokeWidth={1.2}
         />
