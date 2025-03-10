@@ -59,7 +59,7 @@ const Intro = () => {
                   src={`/${info.image}.png`}
                   alt="Speech and Drama student"
                   className={`w-full h-auto object-contain ${
-                    i % 2 !== 0 ? "flip" : ""
+                    i % 2 !== 0 ? "scale-x-[-1]" : ""
                   }`}
                 />
               </MotionDiv>

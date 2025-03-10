@@ -39,13 +39,13 @@ const OpeningAnimation = () => {
               animationActivate ? "" : "-z-50 hidden"
             }`}
           >
-            <div className="bg-white absolute rounded-full animate-opening-spotlight-mobile md:animate-opening-spotlight z-60"></div>
+            <div className="bg-white absolute rounded-full animate-opening-spotlight-mobile md:animate-opening-spotlight z-[60]"></div>
             <img
               src="/logo.png"
-              className="w-52 h-52 mx-auto animate-logo-mobile sm:animate-logo-sm md:animate-logo z-60 absolute"
+              className="w-52 h-52 mx-auto animate-logo-mobile sm:animate-logo-sm md:animate-logo z-[60] absolute"
               alt="logo"
             />
-            <p className="absolute top-[68%] text-2xl opening-animation-text text-center text-foreground opacity-0 z-60 font-heading animate-opening-text">
+            <p className="absolute top-[68%] text-2xl opening-animation-text text-center text-foreground opacity-0 z-[60] font-heading animate-opening-text">
               The Eileen Fitzgerald <br />
               School of Speech & Drama
             </p>

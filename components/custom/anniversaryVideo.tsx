@@ -12,7 +12,7 @@ const AnniversaryVideo = () => {
   return (
     <>
       {!isLoaded && (
-        <Skeleton className="w-full h-[200px] xl:w-[500px] xl:h-full mx-auto" />
+        <Skeleton className="w-full h-[45vh] xl:w-[500px] lg:h-auto mx-auto" />
       )}
       <video
         controls
@@ -21,7 +21,7 @@ const AnniversaryVideo = () => {
           isLoaded ? "block" : "hidden"
         }`}
         poster=""
-        onLoadStart={handleLoadedData}
+        onLoadedData={handleLoadedData}
       >
         <source
           src="/video.mp4"

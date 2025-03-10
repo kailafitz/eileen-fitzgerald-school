@@ -81,7 +81,7 @@ const Gallery = () => {
       />
       <div className="bg-primary py-10">
         <Container className="custom-vh-xs flex flex-col justify-center">
-          <div className="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 md:space-x-10">
+          <div className="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 lg:space-x-10">
             <AnniversaryVideo />
             <div className="flex flex-col justify-between space-y-10 lg:space-y-0 w-full xl:w-1/2">
               <div>
