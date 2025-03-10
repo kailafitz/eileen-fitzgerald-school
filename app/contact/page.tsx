@@ -70,7 +70,7 @@ const Contact = () => {
         <Container className="pb-10">
           <ContactDetails />
         </Container>
-        <div className="bg-primary pb-10" id="locations">
+        <div className="bg-primary pt-10 pb-20" id="locations">
           <Container>
             <Locations />
           </Container>

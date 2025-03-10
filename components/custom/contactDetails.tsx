@@ -73,15 +73,16 @@ const ContactDetails = () => {
         alt="logo"
         className="absolute top-44 w-screen md:w-3/5 md:-top-6 md:-right-48 opacity-10 rotate-12 -z-10"
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col py-20 space-y-10">
         <div className="w-full md:w-1/2 text-left">
           <SectionHeading
             title="Contact Us"
             subtitle="If you&#39;re interested in enrolling in any of our classes or wish
             to find out more information, please get in touch with us."
-            className="text-center md:text-left md:mx-0 lg:w-full"
+            className="md:mx-0 lg:w-full"
+            left
           />
-          <div className="w-fit space-y-5">
+          <div className="w-fit space-y-6">
             {contactDetails.map((detail, i) => {
               return (
                 <ContactDetail
@@ -99,9 +100,10 @@ const ContactDetails = () => {
             title="Follow Us"
             subtitle="Get to know our school even further by following us on our social
             media platforms where we post the latest news and updates!"
-            className="text-center md:text-left md:mx-0 lg:w-full"
+            className="md:mx-0 lg:w-full"
+            left
           />
-          <div className="w-fit space-y-5">
+          <div className="w-fit space-y-6">
             {socialMediaDetails.map((detail, i) => {
               return (
                 <ContactDetail
