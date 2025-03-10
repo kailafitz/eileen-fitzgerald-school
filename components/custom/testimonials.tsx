@@ -9,6 +9,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Quote } from "lucide-react";
 import SectionHeading from "./sectionHeading";
+import Container from "./container";
 
 const testimonials = [
   {
@@ -68,50 +69,59 @@ const testimonials = [
   },
 ];
 
+const TestimonialsCarousel = ({ className }: { className?: string }) => (
+  <div className={`pb-20 ${className}`} id="testimonials">
+    <SectionHeading
+      title="Testimonials"
+      subtitle="See what our pupils have to say"
+    />
+    <Carousel
+      orientation="horizontal"
+      opts={{
+        loop: true,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      <CarouselContent className="-ml-4 lg:w-full">
+        {testimonials.map((testimonial, i) => {
+          return (
+            <CarouselItem
+              key={`${testimonial.name}_${i}`}
+              className="basis-10/12 sm:basis-1/2 lg:basis-1/3 sm:pl-4 relative"
+            >
+              <Quote
+                className="absolute top-0 right-0 text-primary opacity-20 -z-10"
+                size={120}
+              />
+              <div className="border-primary border-2 h-full p-5 flex flex-col justify-between">
+                <p className="text-sm mb-3">{testimonial.testimonial}</p>
+                <h6 className="flex flex-row items-center justify-end">
+                  <span className="w-7 bg-slate-200 h-0.5 mr-2"></span>
+                  {testimonial.name}
+                </h6>
+              </div>
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  </div>
+);
+
 const Testimonials = () => {
   return (
-    <div className="pb-20" id="testimonials">
-      <SectionHeading
-        title="Testimonials"
-        subtitle="See what our pupils have to say"
-      />
-      <Carousel
-        orientation="horizontal"
-        opts={{
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
-      >
-        <CarouselContent className="-ml-4 lg:w-full">
-          {testimonials.map((testimonial, i) => {
-            return (
-              <CarouselItem
-                key={`${testimonial.name}_${i}`}
-                className="basis-10/12 sm:basis-1/2 lg:basis-1/3 sm:pl-4 relative"
-              >
-                <Quote
-                  className="absolute top-0 right-0 text-primary opacity-20 -z-10"
-                  size={120}
-                />
-                <div className="border-primary border-2 h-full p-5 flex flex-col justify-between">
-                  <p className="text-sm mb-3">{testimonial.testimonial}</p>
-                  <h6 className="flex flex-row items-center justify-end">
-                    <span className="w-7 bg-slate-200 h-0.5 mr-2"></span>
-                    {testimonial.name}
-                  </h6>
-                </div>
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <>
+      <Container className="hidden lg:block">
+        <TestimonialsCarousel />
+      </Container>
+      <TestimonialsCarousel className="block lg:hidden" />
+    </>
   );
 };
 

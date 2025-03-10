@@ -69,9 +69,9 @@ const About = () => {
       />
       <Container>
         <Staff />
-        <Testimonials />
         <ScrollToTop />
       </Container>
+      <Testimonials />
       <ActionBanner />
     </>
   );
