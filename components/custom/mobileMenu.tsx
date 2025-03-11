@@ -22,7 +22,7 @@ const MobileMenu = () => {
           <span className="h-0.5 w-full bg-gray-200 block"></span>
         </div>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="bg-secondary">
         <SheetTitle className="hidden">Mobile Menu</SheetTitle>
         <SheetDescription className="hidden">
           Mobile navigation menu where links to different pages are accessible.
