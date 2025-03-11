@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 const col1 = [
   { imageName: 22, alt: "" },
@@ -11,9 +11,9 @@ const col1 = [
 ];
 
 const col2 = [
-  { imageName: 5, alt: "Annual Showcase showdown!" },
-  { imageName: 21, alt: "" },
-  { imageName: 6, alt: "Feile Luimnigh winners!" },
+  { imageName: 5, alt: "Senior class photo!" },
+  { imageName: 21, alt: "Feile Luimnigh winners!" },
+  { imageName: 6, alt: "" },
   { imageName: 7, alt: "Feile Luimnigh winners!" },
   { imageName: 25, alt: "" },
   { imageName: 8, alt: "Feile Luimnigh winners!" },
@@ -24,19 +24,19 @@ const col3 = [
   { imageName: 24, alt: "" },
   { imageName: 9, alt: "Feile Luimnigh winners!" },
   { imageName: 10, alt: "Senior Feile Luimnigh winners!" },
-  { imageName: 11, alt: "Senior class photo!" },
-  { imageName: 12, alt: "Class projects!" },
+  { imageName: 11, alt: "" },
+  { imageName: 12, alt: "Senior class photo!" },
   { imageName: 17, alt: "Lots of wins at Feile Luimnigh!" },
 ];
 
 const col4 = [
-  { imageName: 13, alt: "Annual Showcase awards presentation!" },
+  { imageName: 13, alt: "Class projects!" },
   { imageName: 23, alt: "" },
-  { imageName: 14, alt: "Exam results from the Irish Board!" },
-  { imageName: 15, alt: "Annual Showcase awards presentation!" },
+  { imageName: 14, alt: "" },
+  { imageName: 15, alt: "Exam results from the Irish Board!" },
   { imageName: 27, alt: "" },
-  { imageName: 4, alt: "Senior class photo!" },
-  { imageName: 18, alt: "" },
+  { imageName: 4, alt: "" },
+  { imageName: 18, alt: "Annual Showcase awards presentation!" },
 ];
 
 const cols = [col1, col2, col3, col4];
